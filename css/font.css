@@ -1,1 +1,17 @@
 /* 字体样式 */
+
+/* 特太行书 */
+@font-face {
+	font-family: TetaiXS;
+	src: url(../fonts/tetai-2.ttf);
+}
+/* 三极行书简体 */
+@font-face{
+	font-family: Sanji;
+	src: url(../fonts/SanJiXingShuJianTi-2.ttf)
+}
+/* 唯你主义浪漫行书 */
+@font-face{
+	font-family: WeiniZY;
+	src: url(../fonts/WeiNiZhuYiLangManXingShu-2.ttf)
+}
