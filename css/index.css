@@ -1,0 +1,53 @@
+body{
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+/* 外壳滑动 */
+.outer-roll{
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	overflow-x: hidden;
+}
+.outer-roll::-webkit-scrollbar{
+	width: 0;
+}
+.outer-roll::-webkit-scrollbar-thumb{
+	background-color: rgba(0, 0, 0, .5);
+	border-radius: 4px;
+}
+.outer-roll::-webkit-scrollbar-track{
+	width: 15px;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+/* 核心容器 */
+.wrap{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1920px;
+	min-width: 1400px;
+	background-color: pink;
+	overflow: hidden;
+}
+.wrap *{
+	box-sizing: border-box;
+}
+
+/* 版心 */
+.inner-cont{
+	position: relative;
+	width: 1400px;
+}
+
+/* 头部区域 start */
+.header{
+	margin: 0 auto;
+	width: 100%;
+	min-width: 1400px;
+	height: 2160px;
+	background: url("../images/header-1.jpg") no-repeat center top;
+}
+/* 头部区域 end */
