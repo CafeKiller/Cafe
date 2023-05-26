@@ -41,6 +41,9 @@ body{
 .wrap li{
 	list-style: none;
 }
+.wrap a{
+	text-decoration: none;
+}
 /* 头部区域 start */
 .header{
 	margin: 0 auto;
@@ -74,20 +77,44 @@ body{
 .p1-title{
 	width: 100%;
 	font-family: "TetaiXS";
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 56px;
+	line-height: 56px;
 	text-align: center;
 }
 .p1-cont{
-	padding: 20px 50px 0;	
+	padding: 20px 80px 0;
+	font-size: 0;
 }
-.p1-cont ul{
+.p1-left{
+	display: inline-block;
+	width: 40%;
+	height: 280px;
+	vertical-align: middle;
+}
+.ai-header{
+	width: 250px;
+	height: 270px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+.p1-right{
+	display: inline-block;
+	width: 60%;
+	height: 280px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.p1-right ul{
 	display: flex;
 	width: 100%;
 	align-items: center;
 	justify-content: space-between;	
 }
 .p1-tips{
-	
+	margin-right: 8px;
+	font-size: 26px;
+	font-weight: bold;
+	color: #195850;
 }
 /* 模块1 end */
