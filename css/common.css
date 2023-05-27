@@ -28,7 +28,7 @@ td,th,ul,ol{padding:0}
 		opacity: 0;
 	}
 	100%{
-		top: -50px;
+		top: -60px;
 		opacity: 1;
 	}
 }
@@ -38,7 +38,7 @@ td,th,ul,ol{padding:0}
 		opacity: 0;
 	}
 	100%{
-		top: -120px;
+		top: -140px;
 		opacity: 1;
 	}
 }
