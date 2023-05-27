@@ -11,8 +11,13 @@ table{border-collapse:collapse;border-spacing:0}
 td,th,ul,ol{padding:0}
 
 /* >>公共样式 */
+:root{
+	--base-text: #3c3c3c
+}
+
 .hide{
 	display: none;
 	font-size: 0;
-	text-indent: -9999;	
+	text-indent: -9999px;
 }
+

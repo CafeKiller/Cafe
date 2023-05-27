@@ -5,13 +5,13 @@
 	font-family: TetaiXS;
 	src: url(../fonts/tetai-2.ttf);
 }
-/* 三极行书简体 */
+/* 三极魏碑简 */
 @font-face{
 	font-family: Sanji;
-	src: url(../fonts/SanJiXingShuJianTi-2.ttf)
+	src: url(../fonts/SanJiWeiBeiJianTi.ttf)
 }
-/* 唯你主义浪漫行书 */
-@font-face{
-	font-family: WeiniZY;
-	src: url(../fonts/WeiNiZhuYiLangManXingShu-2.ttf)
+/* 猫啃什锦黑体 */
+@font-face {
+	font-family: Maoken;
+	src: url(../fonts/MaoKen.ttf);
 }
