@@ -93,6 +93,20 @@ body{
 }
 .p1-left div{
 	display: inline-block;
+	position: relative;
+}
+.ai-header-box:hover .ai-header-tips{
+	top: -50px;
+	opacity: 1;
+	animation: showAiHeaderTips 1s ease;
+}
+.common-header-box{
+	margin-left: 20px;
+}
+.common-header-box:hover .common-header-tips{
+	top: -120px;
+	opacity: 1;
+	animation: showCommHeaderTips 1s ease;
 }
 .ai-header{
 	width: 250px;
@@ -101,8 +115,21 @@ body{
 	box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
 	cursor: pointer;
 }
+.common-header-tips,
+.ai-header-tips{
+	padding: 5px 10px;
+	position: absolute;
+	top: -70px;
+	left: 50%;
+	font-size: 14px;
+	width: 100%;
+	transform: translateX(-50%);
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 5px;
+	opacity: 0;
+	color: var(--white-text);
+}
 .common-header{
-	margin-left: 20px;
 	box-shadow: 3px 3px 2px 2px rgba(0,0,0,0.3);
 	cursor: pointer;
 }
@@ -129,6 +156,6 @@ body{
 	font-family: Sanji;
 	font-size: 26px;
 	font-weight: bold;
-	color: #195850;
+	color: var(--tips1);
 }
 /* 模块1 end */
