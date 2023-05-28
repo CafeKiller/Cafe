@@ -240,13 +240,12 @@ body{
 .mod{
 	padding: 20px;
 	width: 600px;
-	height: 400px;
-
+	min-height: 400px;
+	border-radius: 5px;
 }
 .java-mod{
 	color: var(--white-text);
 	background-color: rgba(199, 70, 52,.8);
-	border-radius: 5px;
 }
 .mod-title{
 	font-size: 45px;
@@ -276,13 +275,31 @@ body{
 .web-mod{
 	color: var(--white-text);
 	background: linear-gradient(45deg, #972692, #262a73);
-	border-radius: 5px;
 }
 .web-tag-cont span{
-	/*font-family: Sanji;*/
 	font-weight: bold;
 	font-size: 16px;
 	color: #2d2a75;
+	background-color: var(--white-text);
+}
+.code-mod{
+	color: var(--white-text);
+	background: linear-gradient(210deg, #b893d6, #a49dd9, #8ea4da);
+}
+.code-tag-cont span{
+	font-weight: bold;
+	font-size: 16px;
+	color: var(--code-color);
+	background-color: var(--white-text);
+}
+.other-mod{
+	color: var(--white-text);
+	background: linear-gradient(180deg, #006891, #25997e, #00C966);
+}
+.other-tag-cont span{
+	font-weight: bold;
+	font-size: 16px;
+	color: var(--other-color);
 	background-color: var(--white-text);
 }
 /* 模块2 end */
