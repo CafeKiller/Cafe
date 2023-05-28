@@ -173,8 +173,40 @@ body{
 	color: var(--tips1);
 }
 .dream .icon-yiwen{
-	vertical-align: top;
+	position: absolute;
 	font-size: 12px;
 	color: #999;
+	vertical-align: top;
 }
+.dream .icon-yiwen:hover .full-stack{
+	display: block;
+	top: -100px;
+	opacity: 1;
+	animation: showFullStack 1s ease;
+}
+.full-stack{
+	display: none;
+	margin-left: -275px;
+	padding: 15px 20px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 550px;
+	color: var(--white-text);
+	background-color: rgba(0,0,0,.7);
+	border-radius: 10px;
+	opacity: 0;
+}
+.full-stack::before{
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 48%;
+	width: 0;
+	height: 0;
+	border-top: 10px solid rgba(0,0,0,.7);
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+}
+
 /* 模块1 end */
