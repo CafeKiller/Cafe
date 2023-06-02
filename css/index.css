@@ -303,3 +303,13 @@ body{
 	background-color: var(--white-text);
 }
 /* 模块2 end */
+
+/* 模块4 start */
+.part4{
+	padding: 30px 80px 40px;
+	margin-top: 40px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .95);
+}
+
+/* 模块4 end */
