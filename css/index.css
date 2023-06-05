@@ -329,7 +329,6 @@ body{
 	width: 300px;
 	height: 150px;
 	clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
-	background: blue;
 	animation: rhombusCorrection 1s ease-in;
 }
 .game-list-item:hover{
