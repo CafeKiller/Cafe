@@ -311,5 +311,33 @@ body{
 	width: 100%;
 	background-color: rgba(255, 255, 255, .95);
 }
+.game-mod{
+	width: 100%;
+	height: 400px;
+}
+.game-title{
+	font-size: 36px;
+	line-height: 36px;
+	font-family: Maoken;
+}
+.game-list{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.game-list-item{
+	width: 300px;
+	height: 150px;
+	clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
+	background: blue;
+	animation: rhombusCorrection 1s ease-in;
+}
+.game-list-item:hover{
+	clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 0);
+}
+.game-list-item img{
+	width: 100%;
+	height: 100%;
+}
 
 /* 模块4 end */
