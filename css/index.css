@@ -321,6 +321,7 @@ body{
 	font-family: Maoken;
 }
 .game-list{
+	margin-bottom: 20px;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -330,13 +331,20 @@ body{
 	height: 150px;
 	-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	transition: all 1s ease;
 }
 .game-list-item:hover{
-	clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 0);
-	animation: rhombusCorrection 1s ease;
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .game-list-item img{
 	width: 100%;
 	height: 100%;
+}
+.part4 p{
+	text-indent: 2em;
+	font-size: 16px;
+	line-height: 26px;
+	color: var(--base-text);
 }
 /* 模块4 end */
