@@ -240,8 +240,9 @@ body{
 .mod{
 	padding: 20px;
 	width: 600px;
-	min-height: 400px;
+	height: auto;
 	border-radius: 5px;
+	align-self: self-start;
 }
 .java-mod{
 	color: var(--white-text);
@@ -314,6 +315,7 @@ body{
 .music-mod,
 .anime-mod,
 .game-mod{
+	margin-bottom: 15px;
 	width: 100%;
 	height: 500px;
 }
