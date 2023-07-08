@@ -1,0 +1,56 @@
+.wrap{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+
+/* 主体区域 start */
+.content{
+
+}
+.section{
+    text-align: center; 
+    font: 50px "Microsoft Yahei"; 
+    color: pink;
+    background:pink ;
+}
+
+
+/* part1 */
+.part1{
+    width: 100%;
+    background: url(../images/background/bg1.jpg) center center no-repeat;
+    background-size: cover;
+}
+/* part2 */
+.part2{
+    width: 100%;
+    background: url(../images/background/bg2.jpg) center center no-repeat;
+    background-size: cover;
+}
+.part3{
+    width: 100%;
+    background: url(../images/background/bg3.png) center center no-repeat;
+    background-size: cover;
+}
+.part4{
+    width: 100%;
+    background: url(../images/background/bg4.png) center center no-repeat;
+    background-size: cover;
+}
+.part5{
+    width: 100%;
+    background: url(../images/background/bg5.png) center center no-repeat;
+    background-size: cover;
+}
+.part6{
+    width: 100%;
+    background: url(../images/background/bg6.jpg) center center no-repeat;
+    background-size: cover;
+}
+.part7{
+    width: 100%;
+    background: url(../images/background/bg7.jpg) center center no-repeat;
+    background-size: cover;
+}
+/* 主体区域 end */
