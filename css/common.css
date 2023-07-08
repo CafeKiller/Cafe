@@ -5,11 +5,10 @@ body{
 
 /* 外壳滑动容器 start */
 .outer-roll{
-	width: 100vw;
-	height: 100vh;
+	/* width: 100vw;
+	height: 100vh; */
 	overflow: auto;
 	overflow-x: hidden;
-	background: url("../images/header-1.jpg") no-repeat center top;
 }
 .outer-roll::-webkit-scrollbar{
 	width: 4px;
