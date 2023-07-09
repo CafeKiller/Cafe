@@ -31,6 +31,7 @@
 }
 
 .part2-cont{
+    position: relative;
     display: flex;
     padding: 30px 50px;
     margin: 0 auto;
@@ -42,7 +43,7 @@
 }
 .part2-title{
     position: absolute;
-    right: 230px;
+    right: 30px;
     font-size: 108px;
     background-image:-webkit-linear-gradient(left, rgba(139, 69, 19,.7) 10%,rgba(78, 57, 0,0));
     -webkit-background-clip:text;
@@ -92,8 +93,34 @@
     background-image: url(../images/background/bg3.png);
     background-size: cover;
 }
-
-
+.part3-cont{
+    position: relative;
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 1000px;
+    height: 660px;
+    background-color: rgba(255, 255, 255, .15);
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px 3px rgba(255,255,255,.3);
+}
+.part3-title{
+    position: absolute;
+    top: -60px;
+    left: -40px;
+    font-size: 78px;
+    background-image:-webkit-linear-gradient(left, rgba(255, 255, 255,.85) 10%,rgba(255, 255, 255,0));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    pointer-events:none;
+}
+.p3swiper{
+    margin: 0 auto;
+    width: 80%;
+    height: 480px;
+}
+.tech-item{
+    
+}
 
 .part4{
     width: 100%;
