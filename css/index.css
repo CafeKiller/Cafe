@@ -2,17 +2,18 @@
     max-width: 1920px;
     margin: 0 auto;
 }
-
+.wrap *{
+    box-sizing: border-box;
+}
 
 /* 主体区域 start */
 .content{
-
+    position: relative;
 }
 .section{
-    text-align: center; 
-    font: 50px "Microsoft Yahei"; 
-    color: pink;
-    background:pink ;
+    position: relative;
+    font: 20px "Microsoft Yahei"; 
+    color: var(--cafe_text2);
 }
 
 
@@ -28,9 +29,52 @@
     background: url(../images/background/bg2.jpg) center center no-repeat;
     background-size: cover;
 }
+.part2-cont{
+    display: flex;
+    padding: 30px 50px;
+    margin: 0 auto;
+    width: 1000px;
+    height: 660px;
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px 3px rgba(0,0,0,.5);
+}
+.part2-left{
+    padding: 30px 10px 10px;
+    width: 35%;
+    height: 100%;
+}
+.head-cover{
+    margin-bottom: 15px;
+    width: 150px;
+    height: 135px;
+    background: url(../images/cover.jpg) no-repeat;
+    background-size: cover;
+    border: 3px solid var(--cafe_text1) ;
+    border-radius: 10px;
+}
+.sev-thirty-box{
+    display: flex;
+    margin-bottom: 15px;
+}
+.sev-thirty-box div:first-of-type{
+    width: 30%;
+    font-weight: 800;
+}
+.sev-thirty-box div:last-of-type{
+    padding-left: 20px;
+    width: 70%;
+}
+.nickname{
+    margin-bottom: 105px;
+}
+/* part3 */
 .part3{
     width: 100%;
-    background: url(../images/background/bg3.png) center center no-repeat;
+    background: no-repeat center / contain;
+    background-image: url(../images/background/bg3.png);
+    background-image: cross-fade(var(--transparent), url(../images/background/bg3.png), 50%) ;
+    background-image: -webkit-cross-fade(var(--transparent), url(../images/background/bg3.png), 50%);
     background-size: cover;
 }
 .part4{
