@@ -44,7 +44,7 @@
     position: absolute;
     right: 230px;
     font-size: 108px;
-    background-image:-webkit-linear-gradient(left, rgba(78, 57, 0,.7) 10%,rgba(78, 57, 0,0));
+    background-image:-webkit-linear-gradient(left, rgba(139, 69, 19,.7) 10%,rgba(78, 57, 0,0));
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     pointer-events:none;
@@ -84,20 +84,17 @@
 .nickname{
     margin-bottom: 105px;
 }
-.current-jobs{
-    
-}
-
 
 /* part3 */
 .part3{
     width: 100%;
     background: no-repeat center / contain;
     background-image: url(../images/background/bg3.png);
-    background-image: cross-fade(var(--transparent), url(../images/background/bg3.png), 50%) ;
-    background-image: -webkit-cross-fade(var(--transparent), url(../images/background/bg3.png), 50%);
     background-size: cover;
 }
+
+
+
 .part4{
     width: 100%;
     background: url(../images/background/bg4.png) center center no-repeat;
