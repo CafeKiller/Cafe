@@ -29,19 +29,35 @@
     background: url(../images/background/bg2.jpg) center center no-repeat;
     background-size: cover;
 }
+
 .part2-cont{
     display: flex;
     padding: 30px 50px;
     margin: 0 auto;
     width: 1000px;
-    height: 660px;
+    height: 600px;
     background-color: rgba(255, 255, 255, .9);
     border-radius: 5px;
     box-shadow: 4px 4px 10px 3px rgba(0,0,0,.5);
 }
+.part2-title{
+    position: absolute;
+    right: 230px;
+    font-size: 108px;
+    background-image:-webkit-linear-gradient(left, rgba(78, 57, 0,.7) 10%,rgba(78, 57, 0,0));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    pointer-events:none;
+    transform:scaleX(-1);
+}
 .part2-left{
     padding: 30px 10px 10px;
     width: 35%;
+    height: 100%;
+}
+.part2-right{
+    padding: 320px 15px 10px;
+    width: 65%;
     height: 100%;
 }
 .head-cover{
@@ -68,6 +84,11 @@
 .nickname{
     margin-bottom: 105px;
 }
+.current-jobs{
+    
+}
+
+
 /* part3 */
 .part3{
     width: 100%;
