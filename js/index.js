@@ -6,12 +6,28 @@ $(function(){
 });
 
 
-let tecStack = {
-    java:["JavaSE","JavaWeb","JavaGUI","JavaFX","Spring","SpringMVC","MyBatisPlus","SpringBoot","SpringCloud","JVM虚拟机","Maven"],
-    web:["HTML5","CSS3","JavaScript","ES 6","微信小程序","Uni-App","Nodejs","TypeScript","Express","Vue全家桶","ThreeJS","WebPack"],
-    other:["Python","C","C sharp","Unity3D","RPG Maker","LuaScript","Php","Golang","Android"],
-    Extend:["MySQL","MongoDB","Linux","Nginx","Redis","RabbitMQ","Docker","设计模式","数据结构与算法","计算机网络"]
+let tecStack = [
+    ["JavaSE","JavaWeb","JavaGUI","JavaFX","Spring","SpringMVC","MyBatisPlus","SpringBoot","SpringCloud","JVM虚拟机","Maven"],
+    ["HTML5","CSS3","JavaScript","ES 6","微信小程序","Uni-App","Nodejs","TypeScript","Express","Vue全家桶","ThreeJS","WebPack"],
+    ["Python","C","C sharp","Unity3D","RPG Maker","LuaScript","Php","Golang","Android"],
+    ["MySQL","MongoDB","Linux","Nginx","Redis","RabbitMQ","Docker","设计模式","数据结构与算法","计算机网络"]
+]
+
+function initTech() {
+    let _html = ``
+    for (const item in tecStack) {
+        _html += `<div class="swiper-slide">`
+        for (const key in tecStack[item]) {
+            _html += `
+                <span class="tech-item">${tecStack[item][key]}</span>
+            `
+        }
+        _html += "</div>"
+    }
+    $('.swiper-wrapper').html(_html)
 }
+
+initTech()
 
 
 const p3swiper = new Swiper(".p3swiper", {
