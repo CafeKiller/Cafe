@@ -31,9 +31,15 @@ initTech()
 
 
 const p3swiper = new Swiper(".p3swiper", {
+    effect : 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
     pagination: {
+        clickable: true,
         el: ".p3swiper-pagination",
     },
+    
 });
 
 $(window).resize(function(){
