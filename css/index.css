@@ -99,7 +99,7 @@
     margin: 0 auto;
     width: 1000px;
     height: 660px;
-    background-color: rgba(255, 255, 255, .15);
+    background-color: rgba(255, 255, 255, .08);
     border-radius: 5px;
     box-shadow: 4px 4px 10px 3px rgba(255,255,255,.3);
 }
@@ -115,26 +115,61 @@
 }
 .p3swiper{
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     height: 480px;
 }
-.tech-item{
-    position: absolute;
-    font-size: 42px;
-    font-weight: 800;
+.p3swiper .swiper-slide{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.tech-item:nth-of-type(1){top: 75px;left: 66px}
-.tech-item:nth-of-type(2){top: 20px;left: 236px}
-.tech-item:nth-of-type(3){top: 215px;left: 0}
-.tech-item:nth-of-type(4){top: 402px;left: 266px}
-.tech-item:nth-of-type(5){top: 336px;left: 490px}
-.tech-item:nth-of-type(6){top: 82px;left: 490px}
-.tech-item:nth-of-type(7){top: 0;left: 0}
-.tech-item:nth-of-type(8){top: 330px;left: 33px;}
-.tech-item:nth-of-type(9){top: 29px;left: 597px;font-size: 32px;}
-.tech-item:nth-of-type(10){top: 402px;left: 670px;font-size: 32px;}
-.tech-item:nth-of-type(11){top: 202px;left: 650px;font-size: 38px;}
-.tech-item:nth-of-type(12){top: 12px;left: 577px;font-size: 38px}
+.tech-item{
+    padding-left: 5px;
+    min-width: calc((100% - 210px)/2);
+    height: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 30px;
+    white-space: nowrap;
+    text-align: center;
+    list-style:circle;
+}
+.part3-cont .p3swiper-pagination{
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+}
+.p3swiper-pagination .swiper-pagination-bullet{
+    position: relative;
+    margin: 0 10px !important;
+    width: 60px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.p3swiper-pagination .swiper-pagination-bullet::before{
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0);
+    transition: all .5s ease-in-out;
+}
+.p3swiper-pagination .swiper-pagination-bullet-active::before{
+    content: "JAVA";
+    top: 14px;
+    color: rgba(255,255,255,1);
+}
+.p3swiper-pagination .swiper-pagination-bullet-active{
+    background-color: #ffffff;
+}
+
 
 .part4{
     width: 100%;
