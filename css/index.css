@@ -171,11 +171,32 @@
     font-size: 20px;
     color: #ffffff;
 }
+/* part3 end */
+
+/* part4 start */
 .part4{
     width: 100%;
     background: url(../images/background/bg4.png) center center no-repeat;
     background-size: cover;
 }
+.part4-cont{
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 1000px;
+    height: 600px;
+    /* border: 1px solid #ffffff; */
+}
+.p4swiper{
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+}
+.p4swiper .swiper-slide{
+    height: 500px;
+    background-color: rgba(255, 255, 255, .9);
+}
+/* part4 end */
+
 .part5{
     width: 100%;
     background: url(../images/background/bg5.png) center center no-repeat;

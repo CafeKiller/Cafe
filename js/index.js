@@ -8,14 +8,14 @@ $(function(){
 
 
 
-const p3swiper = new Swiper(".p3swiper", {
-    effect : 'fade',
+const p4swiper = new Swiper(".p4swiper", {
+    slidesPerView: 3,
     fadeEffect: {
         crossFade: true,
     },
     pagination: {
         clickable: true,
-        el: ".p3swiper-pagination",
+        el: ".p4swiper-pagination",
     },
     
 });
