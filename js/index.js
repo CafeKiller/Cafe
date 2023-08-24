@@ -9,6 +9,7 @@ $(function(){
 
 
 const p4swiper = new Swiper(".p4swiper", {
+    loop:true,
     slidesPerView: 3,
     fadeEffect: {
         crossFade: true,
