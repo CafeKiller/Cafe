@@ -90,7 +90,7 @@
 .part3{
     width: 100%;
     background: no-repeat center / contain;
-    background-image: url(../images/background/bg3.png);
+    background-image: #000;
     background-size: cover;
 }
 .part3-cont{
@@ -121,11 +121,13 @@
 }
 .part3-item{
     position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
 }
 .part3-item .tips{
-    position: absolute;
-    top: -2.5px;
-    padding: 0 20px;
+    padding: 0 10px;
+    min-width: 100px;
     height: 20px;
     font-weight: bold;
     font-size: 16px;
@@ -133,13 +135,14 @@
     border-radius: 12.5px;
     background-color: #ffffff;
     z-index: 10;
+    text-align: center;
 }
 .part3-item .progress-outer{
-    margin-left: 9%;
+    margin-left: 5px;
     position: relative;
-    width: 91%;
-    height: 15px;
-    border-radius: 7.5px;
+    width: 100%;
+    height: 16px;
+    border-radius: 8px;
     background-color: rgba(255,255,255,.3);
     z-index: 1;
 }
@@ -154,7 +157,12 @@
     z-index: 5;
 }
 .part3-item .tags{
-
+    position: absolute;
+    bottom: -18px;
+    padding-left: 120px;
+    font-size: 12px;
+    line-height: 16px;
+    filter: grayscale(1);
 }
 .part4{
     width: 100%;
