@@ -92,6 +92,7 @@
     background: no-repeat center / contain;
     background-image: #000;
     background-size: cover;
+    text-align: center;
 }
 .part3-cont{
     position: relative;
@@ -163,6 +164,12 @@
     font-size: 12px;
     line-height: 16px;
     filter: grayscale(1);
+}
+.part3-btn{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
 }
 .part4{
     width: 100%;
