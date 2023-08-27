@@ -7,6 +7,13 @@ $(function(){
 
 
 
+// 复制文字
+function copyText(domNode){
+    let text = $(domNode).text()
+    navigator.clipboard.writeText(text).then(()=>{
+    }).catch(()=>{
+    })
+}
 
 const p4swiper = new Swiper(".p4swiper", {
     loop:true,
@@ -27,8 +34,9 @@ $(window).resize(function(){
 });
 
 // 经历标签点击事件
-$('.p4swiper .swiper-slide').on('click',function(){
-    console.log('经历标签点击事件');
+$('.story-box').on('click',function(){
+    let idx = $(this).attr('date-idx')
+    console.log(idx);
 })
 
 
@@ -44,3 +52,15 @@ function autoScrolling(){
 autoScrolling();
 
 
+// 开启弹窗
+function showPop(id){
+    console.log($(id));
+    $(`#${id}`).css({
+        display:'block'
+    })
+}
+
+// 关闭弹窗
+function closePop(){
+    
+}

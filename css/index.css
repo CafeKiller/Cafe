@@ -257,3 +257,25 @@
     background-size: cover;
 }
 /* 主体区域 end */
+
+
+/* 弹窗区域 */
+.pop-model{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 900;
+}
+
+/* 测试区域 */
+.test-model{
+    position: fixed;
+    top: 50%;
+    left: 10px;
+}

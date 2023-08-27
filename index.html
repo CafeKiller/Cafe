@@ -76,10 +76,10 @@
                             </div>
                             <div class="email sev-thirty-box">
                                 <div>
-                                    <span>常用邮箱</span>
+                                    <span >常用邮箱</span>
                                 </div>
                                 <div>
-                                    <p>zai******@163.com</p>
+                                    <p onclick="copyText(this)">zai******@163.com</p>
                                 </div>
                             </div>
                         </div>
@@ -166,28 +166,28 @@
                         <div class="p4swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="story-box">
+                                    <div class="story-box" date-idx="0">
                                         <h3>LESSON-1</h3>
                                         <img src="./images/lesson1.jpg" alt="">
                                         <span class="timer">2020YearEnd</span>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="story-box">
+                                    <div class="story-box" date-idx="1">
                                         <h3>LESSON-2</h3>
                                         <img src="./images/lesson2.jpg" alt="">
                                         <span class="timer">2021YearBeg</span>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="story-box">
+                                    <div class="story-box" date-idx="2">
                                         <h3>LESSON-3</h3>
                                         <img src="./images/lesson3.jpg" alt="">
                                         <span class="timer">2022YearBeg</span>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="story-box">
+                                    <div class="story-box" date-idx="3">
                                         <h3>LESSON-4</h3>
                                         <img src="./images/lesson4.jpg" alt="">
                                         <span class="timer">2023YearBeg</span>
@@ -202,6 +202,16 @@
                 <div class="section part5">
                     Hobbies
                 </div>
+            </div>
+
+            <!-- 弹窗区域 -->
+            <div class="pop-model" id="pop-story">
+
+            </div>
+
+            <!-- 弹窗测试区域 -->
+            <div class="test-model">
+                <button onclick="showPop('pop-story')">故事弹窗</button>
             </div>
         </div>
         
