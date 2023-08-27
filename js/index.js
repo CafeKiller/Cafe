@@ -26,14 +26,20 @@ $(window).resize(function(){
     autoScrolling();
 });
 
+// 经历标签点击事件
+$('.p4swiper .swiper-slide').on('click',function(){
+    console.log('经历标签点击事件');
+})
+
+
 // fullPage 响应式适配函数
 function autoScrolling(){
     var $ww = $(window).width();
-    if($ww < 1024){
-        $.fn.fullpage.setAutoScrolling(false);
-    } else {
-        $.fn.fullpage.setAutoScrolling(true);
-    }
+    // if($ww < 1024){
+    //     $.fn.fullpage.setAutoScrolling(false);
+    // } else {
+    //     $.fn.fullpage.setAutoScrolling(true);
+    // }
 }
 autoScrolling();
 
