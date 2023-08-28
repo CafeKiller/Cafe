@@ -205,6 +205,7 @@
     clip-path: polygon(0 0, 90% 10%, 100% 100%, 10% 90%);
     text-align: center;
     user-select: none;
+    cursor: pointer;
 }
 .story-box h3{
     position: absolute;

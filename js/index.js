@@ -10,9 +10,9 @@ $(function(){
 // 复制文字
 function copyText(domNode){
     let text = $(domNode).text()
-    navigator.clipboard.writeText(text).then(()=>{
-    }).catch(()=>{
-    })
+    const _clipb = navigator.clipboard
+    _clipb ? navigator.clipboard.writeText(text) : console.log("当前浏览器无法支持复制");
+    
 }
 
 const p4swiper = new Swiper(".p4swiper", {
