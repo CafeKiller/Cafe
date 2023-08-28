@@ -1,8 +1,16 @@
+let storyList;
+
 $(function(){
     // 创建 Jquery.fullPage 对象
     $('#content').fullpage({
         // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
     });
+
+    $.getJSON('./data/story.json', function (data) {
+        console.log(data);
+        storyList = data.text_list
+    })
+
 });
 
 
@@ -34,9 +42,20 @@ $(window).resize(function(){
 });
 
 // 经历标签点击事件
+let _tempHtml = ``
 $('.story-box').on('click',function(){
+    
     let idx = $(this).attr('date-idx')
-    console.log(idx);
+    
+    _tempHtml = `
+        <h3 class="title">${storyList[idx].sub_title}</h3>
+        <p class="content">${storyList[idx].content}</p>
+    `
+    $('.pop-story-cont').html(_tempHtml)
+    _tempHtml = ``;
+
+    showPop("pop-story")
+
 })
 
 
@@ -56,7 +75,7 @@ autoScrolling();
 function showPop(id){
     console.log($(id));
     $(`#${id}`).css({
-        display:'block'
+        display:'flex'
     })
 }
 

@@ -273,6 +273,21 @@
     background-color: rgba(0,0,0,.5);
     z-index: 900;
 }
+.pop-story-cont{
+    padding: 20px;
+    width: 780px;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,.5);
+}
+.pop-story-cont .title{
+    font-size: 40px;
+    color: #ffffff;
+}
+.pop-story-cont .content{
+    font-size: 20px;
+    color: #ffffff;
+}
 
 /* 测试区域 */
 .test-model{
