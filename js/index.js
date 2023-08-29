@@ -4,10 +4,36 @@ $(function(){
     // 创建 Jquery.fullPage 对象
     $('#content').fullpage({
         // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
+        afterLoad: function(anchorLink, index){
+			if(index == 2){
+				console.log("进入2页面");
+			}
+			if(index == 3){
+				$.getJSON('./data/stack.json', function (data) {
+                    console.log(data);
+                    initStack(data.stack_list)
+                    
+                })
+			}
+			if(index == 4){
+				console.log("进入4页面");
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '2'){
+				console.log("离开2页面");
+			}
+			if(index == '3'){
+				console.log("离开3页面");
+			}
+			if(index == '4'){
+				console.log("离开4页面");
+			}
+		}
     });
 
     $.getJSON('./data/story.json', function (data) {
-        console.log(data);
+        // console.log(data);
         storyList = data.text_list
     })
 
@@ -40,6 +66,24 @@ const p4swiper = new Swiper(".p4swiper", {
 $(window).resize(function(){
     autoScrolling();
 });
+
+// 初始化技术栈页面
+function initStack(stack_list){
+    let _html = ``
+    stack_list.forEach((item)=>{
+        _html += `
+        <div class="part3-item">
+            <span class="tips">${item.title}</span>
+            <div class="progress-outer">
+                <div class="progress-inner"><span class="progress-number">${item.progress_number}%</span></div>
+            </div>
+            <div class="tags">如: ${item.tags}</div>
+        </div>
+        `
+    })
+    $(".part3-list").html(_html)
+}
+
 
 // 经历标签点击事件
 let _tempHtml = ``
