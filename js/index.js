@@ -9,11 +9,7 @@ $(function(){
 				console.log("进入2页面");
 			}
 			if(index == 3){
-				$.getJSON('./data/stack.json', function (data) {
-                    console.log(data);
-                    initStack(data.stack_list)
-                    
-                })
+				
 			}
 			if(index == 4){
 				console.log("进入4页面");
@@ -33,8 +29,14 @@ $(function(){
     });
 
     $.getJSON('./data/story.json', function (data) {
-        // console.log(data);
+        console.log("story.json", data);
         storyList = data.text_list
+    })
+
+    $.getJSON('./data/stack.json', function (data) {
+        console.log("stack.json", data);
+        initStack(data.stack_list)
+        
     })
 
 });
@@ -73,9 +75,11 @@ function initStack(stack_list){
     stack_list.forEach((item)=>{
         _html += `
         <div class="part3-item">
-            <span class="tips">${item.title}</span>
+            <span class="tips" style="color:${item.color}">${item.title}</span>
             <div class="progress-outer">
-                <div class="progress-inner"><span class="progress-number">${item.progress_number}%</span></div>
+                <div class="progress-inner" style="width:${item.progress_number}%; background-color:${item.color}; filter: drop-shadow(0px 0px 5px ${item.color}">
+                    <span class="progress-number">${item.progress_number}%</span>
+                </div>
             </div>
             <div class="tags">如: ${item.tags}</div>
         </div>
