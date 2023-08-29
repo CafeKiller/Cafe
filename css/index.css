@@ -157,6 +157,14 @@
     background-color: var(--cafe_text2);
     z-index: 5;
 }
+.progress-number{
+    position: absolute;
+    right: 5px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #ffffff;
+    z-index: 999;
+}
 .part3-item .tags{
     position: absolute;
     bottom: -18px;
