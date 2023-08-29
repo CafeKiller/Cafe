@@ -41,6 +41,13 @@
     border-radius: 5px;
     box-shadow: 4px 4px 10px 3px rgba(0,0,0,.5);
 }
+.part2-cont::before{
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 49px;
+    background: url(../images/bef_image/bef_1.png);
+}
 .part2-title{
     position: absolute;
     right: 30px;
