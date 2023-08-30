@@ -191,7 +191,8 @@
 /* part4 start */
 .part4{
     width: 100%;
-    background: url(../images/background/bg4.png) center center no-repeat;
+    background-color: #000;
+    /* background: url(../images/background/bg4.png) center center no-repeat; */
     background-size: cover;
 }
 .part4-cont{
@@ -207,7 +208,10 @@
     overflow: hidden;
 }
 .p4swiper .swiper-slide{
+    position: relative;
+    top: 20px;
     height: 500px;
+    opacity: 0;
 }
 .story-box{
     padding: 10px;
@@ -287,6 +291,11 @@
     height: 100vh;
     background-color: rgba(0,0,0,.5);
     z-index: 900;
+    transition: opacity .5s ease;
+    opacity: 3;
+}
+.pop-model.active{
+    opacity: 1;
 }
 .pop-story-cont{
     padding: 20px;

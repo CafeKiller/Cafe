@@ -6,24 +6,26 @@ $(function(){
         // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
         afterLoad: function(anchorLink, index){
 			if(index == 2){
-				console.log("进入2页面");
+				// console.log("进入2页面");
 			}
 			if(index == 3){
-				
+				// TweenMax.staggerTo(".swiper-slide", 0.6, {opacity: 1,y: -20,delay:0.3}, 0.15)
 			}
 			if(index == 4){
-				console.log("进入4页面");
+                // 进入页面4
+				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.01}, 0.15)
 			}
 		},
 		onLeave: function(index, direction){
 			if(index == '2'){
-				console.log("离开2页面");
+				// console.log("离开2页面");
 			}
 			if(index == '3'){
-				console.log("离开3页面");
+				// TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.01}, 0.15)
 			}
 			if(index == '4'){
-				console.log("离开4页面");
+                // 离开页面4
+				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 0,y: 0,delay:0.01}, 0.15)
 			}
 		}
     });
@@ -121,7 +123,8 @@ autoScrolling();
 
 // 开启弹窗
 function showPop(id){
-    console.log($(id));
+    // console.log("showPop",$(id));
+    $('.pop-model').addClass("active")
     $(`#${id}`).css({
         display:'flex'
     })
@@ -129,5 +132,5 @@ function showPop(id){
 
 // 关闭弹窗
 function closePop(){
-    
+    $('.pop-model').removeClass('active')
 }
