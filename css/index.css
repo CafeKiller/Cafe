@@ -158,11 +158,12 @@
     position: absolute;
     left: 2px;
     top: 2px;
-    width: 50%;
+    width: 0%;
     height: 12px;
     border-radius: 7.5px;
     background-color: var(--cafe_text2);
     z-index: 5;
+    transition: width .5s ease;
 }
 .progress-number{
     position: absolute;
@@ -212,6 +213,7 @@
     top: 20px;
     height: 500px;
     opacity: 0;
+    pointer-events: none;
 }
 .story-box{
     padding: 10px;

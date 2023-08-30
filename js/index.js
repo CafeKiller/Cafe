@@ -14,6 +14,7 @@ $(function(){
 			if(index == 4){
                 // 进入页面4
 				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.01}, 0.15)
+                $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
 			}
 		},
 		onLeave: function(index, direction){
@@ -26,6 +27,7 @@ $(function(){
 			if(index == '4'){
                 // 离开页面4
 				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 0,y: 0,delay:0.01}, 0.15)
+                $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
 			}
 		}
     });
