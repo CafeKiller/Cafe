@@ -4,7 +4,7 @@ body,button,input,select,textarea{font:16px tahoma,sans-serif}
 h1,h2,h3,h4,h5,h6{font-size:100%}
 em,b{font-style:normal}
 a{text-decoration:none} 
-a:hover{text-decoration:underline}
+a:hover{text-decoration:none !important}
 img{border:0} 
 button,input,select,textarea{font-size:100%;outline:none}
 table{border-collapse:collapse;border-spacing:0}

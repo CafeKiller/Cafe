@@ -102,6 +102,7 @@ $('.story-box').on('click',function(){
     _tempHtml = `
         <h3 class="title">${storyList[idx].sub_title}</h3>
         <p class="content">${storyList[idx].content}</p>
+        <a class="pop-close" href="javascript:closePop()">×</a>
     `
     $('.pop-story-cont').html(_tempHtml)
     _tempHtml = ``;
@@ -126,10 +127,10 @@ autoScrolling();
 // 开启弹窗
 function showPop(id){
     // console.log("showPop",$(id));
-    $('.pop-model').addClass("active")
-    $(`#${id}`).css({
-        display:'flex'
-    })
+    $(`.pop-model#${id}`).addClass("active")
+    // $(`#${id}`).css({
+    //     display:'flex'
+    // })
 }
 
 // 关闭弹窗
