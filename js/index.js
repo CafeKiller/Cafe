@@ -13,7 +13,7 @@ $(function(){
 			}
 			if(index == 4){
                 // 进入页面4
-				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.01}, 0.15)
+				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
                 $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
 			}
 		},
