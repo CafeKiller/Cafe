@@ -265,16 +265,18 @@
     cursor: pointer;
     
 }
-.p4swiper .swiper-slide:nth-of-type(1) .story-box::before{
+.story-box::before{
     content: "";
     position: absolute;
     bottom: 50px;
     left: 40px;
-    width: 43px;
-    height: 49px;
-    background: url(../images/bef_image/bef_1.png);
     z-index: 100;
 }
+.story-box-num0::before{width: 43px; height: 49px; background: url(../images/bef_image/bef_1.png); }
+.story-box-num1::before{width: 40px; height: 47px; background: url(../images/bef_image/bef_2.png); }
+.story-box-num2::before{width: 43px; height: 61px; background: url(../images/bef_image/bef_3.png); }
+.story-box-num3::before{width: 48px; height: 55px; background: url(../images/bef_image/bef_4.png); }
+
 .story-box h3{
     position: absolute;
     top: 10px;

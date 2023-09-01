@@ -34,7 +34,7 @@ $(function(){
 
     $.getJSON('./data/story.json', function (data) {
         console.log("story.json", data);
-        storyList = data.text_list
+        init_Part4_Swiper(data.text_list)
     })
 
     $.getJSON('./data/stack.json', function (data) {
@@ -108,31 +108,36 @@ function initStack(stack_list){
 
 // 初始化 Part4 Swiper模块
 function init_Part4_Swiper(story_list){
-    for (let idx = 0; idx < story_list.length; idx++) {
+
+    story_list.forEach((item,idx)=>{
         p4swiper.appendSlide(`
-            
+            <div class="swiper-slide">
+                <div class="story-box story-box-num${idx}" date-idx="${idx}">
+                    <h3>${item.title.toUpperCase()}</h3>
+                    <img src="${item.cover}" alt="StoryCover_${item.title}">
+                    <span class="timer">${item.timer}</span>
+                </div>
+            </div>
         `)
+    })
+
+    // 经历标签点击事件
+    $('.story-box').on('click',function(){
         
-    }    
+        let idx = $(this).attr('date-idx')
+        let _tempHtml = `
+            <h3 class="title">${story_list[idx].sub_title}</h3>
+            <p class=content>${story_list[idx].content}</p>
+            <a class="pop-close" href="javascript:closePop()">×</a>
+        `
+        $('.pop-story-cont').html(_tempHtml)
+        _tempHtml = ``;
+        showPop("pop-story")
+    })
+      
 }
 
-// 经历标签点击事件
-let _tempHtml = ``
-$('.story-box').on('click',function(){
-    
-    let idx = $(this).attr('date-idx')
-    
-    _tempHtml = `
-        <h3 class="title">${storyList[idx].sub_title}</h3>
-        <p class=content>${storyList[idx].content}</p>
-        <a class="pop-close" href="javascript:closePop()">×</a>
-    `
-    $('.pop-story-cont').html(_tempHtml)
-    _tempHtml = ``;
 
-    showPop("pop-story")
-
-})
 
 
 // 开启弹窗
