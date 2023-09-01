@@ -45,6 +45,21 @@ $(function(){
 
 });
 
+// fullPage 响应式适配函数
+function autoScrolling(){
+    var $ww = $(window).width();
+    // if($ww < 1024){
+    //     $.fn.fullpage.setAutoScrolling(false);
+    // } else {
+    //     $.fn.fullpage.setAutoScrolling(true);
+    // }
+}
+autoScrolling();
+
+// 在window对象上绑定resize监听函数
+$(window).resize(function(){
+    autoScrolling();
+});
 
 
 // 复制文字
@@ -55,6 +70,7 @@ function copyText(domNode){
     
 }
 
+// Part4Swiper对象
 const p4swiper = new Swiper(".p4swiper", {
     loop:true,
     slidesPerView: 3,
@@ -69,14 +85,12 @@ const p4swiper = new Swiper(".p4swiper", {
     
 });
 
-$(window).resize(function(){
-    autoScrolling();
-});
+
 
 // 初始化技术栈页面
 function initStack(stack_list){
     let _html = ``
-    stack_list.forEach((item)=>{
+    stack_list.forEach((item) => {
         _html += `
         <div class="part3-item">
             <span class="tips" style="color:${item.color}">${item.title}</span>
@@ -92,6 +106,15 @@ function initStack(stack_list){
     $(".part3-list").html(_html)
 }
 
+// 初始化 Part4 Swiper模块
+function init_Part4_Swiper(story_list){
+    for (let idx = 0; idx < story_list.length; idx++) {
+        p4swiper.appendSlide(`
+            
+        `)
+        
+    }    
+}
 
 // 经历标签点击事件
 let _tempHtml = ``
@@ -101,7 +124,7 @@ $('.story-box').on('click',function(){
     
     _tempHtml = `
         <h3 class="title">${storyList[idx].sub_title}</h3>
-        <p class="content">${storyList[idx].content}</p>
+        <p class=content>${storyList[idx].content}</p>
         <a class="pop-close" href="javascript:closePop()">×</a>
     `
     $('.pop-story-cont').html(_tempHtml)
@@ -110,18 +133,6 @@ $('.story-box').on('click',function(){
     showPop("pop-story")
 
 })
-
-
-// fullPage 响应式适配函数
-function autoScrolling(){
-    var $ww = $(window).width();
-    // if($ww < 1024){
-    //     $.fn.fullpage.setAutoScrolling(false);
-    // } else {
-    //     $.fn.fullpage.setAutoScrolling(true);
-    // }
-}
-autoScrolling();
 
 
 // 开启弹窗

@@ -23,13 +23,14 @@
     background: url(../images/background/bg1.jpg) center center no-repeat;
     background-size: cover;
 }
+
+
 /* part2 */
 .part2{
     width: 100%;
-    background: url(../images/background/bg2.jpg) center center no-repeat;
+    background: url(../images/background/part2_bg.png) center center no-repeat;
     background-size: cover;
 }
-
 .part2-cont{
     position: relative;
     display: flex;
@@ -44,9 +45,13 @@
 .part2-cont::before{
     content: "";
     position: absolute;
-    width: 43px;
-    height: 49px;
-    background: url(../images/bef_image/bef_1.png);
+    bottom: 5px;
+    left: 5px;
+    width: 75px;
+    height: 75px;
+    background: url(../images/bef_image/bef_12.png);
+    background-size: 75px 75px;
+    transform: scaleX(-1);
 }
 .part2-title{
     position: absolute;
@@ -69,6 +74,7 @@
     height: 100%;
 }
 .head-cover{
+    position: relative;
     margin-bottom: 15px;
     width: 150px;
     height: 135px;
@@ -76,6 +82,15 @@
     background-size: cover;
     border: 3px solid var(--cafe_text1) ;
     border-radius: 10px;
+}
+.head-cover::before{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: -25px;
+    width: 43px;
+    height: 61px;
+    background: url(../images/bef_image/bef_3.png);
 }
 .sev-thirty-box{
     display: flex;
@@ -96,27 +111,46 @@
 /* part3 */
 .part3{
     width: 100%;
-    background: no-repeat center / contain;
+    background: url(../images/background/part3_bg.jpg) no-repeat center / contain;
     background-image: #000;
     background-size: cover;
     text-align: center;
 }
 .part3-cont{
     position: relative;
-    padding-top: 100px;
+    padding-top: 120px;
     margin: 0 auto;
     width: 1000px;
     height: 660px;
-    background-color: rgba(255, 255, 255, .08);
+    background-color: rgba(255, 255, 255, .9);
     border-radius: 5px;
     box-shadow: 4px 4px 10px 3px rgba(255,255,255,.3);
 }
+.part3-cont::before{
+    content: "";
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 120px;
+    height: 120px;
+    background: url(../images/bef_image/bef_12.png);
+    background-size: 120px 120px;
+}
+.part3-cont::after{
+    content: "";
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+    width: 50px;
+    height: 65px;
+    background: url(../images/bef_image/bef_10.png);
+}
 .part3-title{
     position: absolute;
-    top: -60px;
+    top: -50px;
     left: -40px;
     font-size: 78px;
-    background-image:-webkit-linear-gradient(left, rgba(255, 255, 255,.85) 10%,rgba(255, 255, 255,0));
+    background-image:-webkit-linear-gradient(left, rgba(139, 69, 19,.9) 10%,rgba(78, 57, 0,.05));
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     pointer-events:none;
@@ -151,7 +185,7 @@
     width: 100%;
     height: 16px;
     border-radius: 8px;
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(0,0,0,.3);
     z-index: 1;
 }
 .part3-item .progress-inner{
@@ -185,7 +219,7 @@
     margin-top: 10px;
     font-weight: bold;
     font-size: 20px;
-    color: #ffffff;
+    color: #666666;
 }
 /* part3 end */
 
@@ -193,7 +227,7 @@
 .part4{
     width: 100%;
     background-color: #000;
-    /* background: url(../images/background/bg4.png) center center no-repeat; */
+    background: url(../images/background/part4_bg.jpg) center no-repeat;
     background-size: cover;
 }
 .part4-cont{
@@ -216,19 +250,30 @@
     pointer-events: none;
     /* filter: drop-shadow(0px 0px 10px #fff); */
 }
+
 .story-box{
     padding: 10px;
     position: relative;
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(0, 44, 77, .7);
     -webkit-clip-path: polygon(0 0, 90% 10%, 100% 100%, 10% 90%);
     clip-path: polygon(0 0, 90% 10%, 100% 100%, 10% 90%);
     text-align: center;
     user-select: none;
     cursor: pointer;
     
+}
+.p4swiper .swiper-slide:nth-of-type(1) .story-box::before{
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    width: 43px;
+    height: 49px;
+    background: url(../images/bef_image/bef_1.png);
+    z-index: 100;
 }
 .story-box h3{
     position: absolute;
@@ -267,7 +312,7 @@
 
 .part5{
     width: 100%;
-    background: url(../images/background/bg5.png) center center no-repeat;
+    background: url(../images/background/4.jpeg) center center no-repeat;
     background-size: cover;
 }
 .part6{
