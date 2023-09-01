@@ -45,13 +45,25 @@
 .part2-cont::before{
     content: "";
     position: absolute;
-    bottom: 5px;
-    left: 5px;
-    width: 75px;
-    height: 75px;
-    background: url(../images/bef_image/bef_12.png);
-    background-size: 75px 75px;
+    bottom: -20px;
+    left: -55px;
+    width: 192px;
+    height: 96px;
+    background: url(../images/bef_image/bef_9.png);
+    background-size: 192px 96px;
     transform: scaleX(-1);
+    zoom: .7;
+}
+.part2-cont::after{
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -75px;
+    width: 192px;
+    height: 96px;
+    background: url(../images/bef_image/bef_9.png);
+    background-size: 192px 96px;
+    zoom: .8;
 }
 .part2-title{
     position: absolute;
@@ -126,6 +138,17 @@
     border-radius: 5px;
     box-shadow: 4px 4px 10px 3px rgba(255,255,255,.3);
 }
+.part3-icon-1{
+    display: block;
+    position: absolute;
+    right: -40px;
+    top: -30px;
+    width: 120px;
+    height: 120px;
+    background: url(../images/bef_image/bef_11.png);
+    background-size: 120px;
+    transform: scaleX(-1);
+}
 .part3-cont::before{
     content: "";
     position: absolute;
@@ -139,11 +162,12 @@
 .part3-cont::after{
     content: "";
     position: absolute;
-    left: 40px;
-    bottom: 50px;
-    width: 50px;
-    height: 65px;
-    background: url(../images/bef_image/bef_10.png);
+    left: 15px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    background: url(../images/bef_image/bef_13.png);
+    zoom: 1.2;
 }
 .part3-title{
     position: absolute;
