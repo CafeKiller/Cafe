@@ -1,9 +1,6 @@
-let storyList;
-
 $(function(){
     // 创建 Jquery.fullPage 对象
     $('#content').fullpage({
-        // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
         afterLoad: function(anchorLink, index){
 			if(index == 2){
 				// console.log("进入2页面");
@@ -13,7 +10,7 @@ $(function(){
 			}
 			if(index == 4){
                 // 进入页面4
-				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.01}, 0.15)
+				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
                 $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
 			}
 		},
@@ -32,60 +29,36 @@ $(function(){
 		}
     });
 
+    $.getJSON('./data/stack.json', function (data) {
+        console.log("stack.json", data);
+        initStack(data.stack_list)
+    })
+
     $.getJSON('./data/story.json', function (data) {
         console.log("story.json", data);
         init_Part4_Swiper(data.text_list)
     })
 
-    $.getJSON('./data/stack.json', function (data) {
-        console.log("stack.json", data);
-        initStack(data.stack_list)
-        
-    })
-
-});
-
-// fullPage 响应式适配函数
-function autoScrolling(){
-    var $ww = $(window).width();
-    // if($ww < 1024){
-    //     $.fn.fullpage.setAutoScrolling(false);
-    // } else {
-    //     $.fn.fullpage.setAutoScrolling(true);
-    // }
-}
-autoScrolling();
-
-// 在window对象上绑定resize监听函数
-$(window).resize(function(){
     autoScrolling();
+
+    // 在window对象上绑定resize监听函数
+    $(window).resize(function(){
+        autoScrolling();
+    });
+
 });
-
-
-// 复制文字
-function copyText(domNode){
-    let text = $(domNode).text()
-    const _clipb = navigator.clipboard
-    _clipb ? navigator.clipboard.writeText(text) : console.log("当前浏览器无法支持复制");
-    
-}
 
 // Part4Swiper对象
 const p4swiper = new Swiper(".p4swiper", {
     loop:true,
     slidesPerView: 3,
     spaceBetween:20,
-    fadeEffect: {
-        crossFade: true,
-    },
     pagination: {
         clickable: true,
         el: ".p4swiper-pagination",
     },
     
 });
-
-
 
 // 初始化技术栈页面
 function initStack(stack_list){
@@ -106,9 +79,10 @@ function initStack(stack_list){
     $(".part3-list").html(_html)
 }
 
-// 初始化 Part4 Swiper模块
+// 初始化Part4-Swiper模块函数
 function init_Part4_Swiper(story_list){
 
+    // 渲染Part4 SwiperSlide标签
     story_list.forEach((item,idx)=>{
         p4swiper.appendSlide(`
             <div class="swiper-slide">
@@ -121,14 +95,14 @@ function init_Part4_Swiper(story_list){
         `)
     })
 
-    // 经历标签点击事件
+    // 遍历Part4 SwiperSlide标签, 并为其绑定点击事件
+    // 点击事件: 点击后在Story故事弹窗渲染对应的数据
     $('.story-box').on('click',function(){
-        
         let idx = $(this).attr('date-idx')
         let _tempHtml = `
             <h3 class="title">${story_list[idx].sub_title}</h3>
             <p class=content>${story_list[idx].content}</p>
-            <a class="pop-close" href="javascript:closePop()">×</a>
+            <a class="pop-close" href="javascript:closePop('pop-story')">×</a>
         `
         $('.pop-story-cont').html(_tempHtml)
         _tempHtml = ``;
@@ -137,19 +111,43 @@ function init_Part4_Swiper(story_list){
       
 }
 
-
-
-
-// 开启弹窗
+// 通用开启弹窗函数
 function showPop(id){
-    // console.log("showPop",$(id));
+    // 添加弹窗样式
     $(`.pop-model#${id}`).addClass("active")
-    // $(`#${id}`).css({
-    //     display:'flex'
-    // })
+
+    // 判断是否为Story故事模块, 如果是Story模块则添加相对应的动画
+    if(id === "pop-story"){
+        TweenMax.staggerTo(".pop-story-cont", 0.3, {opacity: 1,y: -100,delay:0.2}, 0.15)
+    }
 }
 
-// 关闭弹窗
-function closePop(){
-    $('.pop-model').removeClass('active')
+// 通用关闭弹窗函数
+function closePop(id){
+    // 判断关闭的是否为Story故事模块, 如果是Story模块则移除相对应的动画
+    // 如果不是Story模块,则移除弹窗样式
+    if(id === "pop-story"){
+        TweenMax.staggerTo(".pop-story-cont", 0.3, {opacity: 0.1,y: 100,delay:0.2}, 0.15,function(){
+            $('.pop-model').removeClass('active')
+        })
+    }else{
+        $('.pop-model').removeClass('active')
+    }
+}
+
+// 复制文字函数
+function copyText(domNode){
+    let text = $(domNode).text()
+    const _clipb = navigator.clipboard
+    _clipb ? navigator.clipboard.writeText(text) : console.log("当前浏览器无法支持复制");
+}
+
+// fullPage 响应式适配函数
+function autoScrolling(){
+    var $ww = $(window).width();
+    // if($ww < 1024){
+    //     $.fn.fullpage.setAutoScrolling(false);
+    // } else {
+    //     $.fn.fullpage.setAutoScrolling(true);
+    // }
 }
