@@ -280,12 +280,11 @@
     pointer-events: none;
     /* filter: drop-shadow(0px 0px 10px #fff); */
 }
-.p4swiper .swiper-slide .story-box:hover{
-    transform: scale(1.1);
-}
+
 .story-box{
     padding: 10px;
     position: relative;
+    top: 0;
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -295,7 +294,12 @@
     text-align: center;
     user-select: none;
     cursor: pointer;
-    
+    transform: scale(.98);
+    transition: all .2s ease-in;
+}
+.story-box:hover{
+    top: -10px;
+    transform: scale(1);
 }
 .story-box::before{
     content: "";
@@ -402,6 +406,11 @@
     color: #ffffff;
 }
 
+.footer{
+    width: 100%;
+    height: 70px;
+    background-color: #000000;
+}
 /* 测试区域 */
 .test-model{
     position: fixed;

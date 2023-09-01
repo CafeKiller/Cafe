@@ -21,6 +21,15 @@
 - [ ] 页面适配移动端
 - [ ] 加入过渡动画
 
+## 技术栈
+
+| LibraryName        | Version          | Description                     |
+| :----------------- | :--------------- | :------------------------------ |
+| JQuery             | 3.6.4            | JavaScript增强                  |
+| JQuery.fullPage    | 2.7.8            | JQuery全屏页面滚动展示          |
+| Swiper             | 8.3.0            | 轮播图插件                      |
+| TweetMax           | 2.0.1            | 动画增强JS库                    |
+
 
 ## 历史版本
 

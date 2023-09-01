@@ -140,9 +140,9 @@ function copyText(domNode){
 // fullPage 响应式适配函数
 function autoScrolling(){
     var $ww = $(window).width();
-    // if($ww < 1024){
-    //     $.fn.fullpage.setAutoScrolling(false);
-    // } else {
-    //     $.fn.fullpage.setAutoScrolling(true);
-    // }
+    /* if($ww < 1024){
+        $.fn.fullpage.setAutoScrolling(false);
+    } else {
+        $.fn.fullpage.setAutoScrolling(true);
+    } */
 }
