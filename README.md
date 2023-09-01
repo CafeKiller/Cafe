@@ -10,43 +10,21 @@
 
 ## 贡献者
 
-<table>
-    <tr>
-        <th>名称</th>
-        <th>加入时间</th>
-    </tr>
-    <tr>
-        <td>CoffeeKiller</td>
-        <td>2023年6月28日</td>
-    </tr>
-</table>
+| Name          | Join Time     |
+| :---          | :---          |
+| CoffeeKiller  | 2023_06_28    |
 
 ## 任务
 
-- 完成页面的基本构建
-- KV区域接入动态接口
-- 页面适配移动端
-- 加入过渡动画
+- [x] 完成页面的基本构建
+- [ ] KV区域接入动态接口
+- [ ] 页面适配移动端
+- [ ] 加入过渡动画
 
 
 ## 历史版本
-<table>
-    <tr>
-        <th>Version-Number</th>
-        <th>Create-Time</th>
-        <th>Downline-Time</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>Version 1.0</td>
-        <td>2023-06-28</td>
-        <td>2023-07-08</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Version 2.0</td>
-        <td>2023-07-07</td>
-        <td>current</td>
-        <td>更新视觉</td>
-    </tr>
-</table>
+
+| Version-Number | Create_Time | Downline-Time | Description |
+| :---:          | :---        | :---          | :---        |        
+| Version 1.0    | 2023-06-28  | 2023-07-07    |             |
+| Version 2.0    | 2023-07-08  | current       | 视觉更新    |
