@@ -1,29 +1,24 @@
 $(function(){
+    
     // 创建 Jquery.fullPage 对象
     $('#content').fullpage({
         afterLoad: function(anchorLink, index){
 			if(index == 2){
-				// console.log("进入2页面");
 			}
 			if(index == 3){
-				// TweenMax.staggerTo(".swiper-slide", 0.6, {opacity: 1,y: -20,delay:0.3}, 0.15)
 			}
 			if(index == 4){
-                // 进入页面4
 				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
                 $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
 			}
 		},
 		onLeave: function(index, direction){
 			if(index == '2'){
-				// console.log("离开2页面");
 			}
 			if(index == '3'){
-				// TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.01}, 0.15)
 			}
 			if(index == '4'){
-                // 离开页面4
-				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 0,y: 0,delay:0.01}, 0.15)
+				TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
                 $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
 			}
 		}
@@ -118,7 +113,7 @@ function showPop(id){
 
     // 判断是否为Story故事模块, 如果是Story模块则添加相对应的动画
     if(id === "pop-story"){
-        TweenMax.staggerTo(".pop-story-cont", 0.3, {opacity: 1,y: -100,delay:0.2}, 0.15)
+        TweenMax.to(".pop-story-cont", 0.5, {opacity: 1,y: -100,delay:0.5}, 0.15)
     }
 }
 
@@ -127,7 +122,7 @@ function closePop(id){
     // 判断关闭的是否为Story故事模块, 如果是Story模块则移除相对应的动画
     // 如果不是Story模块,则移除弹窗样式
     if(id === "pop-story"){
-        TweenMax.staggerTo(".pop-story-cont", 0.3, {opacity: 0.1,y: 100,delay:0.2}, 0.15,function(){
+        TweenMax.staggerTo(".pop-story-cont", 0.3, {opacity: 0,y: 100,delay:0.2}, 0.15,function(){
             $('.pop-model').removeClass('active')
         })
     }else{

@@ -255,16 +255,22 @@
     background-size: cover;
 }
 .part4-cont{
-    padding-top: 50px;
+    position: relative;
     margin: 0 auto;
     width: 1000px;
     height: 600px;
     /* border: 1px solid #ffffff; */
 }
+.p4-outer{
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+}
 .p4swiper{
     width: 1000px;
     height: 500px;
-    overflow: hidden;
 }
 .p4swiper .swiper-slide{
     position: relative;
@@ -274,7 +280,9 @@
     pointer-events: none;
     /* filter: drop-shadow(0px 0px 10px #fff); */
 }
-
+.p4swiper .swiper-slide .story-box:hover{
+    transform: scale(1.1);
+}
 .story-box{
     padding: 10px;
     position: relative;
@@ -357,7 +365,7 @@
     background-color: rgba(0,0,0,.5);
     z-index: 900;
     transition: opacity .5s ease;
-    opacity: 3;
+    opacity: 1;
 }
 .pop-model.active{
     opacity: 1;
@@ -375,7 +383,7 @@
     border-radius: 10px;
     box-shadow: 3px 3px 3px 3px rgba(0,0,0,.5);
     border: 3px solid #ffffff;
-    opacity: .1;
+    opacity: 0;
 }
 .pop-story-cont .title{
     font-size: 40px;
