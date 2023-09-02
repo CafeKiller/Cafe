@@ -50,11 +50,11 @@ body{
 }
 
 @keyframes diamondBowlUp{
-	0%{
+	0% {
 		width: 18px;
 		opacity: .1;
 	}
-	100%{
+	100% {
 		width: 28px;
 		opacity: .5;
 	}
