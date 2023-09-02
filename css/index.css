@@ -348,11 +348,56 @@
 }
 /* part4 end */
 
+/* part5 start */
 .part5{
     width: 100%;
     background: url(../images/background/part5_bef.jpg) center center no-repeat;
     background-size: cover;
 }
+.part5-cont{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 1240px;
+    height: 640px;
+}
+.part5-cont-item{
+    position: relative;
+    
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .64);
+}
+.part5-cont-item::before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, .9);
+    border-radius: 5px;
+    z-index: 1;
+}
+.part5-cont-item:nth-of-type(1) { grid-area: 1 / 1 / 2 / 3; }
+.part5-cont-item:nth-of-type(2) { grid-area: 2 / 1 / 3 / 3; }
+.part5-cont-item:nth-of-type(3) { grid-area: 3 / 1 / 4 / 4; }
+.part5-cont-item:nth-of-type(4) { grid-area: 3 / 4 / 4 / 7; }
+.part5-cont-item:nth-of-type(5) { grid-area: 1 / 3 / 3 / 7; }
+
+.part5-cont-item.left-model{
+    position: relative;
+    left: -80px;
+    opacity: 0;
+}
+.part5-cont-item.btom-model{
+    position: relative;
+    top: 80px;
+    opacity: 0;
+}
+/* part5 end */
+
 /* 主体区域 end */
 
 

@@ -3,24 +3,24 @@ $(function(){
     // 创建 Jquery.fullPage 对象
     $('#content').fullpage({
         afterLoad: function(anchorLink, index){
-			if(index == 2){
-			}
-			if(index == 3){
-			}
 			if(index == 4){
 				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
                 $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
 			}
+            if(index == 5){
+                TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
+                TweenMax.staggerTo(".btom-model",0.3, {opacity: 1,y: -80,delay:0.2}, 0.15)
+            }
 		},
 		onLeave: function(index, direction){
-			if(index == '2'){
-			}
-			if(index == '3'){
-			}
-			if(index == '4'){
+			if(index == 4){
 				TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
                 $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
 			}
+            if(index == 5){
+                TweenMax.staggerTo(".left-model",0.2, {opacity: 0,x: -80,delay:0.01}, 0.15)
+                TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15)
+            }
 		}
     });
 
