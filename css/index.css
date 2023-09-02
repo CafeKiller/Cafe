@@ -447,10 +447,10 @@
     right: -20%;
     transition: right .3s ease-in;
 }
-.part5-cont-item:hover .sideslip{
+.part5-cont-item.active .sideslip{
     left: 0;
 }
-.part5-cont .part5-cont-item:nth-of-type(3):hover .sideslip{
+.part5-cont .part5-cont-item:nth-of-type(3).active .sideslip{
     left: unset;
     right: 0;
 }

@@ -13,7 +13,10 @@ $(function(){
 			}
             if(index == 5){
                 TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
-                TweenMax.staggerTo(".btom-model",0.3, {opacity: 1,y: -80,delay:0.2}, 0.15)
+                TweenMax.staggerTo(".btom-model",0.3, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
+                    $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
+                })
+                init_Part5Item_MouseEvent()
             }
 		},
 		onLeave: function(index, direction){
@@ -27,7 +30,9 @@ $(function(){
 			}
             if(index == 5){
                 TweenMax.staggerTo(".left-model",0.2, {opacity: 0,x: -80,delay:0.01}, 0.15)
-                TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15)
+                TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15,() => {
+                    $('.part5-cont-item').removeClass("active")
+                })
             }
 		}
     });
@@ -53,6 +58,7 @@ $(function(){
 });
 
 let stack_progress_list = {}
+let part5_current_active = 0
 
 // Part4Swiper对象
 const p4swiper = new Swiper(".p4swiper", {
@@ -130,6 +136,14 @@ function init_Part4_Swiper(story_list){
         showPop("pop-story")
     })
       
+}
+
+function init_Part5Item_MouseEvent(){
+    const p5_Len =  $(".part5-cont-item").length
+    console.log(p5_Len);
+    $(`.part5-cont-item:lt(${ p5_Len-1 })`).on("mouseover",function(){
+        $(this).addClass("active").siblings().removeClass('active')
+    })
 }
 
 // 通用开启弹窗函数
