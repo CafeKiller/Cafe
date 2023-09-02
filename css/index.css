@@ -262,12 +262,38 @@
     /* border: 1px solid #ffffff; */
 }
 .p4-outer{
+    position: relative;
     display: flex;
     align-items: center;
     width: 1000px;
     height: 600px;
     overflow: hidden;
 }
+.p4swiper-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, .64); */
+}
+.p4swiper-pagination .swiper-pagination-bullet{
+    position: relative;
+    margin: 0 10px !important;
+    width: 18px;
+    height: 18px;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    border-radius: 0;
+    opacity: .6;
+}
+.p4swiper-pagination .swiper-pagination-bullet-active{
+    opacity: 1;
+}
+.p4swiper-pagination .swiper-pagination-bullet-active::before{
+    
+}
+
 .p4swiper{
     width: 1000px;
     height: 500px;
@@ -365,9 +391,29 @@
 }
 .part5-cont-item{
     position: relative;
-    
     border-radius: 5px;
     background-color: rgba(0, 0, 0, .64);
+}
+.part5-cont-item .img-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+.part5-cont-item .sideslip{
+    position: absolute;
+    left: -35%;
+    width: 55%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .9);
+    -webkit-clip-path: polygon(0% 0%, 65% 0, 100% 50%, 65% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 65% 0, 100% 50%, 65% 100%, 0% 100%);
+    z-index: 10;
+    transition: left .3s ease-in;
+}
+.part5-cont-item:hover .sideslip{
+    left: 0;
 }
 .part5-cont-item::before{
     content: "";

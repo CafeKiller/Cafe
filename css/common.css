@@ -48,3 +48,14 @@ body{
     overflow: hidden;
     opacity: 0;
 }
+
+@keyframes diamondBowlUp{
+	0%{
+		width: 18px;
+		opacity: .1;
+	}
+	100%{
+		width: 28px;
+		opacity: .5;
+	}
+}
