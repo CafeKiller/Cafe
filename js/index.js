@@ -3,8 +3,12 @@ $(function(){
     // 创建 Jquery.fullPage 对象
     $('#content').fullpage({
         afterLoad: function(anchorLink, index){
+            if(index == 3){
+                stackProgressLoad(stack_progress_list)
+            }
 			if(index == 4){
 				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
+                TweenMax.staggerTo(".p4swiper-pagination", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
                 $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
 			}
             if(index == 5){
@@ -13,8 +17,12 @@ $(function(){
             }
 		},
 		onLeave: function(index, direction){
+            if(index == 3){
+                stackProgressBack()
+            }
 			if(index == 4){
 				TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
+                TweenMax.staggerTo(".p4swiper-pagination", 0.2, {opacity: 0,y: 20,delay:0.01}, 0.15)
                 $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
 			}
             if(index == 5){
@@ -25,12 +33,13 @@ $(function(){
     });
 
     $.getJSON('./data/stack.json', function (data) {
-        console.log("stack.json", data);
         initStack(data.stack_list)
+        stack_progress_list = data.stack_list.map((item)=>{
+            return item.progress_number
+        })
     })
 
     $.getJSON('./data/story.json', function (data) {
-        console.log("story.json", data);
         init_Part4_Swiper(data.text_list)
     })
 
@@ -42,6 +51,8 @@ $(function(){
     });
 
 });
+
+let stack_progress_list = {}
 
 // Part4Swiper对象
 const p4swiper = new Swiper(".p4swiper", {
@@ -63,7 +74,7 @@ function initStack(stack_list){
         <div class="part3-item">
             <span class="tips" style="color:${item.color}">${item.title}</span>
             <div class="progress-outer">
-                <div class="progress-inner" style="width:${item.progress_number}%; background-color:${item.color}; filter: drop-shadow(0px 0px 5px ${item.color}">
+                <div class="progress-inner" style="width:${0}%; background-color:${item.color}; filter: drop-shadow(0px 0px 5px ${item.color}">
                     <span class="progress-number">${item.progress_number}%</span>
                 </div>
             </div>
@@ -72,6 +83,21 @@ function initStack(stack_list){
         `
     })
     $(".part3-list").html(_html)
+}
+
+function stackProgressLoad(progress_list){
+    progress_list.forEach((item,idx)=>{
+        $(`.part3-item:eq(${idx}) .progress-inner`).css({
+            "width": `${item}%`,
+            "transition": "width .55s ease-in"
+        })
+    })
+}
+function stackProgressBack(){
+    $(`.part3-item .progress-inner`).css({
+        "width": `0%`,
+        "transition": "width .15s ease-in"
+    })
 }
 
 // 初始化Part4-Swiper模块函数
