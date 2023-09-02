@@ -4,7 +4,9 @@ $(function(){
     $('#content').fullpage({
         afterLoad: function(anchorLink, index){
             if(index == 3){
-                stackProgressLoad(stack_progress_list)
+                TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
+                    stackProgressLoad(stack_progress_list)
+                })
             }
 			if(index == 4){
 				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
@@ -21,7 +23,9 @@ $(function(){
 		},
 		onLeave: function(index, direction){
             if(index == 3){
-                stackProgressBack()
+                TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
+                    stackProgressBack()
+                })
             }
 			if(index == 4){
 				TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)

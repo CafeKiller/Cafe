@@ -187,9 +187,11 @@
 }
 .part3-item{
     position: relative;
+    left: -60px;
     display: flex;
     align-items: center;
     margin-bottom: 55px;
+    opacity: 0;
 }
 .part3-item .tips{
     padding: 0 10px;
@@ -221,7 +223,7 @@
     border-radius: 7.5px;
     background-color: var(--cafe_text2);
     z-index: 5;
-    transition: width .75s ease-in;
+    transition: width .55s ease-in;
 }
 .progress-number{
     position: absolute;
