@@ -140,7 +140,9 @@ body{
 
 .part2-title{
     position: absolute;
+    top: 50px;
     right: 30px;
+    font-family: Pixel;
     font-size: 108px;
     background-image:-webkit-linear-gradient(left, rgba(139, 69, 19,.7) 10%,rgba(78, 57, 0,0));
     -webkit-background-clip:text;
@@ -245,8 +247,9 @@ body{
 }
 .part3-title{
     position: absolute;
-    top: -50px;
+    top: -30px;
     left: -40px;
+    font-family: Pixel;
     font-size: 78px;
     background-image:-webkit-linear-gradient(left, rgba(139, 69, 19,.9) 10%,rgba(78, 57, 0,.05));
     -webkit-background-clip:text;
@@ -319,7 +322,7 @@ body{
     margin-top: 10px;
     font-weight: bold;
     font-size: 20px;
-    color: #666666;
+    color: var(--cafe_text2);
 }
 /* part3 end */
 
@@ -440,8 +443,9 @@ body{
 
 .story-box h3{
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 17px;
+    left: 12px;
+    font-family: Pixel;
     font-size: 40px;
     writing-mode: vertical-rl;
     transform: skew(4deg);
@@ -449,7 +453,6 @@ body{
     color: #ffffff;
     -webkit-text-stroke:1px #000;
     text-stroke:1px #000;
-    opacity: .7;
 }
 .story-box img{
     width:100%;
