@@ -6,7 +6,10 @@ $(function(){
             if(index == 3){
                 TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
                     stackProgressLoad(stack_progress_list)
+                    $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
+                    $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
                 })
+                
             }
 			if(index == 4){
 				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
@@ -15,16 +18,17 @@ $(function(){
 			}
             if(index == 5){
                 TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
-                TweenMax.staggerTo(".btom-model",0.3, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
+                TweenMax.staggerTo(".btom-model",0.2, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
                     $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
+                    init_Part5Item_MouseEvent()
                 })
-                init_Part5Item_MouseEvent()
             }
 		},
 		onLeave: function(index, direction){
             if(index == 3){
                 TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
                     stackProgressBack()
+                    $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
                 })
             }
 			if(index == 4){
@@ -95,6 +99,7 @@ function initStack(stack_list){
     $(".part3-list").html(_html)
 }
 
+// 技术栈进度条加载(进入状态)
 function stackProgressLoad(progress_list){
     progress_list.forEach((item,idx)=>{
         $(`.part3-item:eq(${idx}) .progress-inner`).css({
@@ -103,6 +108,7 @@ function stackProgressLoad(progress_list){
         })
     })
 }
+// 技术栈进度条加载(离开状态)
 function stackProgressBack(){
     $(`.part3-item .progress-inner`).css({
         "width": `0%`,
@@ -142,9 +148,9 @@ function init_Part4_Swiper(story_list){
       
 }
 
+// 初始化 Part5-Item 的鼠标事件
 function init_Part5Item_MouseEvent(){
     const p5_Len =  $(".part5-cont-item").length
-    console.log(p5_Len);
     $(`.part5-cont-item:lt(${ p5_Len-1 })`).on("mouseover",function(){
         $(this).addClass("active").siblings().removeClass('active')
     })

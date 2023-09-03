@@ -73,3 +73,38 @@ body{
 		opacity: .5;
 	}
 }
+
+@keyframes MarioJump {
+	0% {
+		top: -30px;
+	}
+	50% {
+		top: -50px;
+	}
+	100% {
+		top: -30px;
+	}
+}
+
+@keyframes CubeSway {
+	0% {
+		left: 15px;
+		bottom: 20px;
+		transform: rotateZ(0deg);
+	}
+	33% {
+		left: 15px;
+		bottom: 20px;
+		transform: rotateZ(-15deg);
+	}
+	66% {
+		left: 15px;
+		bottom: 20px;
+		transform: rotateZ(15deg);
+	}
+	100% {
+		left: 15px;
+		bottom: 20px;
+		transform: rotateZ(0deg);
+	}
+}
