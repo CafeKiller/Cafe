@@ -31,6 +31,7 @@
     background: url(../images/background/part2_bg.png) 0% center no-repeat;
     background-size: cover;
 }
+
 .part2-cont{
     position: relative;
     display: flex;
@@ -42,27 +43,25 @@
     border-radius: 5px;
     box-shadow: 4px 4px 10px 3px rgba(0,0,0,.5);
 }
-.part2-cont::before{
-    content: "";
+.part2-icon1,
+.part2-icon2{
+    display: block;
     position: absolute;
-    bottom: -20px;
-    left: -55px;
     width: 192px;
     height: 96px;
-    background: url(../images/bef_image/bef_9.png);
     background-size: 192px 96px;
+}
+.part2-icon1{
+    bottom: -20px;
+    left: -55px;
+    background: url(../images/bef_image/bef_9.png);
     transform: scaleX(-1);
     zoom: .7;
 }
-.part2-cont::after{
-    content: "";
-    position: absolute;
+.part2-icon2{
     top: -50px;
     right: -75px;
-    width: 192px;
-    height: 96px;
     background: url(../images/bef_image/bef_9.png);
-    background-size: 192px 96px;
     zoom: .8;
 }
 .part2-title{

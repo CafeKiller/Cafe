@@ -80,6 +80,10 @@ const p4swiper = new Swiper(".p4swiper", {
     
 });
 
+function cloudAnimate(){
+    
+}
+
 // 初始化技术栈页面
 function initStack(stack_list){
     let _html = ``
