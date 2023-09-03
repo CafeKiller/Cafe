@@ -50,20 +50,33 @@
     width: 192px;
     height: 96px;
     background-size: 192px 96px;
+    opacity: .1;
+    transition: all .5s ease-in;
 }
 .part2-icon1{
-    bottom: -20px;
-    left: -55px;
+    bottom: -100px;
+    left: -140px;
     background: url(../images/bef_image/bef_9.png);
     transform: scaleX(-1);
     zoom: .7;
 }
 .part2-icon2{
-    top: -50px;
-    right: -75px;
+    top: -110px;
+    right: -165px;
     background: url(../images/bef_image/bef_9.png);
     zoom: .8;
 }
+.part2-icon1.active{
+    bottom: -20px;
+    left: -55px;
+    opacity: 1
+}
+.part2-icon2.active{
+    top: -50px;
+    right: -75px;
+    opacity: 1
+}
+
 .part2-title{
     position: absolute;
     right: 30px;

@@ -2,45 +2,54 @@ $(function(){
     
     // 创建 Jquery.fullPage 对象
     $('#content').fullpage({
+        // 进入页面 回调函数
         afterLoad: function(anchorLink, index){
-            if(index == 3){
-                TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
-                    stackProgressLoad(stack_progress_list)
-                    $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
-                    $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
-                })
-                
-            }
-			if(index == 4){
-				TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
-                TweenMax.staggerTo(".p4swiper-pagination", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
-                $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
-			}
-            if(index == 5){
-                TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
-                TweenMax.staggerTo(".btom-model",0.2, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
-                    $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
-                    init_Part5Item_MouseEvent()
-                })
+            switch (index) {
+                case 2:
+                    $(".part2-icon1, .part2-icon2").addClass("active")
+                    break
+                case 3:
+                    TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
+                        stackProgressLoad(stack_progress_list)
+                        $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
+                        $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
+                    })
+                    break
+                case 4:
+                    TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
+                    TweenMax.staggerTo(".p4swiper-pagination", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
+                    $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
+                    break
+                case 5:
+                    TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
+                    TweenMax.staggerTo(".btom-model",0.2, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
+                        $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
+                        init_Part5Item_MouseEvent()
+                    })
             }
 		},
+        // 离开页面 回调函数
 		onLeave: function(index, direction){
-            if(index == 3){
-                TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
-                    stackProgressBack()
-                    $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
-                })
-            }
-			if(index == 4){
-				TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
-                TweenMax.staggerTo(".p4swiper-pagination", 0.2, {opacity: 0,y: 20,delay:0.01}, 0.15)
-                $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
-			}
-            if(index == 5){
-                TweenMax.staggerTo(".left-model",0.2, {opacity: 0,x: -80,delay:0.01}, 0.15)
-                TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15,() => {
-                    $('.part5-cont-item').removeClass("active")
-                })
+            switch (index) {
+                case 2:
+                    $(".part2-icon1, .part2-icon2").removeClass("active")
+                    break
+                case 3:
+                    TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
+                        stackProgressBack()
+                        $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
+                    })
+                    break
+                case 4:
+                    TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
+                    TweenMax.staggerTo(".p4swiper-pagination", 0.2, {opacity: 0,y: 20,delay:0.01}, 0.15)
+                    $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
+                    break
+                case 5:
+                    TweenMax.staggerTo(".left-model",0.2, {opacity: 0,x: -80,delay:0.01}, 0.15)
+                    TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15,() => {
+                        $('.part5-cont-item').removeClass("active")
+                    })
             }
 		}
     });
@@ -79,10 +88,6 @@ const p4swiper = new Swiper(".p4swiper", {
     },
     
 });
-
-function cloudAnimate(){
-    
-}
 
 // 初始化技术栈页面
 function initStack(stack_list){
