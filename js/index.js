@@ -60,6 +60,14 @@ $(function(){
 		}
     });
 
+    $.getJSON('https://v1.hitokoto.cn/', function(res){
+        console.log("data",res);
+        $(".kv-cent").html(`
+            <p class="text">${res.hitokoto}</p>
+            <p class="about">——<span class="about-name">${res.from}</span></p>
+        `)
+    })
+
     $.getJSON('./data/stack.json', function (data) {
         initStack(data.stack_list)
         stack_progress_list = data.stack_list.map((item)=>{
