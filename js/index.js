@@ -5,6 +5,9 @@ $(function(){
         // 进入页面 回调函数
         afterLoad: function(anchorLink, index){
             switch (index) {
+                case 1:
+                    TweenMax.staggerTo(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3},0.3)
+                    break
                 case 2:
                     $(".part2-icon1, .part2-icon2").addClass("active")
                     break
@@ -31,6 +34,9 @@ $(function(){
         // 离开页面 回调函数
 		onLeave: function(index, direction){
             switch (index) {
+                case 1:
+                    TweenMax.staggerTo(".part1-cont div", 0.1, {opacity: 0,y: -60,delay:0.01},0.1)
+                    break
                 case 2:
                     $(".part2-icon1, .part2-icon2").removeClass("active")
                     break

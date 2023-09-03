@@ -41,7 +41,50 @@ body{
     background: url(../images/background/bg1.jpg) center center no-repeat;
     background-size: cover;
 }
-
+.part1-cont{
+    position: relative;
+    padding: 20px;
+    margin: 0 auto;
+    width: 1000px;
+    height: 600px;
+}
+.part1-cont .title{
+    position: relative;
+    top: -60px;
+    font-family: Pixel;
+    font-size: 80px;
+    text-align: center;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, .6);
+    opacity: 0;
+}
+.part1-cont .sub-title{
+    position: relative;
+    top: -60px;
+    margin-top: 30px;
+    font-family: Pixel;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .6);
+    opacity: 0;
+}
+.kv-cent{
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    width: 100%;
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .8);
+    box-sizing: border-box;
+    opacity: 0;
+}
+.kv-cent .text{
+    text-indent: 2em;
+}
+.kv-cent .about{
+    text-align: right;
+}
 
 /* part2 */
 .part2{
