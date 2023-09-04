@@ -168,7 +168,9 @@ function init_Part4_Swiper(story_list){
             <p class=content>${story_list[idx].content}</p>
             <a class="pop-close" href="javascript:closePop('pop-story')">×</a>
         `
-        $('.pop-story-cont').html(_tempHtml)
+        $('.pop-story-cont').html(_tempHtml).css({
+            "background-image":`url(${story_list[idx].image})`
+        })
         _tempHtml = ``;
         showPop("pop-story")
     })
