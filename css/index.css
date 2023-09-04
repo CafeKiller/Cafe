@@ -516,6 +516,30 @@ body{
     z-index: 10;
     transition: left .3s ease-in;
 }
+.part5-cont-item .sideslip h1{
+    position: absolute;
+    left: 40%;
+    top: 54%;
+    font-family: "Pixel";
+    font-size: 70px;
+    background-image: -webkit-linear-gradient(left, rgba(139, 69, 19,.9) 10%,rgba(78, 57, 0,.05));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform:translate(-50% , -50%);
+    white-space: nowrap;
+    opacity: .1;
+    transition: opacity .3s .3s ease-in;
+}
+.part5-cont-item .sideslip h2{
+    position: absolute;
+    font-family: "Pixel";
+    right: 60px;
+    top: 55%;
+    font-size: 30px;
+    background-image: -webkit-linear-gradient(bottom, rgba(139, 69, 19,.9) 10%,rgba(78, 57, 0,.05));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .part5-cont-item.btom-model .sideslip{
     position: absolute;
     left: -20%;
@@ -528,9 +552,14 @@ body{
     right: -20%;
     transition: right .3s ease-in;
 }
+.part5-cont-item:hover .sideslip,
 .part5-cont-item.active .sideslip{
     left: 0;
 }
+.part5-cont-item.active .sideslip h1{
+    opacity: 1;
+}
+.part5-cont .part5-cont-item:nth-of-type(3):hover .sideslip,
 .part5-cont .part5-cont-item:nth-of-type(3).active .sideslip{
     left: unset;
     right: 0;
@@ -569,23 +598,39 @@ body{
     padding: 10px 20px;
 }
 .part5-cont-item.cont-model .title{
+    position: relative;
+    left: 150px;
     font-family: "Pixel";
     font-size: 40px;
     line-height: 54px;
     color: #ffffff;
     border-bottom: 1px solid #ffffff;
+    opacity: 0;
 }
 .part5-cont-item.cont-model .content{
     position: absolute;
-    bottom: 30px;
+    width: 95%;
+    bottom: -30px;
     padding-left: 30px;
     color: #ffffff;
     z-index: 10;
+    opacity: 0;
 }
 .part5-cont-item.cont-model .content li{
-    line-height: 28px;
+    display: flex;
+    line-height: 36px;
     font-size: 20px;
     color: #ffffff;
+}
+.part5-cont-item.cont-model .content li span:first-of-type{
+    font-family: "Pixel";
+    width: 35%;
+}
+.part5-cont-item.cont-model .content li span:last-of-type{
+    width: 65%;
+}
+.part5-cont-item.cont-model .content li:last-of-type{
+    font-family: "Pixel";
 }
 .part5-cont-item.cont-model .content li a{
     color: #ffffff;
