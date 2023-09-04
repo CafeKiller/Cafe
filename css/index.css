@@ -583,6 +583,8 @@ body{
     z-index: 10;
 }
 .part5-cont-item.cont-model .content li{
+    line-height: 28px;
+    font-size: 20px;
     color: #ffffff;
 }
 .part5-cont-item.cont-model .content li a{
