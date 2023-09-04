@@ -629,7 +629,7 @@ body{
 .part5-cont-item.cont-model .content li span:last-of-type{
     width: 65%;
 }
-.part5-cont-item.cont-model .content li:last-of-type{
+.part5-cont-item.cont-model .content .content-footer{
     font-family: "Pixel";
 }
 .part5-cont-item.cont-model .content li a{

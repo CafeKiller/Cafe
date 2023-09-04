@@ -27,7 +27,7 @@ $(function(){
                     TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
                     TweenMax.staggerTo(".btom-model",0.2, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
                         $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
-                        init_Part5Item_MouseEvent()
+                        // init_Part5Item_MouseEvent()
                     })
                     TweenMax.staggerTo(".part5-cont-item.cont-model .title",0.5, {opacity: 1,x: -150,delay:0.65}, 0.15)
                     TweenMax.staggerTo(".part5-cont-item.cont-model .content",0.5, {opacity: 1,y: -50,delay:0.65}, 0.15)
