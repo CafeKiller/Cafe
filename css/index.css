@@ -583,7 +583,13 @@ body{
     z-index: 10;
 }
 .part5-cont-item.cont-model .content li{
-    
+    color: #ffffff;
+}
+.part5-cont-item.cont-model .content li a{
+    color: #ffffff;
+}
+.part5-cont-item.cont-model .content li a:hover{
+    text-decoration: underline !important;
 }
 /* part5 end */
 
