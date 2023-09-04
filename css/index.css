@@ -32,6 +32,7 @@ body{
     position: relative;
     font: 20px "Microsoft Yahei"; 
     color: var(--cafe_text2);
+    overflow: hidden;
 }
 
 
@@ -561,6 +562,27 @@ body{
     position: relative;
     top: 80px;
     opacity: 0;
+}
+
+.part5-cont-item.cont-model{
+    position: relative;
+    padding: 10px 20px;
+}
+.part5-cont-item.cont-model .title{
+    font-family: "Pixel";
+    font-size: 40px;
+    line-height: 54px;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.part5-cont-item.cont-model .content{
+    position: absolute;
+    bottom: 30px;
+    padding-left: 30px;
+    color: #ffffff;
+}
+.part5-cont-item.cont-model .content li{
+    
 }
 /* part5 end */
 
