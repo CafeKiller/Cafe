@@ -29,8 +29,8 @@ $(function(){
                         $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
                         // init_Part5Item_MouseEvent()
                     })
-                    TweenMax.staggerTo(".part5-cont-item.cont-model .title",0.5, {opacity: 1,x: -150,delay:0.65}, 0.15)
-                    TweenMax.staggerTo(".part5-cont-item.cont-model .content",0.5, {opacity: 1,y: -50,delay:0.65}, 0.15)
+                    TweenMax.to(".part5-cont-item.cont-model .title",0.5, {opacity: 1,x: -150,delay:0.65})
+                    TweenMax.to(".part5-cont-item.cont-model .content",0.5, {opacity: 1,y: -50,delay:0.65})
             }
 		},
         // 离开页面 回调函数
@@ -58,8 +58,8 @@ $(function(){
                     TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15,() => {
                         $('.part5-cont-item').removeClass("active")
                     })
-                    TweenMax.staggerTo(".part5-cont-item.cont-model .title",0.2, {opacity: 0,x: 150,delay:0.01}, 0.15)
-                    TweenMax.staggerTo(".part5-cont-item.cont-model .content",0.2, {opacity: 0,y: 30,delay:0.01}, 0.15)
+                    TweenMax.to(".part5-cont-item.cont-model .title",0.2, {opacity: 0,x: 150,delay:0.01})
+                    TweenMax.to(".part5-cont-item.cont-model .content",0.2, {opacity: 0,y: 30,delay:0.01})
             }
 		}
     });
