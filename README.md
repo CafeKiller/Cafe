@@ -23,12 +23,13 @@
 
 ## 技术栈
 
-| LibraryName        | Version          | Description                     | Docs                             |
-| :----------------- | :--------------- | :------------------------------ | :-----------------------         | 
-| JQuery             | 3.6.4            | JavaScript增强                  |  [Link](https://api.jquery.com/) |
-| JQuery.fullPage    | 2.7.8            | JQuery全屏页面滚动展示           |                                  |
-| Swiper             | 8.3.0            | 轮播图插件                      |                                   |
-| TweetMax           | 2.0.1            | 用于构建补间动画                 |                                  |
+| LibraryName        | Version          | Description                     |
+| :----------------- | :--------------- | :------------------------------ |
+| JQuery             | 3.6.4            | JavaScript增强                  |
+| JQuery.fullPage    | 2.7.8            | JQuery全屏页面滚动展示          |
+| Swiper             | 8.3.0            | 轮播图插件                      |
+| TweetMax           | 2.0.1            | 用于构建补间动画                |
+| clipboard          | 2.0.6            | 用于复制页面文字                |
 
 
 ## 历史版本
