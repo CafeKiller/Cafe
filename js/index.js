@@ -216,7 +216,7 @@ clipboard.on('success', function(e) {
     e.clearSelection();
 });
 clipboard.on('error', function(e) {
-    Qmsg.success('复制失败')
+    Qmsg.error('复制失败')
     console.error(e);
 });
 
