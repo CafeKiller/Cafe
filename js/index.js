@@ -210,14 +210,8 @@ function closePop(id){
 }
 
 // 复制文字函数
-// function copyText(domNode){
-//     let text = $(domNode).text()
-//     const _clipb = navigator.clipboard
-//     _clipb ? navigator.clipboard.writeText(text) : console.log("当前浏览器无法支持复制");
-// }
 var clipboard = new ClipboardJS('.copy-allowed');
 clipboard.on('success', function(e) {
-    console.log(e);
     e.clearSelection();
 });
 clipboard.on('error', function(e) {
