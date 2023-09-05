@@ -212,9 +212,11 @@ function closePop(id){
 // 复制文字函数
 var clipboard = new ClipboardJS('.copy-allowed');
 clipboard.on('success', function(e) {
+    Qmsg.success('复制成功')
     e.clearSelection();
 });
 clipboard.on('error', function(e) {
+    Qmsg.success('复制失败')
     console.error(e);
 });
 
