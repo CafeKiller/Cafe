@@ -10,9 +10,9 @@
 
 ## 贡献者
 
-| Name          | Join Time     |
-| :---          | :---          |
-| CoffeeKiller  | 2023_06_28    |
+| Name          | Join Time     | Status        |
+| :---          | :---          | :---          |
+| CoffeeKiller  | 2023_06_28    | 维护中        |
 
 ## 任务
 
