@@ -15,9 +15,15 @@ html, body {
 /* reset end */
 
 .wrap{
+    position: relative;
     width: 750px;
 }
-.wrap::before{
+.wrap *{
+    box-sizing: border-box;
+}
+
+/* .wrap::before{
+
     content: "移动端适配中......";
     position: fixed;
     top: 50%;
@@ -31,4 +37,44 @@ html, body {
 }
 .section div{
     display: none;
+} */
+
+/* part1 */
+.part1{
+    position: relative;
+    width: 100%;
+    background: url(../images/background/part1_bg.jpg) center top no-repeat;
+    background-size: 750px 100%;
+}
+
+/* part2 */
+.part2{
+    position: relative;
+    width: 100%;
+    background: url(../images/background/part2_bg.png) center top no-repeat;
+    background-size: 750px 100%;
+}
+
+/* part3 */
+.part3{
+    position: relative;
+    width: 100%;
+    background: url(../images/background/part3_bg.jpg) center top no-repeat;
+    background-size: 750px 100%;
+}
+
+/* part4 */
+.part4{
+    position: relative;
+    width: 100%;
+    background: url(../images/background/part4_bg.jpg) center top no-repeat;
+    background-size: 750px 100%;
+}
+
+/* part5 */
+.part5{
+    position: relative;
+    width: 100%;
+    background: url(../images/background/part5_bef.jpg) center top no-repeat;
+    background-size: 750px 100%;
 }
