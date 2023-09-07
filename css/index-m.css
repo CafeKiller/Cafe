@@ -23,7 +23,6 @@ html, body {
 }
 
 /* .wrap::before{
-
     content: "移动端适配中......";
     position: fixed;
     top: 50%;
@@ -44,7 +43,29 @@ html, body {
     position: relative;
     width: 100%;
     background: url(../images/background/part1_bg.jpg) center top no-repeat;
-    background-size: 750px 100%;
+    /* background-size: 750px 100%; */
+    background-size: cover;
+}
+.part1-cont{
+    position: relative;
+    width: 100%;
+    height: 820px;
+}
+.part1-cont .title{
+    font-family: "Pixel";
+    font-size: 120px;
+    line-height: 120px;
+    text-align: center;
+    color: var(--cafe_text2);
+}
+.part1-cont .sub-title{
+    margin-top: 20px;
+    font-family: "Pixel";
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: var(--cafe_text2);
+    text-shadow: 2px 2px 3px rgba(0,0,0,.5);
 }
 
 /* part2 */
@@ -52,7 +73,7 @@ html, body {
     position: relative;
     width: 100%;
     background: url(../images/background/part2_bg.png) center top no-repeat;
-    background-size: 750px 100%;
+    background-size: cover;
 }
 
 /* part3 */
@@ -60,7 +81,7 @@ html, body {
     position: relative;
     width: 100%;
     background: url(../images/background/part3_bg.jpg) center top no-repeat;
-    background-size: 750px 100%;
+    background-size: cover;
 }
 
 /* part4 */
@@ -68,7 +89,7 @@ html, body {
     position: relative;
     width: 100%;
     background: url(../images/background/part4_bg.jpg) center top no-repeat;
-    background-size: 750px 100%;
+    background-size: cover;
 }
 
 /* part5 */
@@ -76,5 +97,5 @@ html, body {
     position: relative;
     width: 100%;
     background: url(../images/background/part5_bef.jpg) center top no-repeat;
-    background-size: 750px 100%;
+    background-size: cover;
 }
