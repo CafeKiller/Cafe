@@ -57,6 +57,7 @@ html, body {
     line-height: 120px;
     text-align: center;
     color: var(--cafe_text2);
+    opacity: 0;
 }
 .part1-cont .sub-title{
     margin-top: 20px;
@@ -66,6 +67,7 @@ html, body {
     text-align: center;
     color: var(--cafe_text2);
     text-shadow: 2px 2px 3px rgba(0,0,0,.5);
+    opacity: 0;
 }
 .part1-cont .kv-cent{
     position: absolute;
@@ -76,6 +78,7 @@ html, body {
     margin-left: -300px;
     border-radius: 10px;
     background-color: rgba(255,255,255,.7);
+    opacity: 0;
 }
 .part1-cont .kv-cent p:nth-of-type(1){
     font-size: 20px;
@@ -92,6 +95,11 @@ html, body {
     width: 100%;
     background: url(../images/background/part2_bg.png) center top no-repeat;
     background-size: cover;
+}
+.part2-cont{
+    margin: 0 auto;
+    width: 660px;
+    height: 820px;
 }
 
 /* part3 */
