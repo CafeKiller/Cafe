@@ -97,17 +97,45 @@ html, body {
     background-size: cover;
 }
 .part2-cont{
+    padding: 50px 20px 0;
+    position: relative;
     margin: 0 auto;
     width: 660px;
     height: 820px;
     border-radius: 10px;
     background-color: rgba(255,255,255,.7);
 }
+.part2-title{
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    font-family: Pixel;
+    font-size: 80px;
+    line-height: 80px;
+    background-image:-webkit-linear-gradient(left, rgba(139, 69, 19,.7) 10%,rgba(78, 57, 0,0));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    pointer-events:none;
+    transform:scaleX(-1);
+}
 .head-cover{
     width: 135px;
     height: 120px;
     background: url(../images/cover.jpg);
-
+    border: 3px solid var(--cafe_text1);
+    border-radius: 10px;
+}
+.sev-thirty-box{
+    display: flex;
+    justify-content: space-around;
+    font-size: 28px;
+    color: var(--cafe_text2);
+}
+.sev-thirty-box div:first-of-type{
+    width: 30%;
+}
+.sev-thirty-box div:last-of-type{
+    width: 70%;
 }
 
 /* part3 */
