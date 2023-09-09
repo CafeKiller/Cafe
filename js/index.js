@@ -358,7 +358,6 @@ function numberLinearChange(initNum, finaNum, speed, callback){
     
 }
 
-
 // fullPage 响应式适配函数
 function autoScrolling(){
     var $ww = $(window).width();
