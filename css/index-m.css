@@ -165,6 +165,29 @@ html, body {
     background: url(../images/background/part3_bg.jpg) center top no-repeat;
     background-size: cover;
 }
+.part3-cont{
+    padding: 40px 20px 0 40px;
+    position: relative;
+    margin: 0 auto;
+    width: 660px;
+    height: 820px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.7);
+}
+.part3-title{
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    font-family: Pixel;
+    font-size: 50px;
+    line-height: 50px;
+    background-image:-webkit-linear-gradient(top, rgba(139, 69, 19,.7) 10%,rgba(78, 57, 0,0));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    pointer-events:none;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
 
 /* part4 */
 .part4{
