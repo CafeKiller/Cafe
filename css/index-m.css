@@ -119,11 +119,24 @@ html, body {
     transform:scaleX(-1);
 }
 .head-cover{
+    margin-bottom: 30px;
     width: 135px;
     height: 120px;
     background: url(../images/cover.jpg);
     border: 3px solid var(--cafe_text1);
     border-radius: 10px;
+}
+.part2-left{
+    position: relative;
+    margin-bottom: 60px;
+}
+.part2-left::before{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cafe_text1);
 }
 .sev-thirty-box{
     display: flex;
@@ -132,10 +145,17 @@ html, body {
     color: var(--cafe_text2);
 }
 .sev-thirty-box div:first-of-type{
+    font-weight: bold;
     width: 30%;
 }
 .sev-thirty-box div:last-of-type{
     width: 70%;
+}
+.nickname div:last-of-type{
+    display: flex; 
+}
+.nickname div:last-of-type p{
+    margin-right: 20px;
 }
 
 /* part3 */
