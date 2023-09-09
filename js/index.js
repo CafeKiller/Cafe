@@ -2,6 +2,7 @@ $(function(){
     
     // 创建 Jquery.fullPage 对象
     if(isMobile()){
+
         console.log("Mobile Fullpage init ",Date.now());
         $('#content').fullpage({
             // 进入页面 回调函数
@@ -14,7 +15,7 @@ $(function(){
                         $(".part2-icon1, .part2-icon2").addClass("active")
                         break
                     case 3:
-                        TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
+                        TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,y: 50,delay:0.15}, 0.1,()=>{
                             stackProgressLoad(stack_progress_list)
                             $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
                             $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
@@ -45,10 +46,10 @@ $(function(){
                         $(".part2-icon1, .part2-icon2").removeClass("active")
                         break
                     case 3:
-                        TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
-                            stackProgressBack()
-                            $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
-                        })
+                        // TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
+                        //     stackProgressBack()
+                        //     $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
+                        // })
                         break
                     case 4:
                         TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
@@ -66,6 +67,7 @@ $(function(){
             }
         });
     }else{
+
         console.log("PC Fullpage init ",Date.UTC());
         $('#content').fullpage({
             // 进入页面 回调函数
@@ -166,9 +168,7 @@ let part5_current_active = 0
 /*
  * @description: 检测当前页面是否为移动端
  * @return: {boolean} true:移动端 false:PC端
- * 
  * @author: Coffee_Killer
- * @timer: 2023-09-09 21:01:37
  */
 function isMobile(){
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
@@ -189,9 +189,7 @@ const p4swiper = new Swiper(".p4swiper", {
 /*
  * @description: 初始化技术栈页面
  * @params: {array} stack_list 
- * 
  * @author: Coffee_Killer
- * @timer: 2023-09-09 21:02:03
  */
 function initStack(stack_list){
     let _html = ``
@@ -211,7 +209,11 @@ function initStack(stack_list){
     $(".part3-list").html(_html)
 }
 
-// 技术栈进度条加载(进入状态)
+/*
+ * @description: 技术栈进度条加载(进入状态)
+ * @params: {array} progress_list
+ * @author: Coffee_Killer
+ */
 function stackProgressLoad(progress_list){
     progress_list.forEach((item,idx)=>{
         $(`.part3-item:eq(${idx}) .progress-inner`).css({
@@ -220,7 +222,11 @@ function stackProgressLoad(progress_list){
         })
     })
 }
-// 技术栈进度条加载(离开状态)
+
+/*
+ * @description: 技术栈进度条加载(离开状态)
+ * @author: Coffee_Killer
+ */
 function stackProgressBack(){
     $(`.part3-item .progress-inner`).css({
         "width": `0%`,
@@ -228,7 +234,11 @@ function stackProgressBack(){
     })
 }
 
-// 初始化Part4-Swiper模块函数
+/*
+ * @description: 初始化Part4-Swiper模块函数
+ * @params: {array} story_list
+ * @author: Coffee_Killer
+ */
 function init_Part4_Swiper(story_list){
 
     // 渲染Part4 SwiperSlide标签
@@ -270,7 +280,11 @@ function init_Part4_Swiper(story_list){
 //     })
 // }
 
-// 通用开启弹窗函数
+/*
+ * @description: 通用开启弹窗函数
+ * @params: {string} id: DOC_id
+ * @author: Coffee_Killer
+ */
 function showPop(id){
     // 添加弹窗样式
     $(`.pop-model#${id}`).addClass("active")
@@ -281,8 +295,12 @@ function showPop(id){
     }
 }
 
-// 通用关闭弹窗函数
-function closePop(id){
+/*
+ * @description: 通用关闭弹窗函数
+ * @params: {string} id: DOC_id
+ * @author: Coffee_Killer
+ */
+function closePop(id = undefined){
     // 判断关闭的是否为Story故事模块, 如果是Story模块则移除相对应的动画
     // 如果不是Story模块,则移除弹窗样式
     if(id === "pop-story"){

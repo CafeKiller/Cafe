@@ -166,7 +166,7 @@ html, body {
     background-size: cover;
 }
 .part3-cont{
-    padding: 40px 20px 0 40px;
+    padding: 35px 20px 0 40px;
     position: relative;
     margin: 0 auto;
     width: 660px;
@@ -176,7 +176,7 @@ html, body {
 }
 .part3-title{
     position: absolute;
-    top: -15px;
+    top: 10px;
     left: 5px;
     font-family: Pixel;
     font-size: 50px;
@@ -187,6 +187,49 @@ html, body {
     pointer-events:none;
     writing-mode: vertical-rl;
     text-orientation: upright;
+}
+.part3-list{
+    padding-left: 10px;
+    width: 100%;
+    height: 700px;
+}
+.part3-item{
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    position: relative;
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 8px;
+    opacity: 0;
+}
+.part3-item .tips{
+    width: 140px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+.progress-outer{
+    margin:5px 0;
+    position: relative;
+    width: 100%;
+    height: 18px;
+}
+.progress-inner{
+    width: 0%;
+    height: 18px;
+    border-radius: 0 9px 9px 0;
+}
+.progress-number{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font-size: 22px;
+    line-height: 2px;
+    color: #ffffff;
+    transform: translateY(-50%);
 }
 
 /* part4 */
