@@ -1,68 +1,136 @@
 $(function(){
     
     // 创建 Jquery.fullPage 对象
-    $('#content').fullpage({
-        // 进入页面 回调函数
-        afterLoad: function(anchorLink, index){
-            switch (index) {
-                case 1:
-                    TweenMax.staggerTo(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3},0.3)
-                    break
-                case 2:
-                    $(".part2-icon1, .part2-icon2").addClass("active")
-                    break
-                case 3:
-                    TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
-                        stackProgressLoad(stack_progress_list)
-                        $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
-                        $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
-                    })
-                    break
-                case 4:
-                    TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
-                    TweenMax.staggerTo(".p4swiper-pagination", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
-                    $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
-                    break
-                case 5:
-                    TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
-                    TweenMax.staggerTo(".btom-model",0.2, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
-                        $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
-                        // init_Part5Item_MouseEvent()
-                    })
-                    TweenMax.to(".part5-cont-item.cont-model .title",0.5, {opacity: 1,x: -150,delay:0.65})
-                    TweenMax.to(".part5-cont-item.cont-model .content",0.5, {opacity: 1,y: -50,delay:0.65})
+    if(isMobile()){
+        console.log("Mobile Fullpage init ",Date.now());
+        $('#content').fullpage({
+            // 进入页面 回调函数
+            afterLoad: function(anchorLink, index){
+                switch (index) {
+                    case 1:
+                        TweenMax.staggerTo(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3},0.3)
+                        break
+                    case 2:
+                        $(".part2-icon1, .part2-icon2").addClass("active")
+                        break
+                    case 3:
+                        TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
+                            stackProgressLoad(stack_progress_list)
+                            $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
+                            $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
+                        })
+                        break
+                    case 4:
+                        TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
+                        TweenMax.staggerTo(".p4swiper-pagination", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
+                        $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
+                        break
+                    case 5:
+                        TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
+                        TweenMax.staggerTo(".btom-model",0.2, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
+                            $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
+                            // init_Part5Item_MouseEvent()
+                        })
+                        TweenMax.to(".part5-cont-item.cont-model .title",0.5, {opacity: 1,x: -150,delay:0.65})
+                        TweenMax.to(".part5-cont-item.cont-model .content",0.5, {opacity: 1,y: -50,delay:0.65})
+                }
+            },
+            // 离开页面 回调函数
+            onLeave: function(index, direction){
+                switch (index) {
+                    case 1:
+                        TweenMax.staggerTo(".part1-cont div", 0.1, {opacity: 0,y: -60,delay:0.01},0.1)
+                        break
+                    case 2:
+                        $(".part2-icon1, .part2-icon2").removeClass("active")
+                        break
+                    case 3:
+                        TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
+                            stackProgressBack()
+                            $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
+                        })
+                        break
+                    case 4:
+                        TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
+                        TweenMax.staggerTo(".p4swiper-pagination", 0.2, {opacity: 0,y: 20,delay:0.01}, 0.15)
+                        $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
+                        break
+                    case 5:
+                        TweenMax.staggerTo(".left-model",0.2, {opacity: 0,x: -80,delay:0.01}, 0.15)
+                        TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15,() => {
+                            $('.part5-cont-item').removeClass("active")
+                        })
+                        TweenMax.to(".part5-cont-item.cont-model .title",0.2, {opacity: 0,x: 150,delay:0.01})
+                        TweenMax.to(".part5-cont-item.cont-model .content",0.2, {opacity: 0,y: 30,delay:0.01})
+                }
             }
-		},
-        // 离开页面 回调函数
-		onLeave: function(index, direction){
-            switch (index) {
-                case 1:
-                    TweenMax.staggerTo(".part1-cont div", 0.1, {opacity: 0,y: -60,delay:0.01},0.1)
-                    break
-                case 2:
-                    $(".part2-icon1, .part2-icon2").removeClass("active")
-                    break
-                case 3:
-                    TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
-                        stackProgressBack()
-                        $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
-                    })
-                    break
-                case 4:
-                    TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
-                    TweenMax.staggerTo(".p4swiper-pagination", 0.2, {opacity: 0,y: 20,delay:0.01}, 0.15)
-                    $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
-                    break
-                case 5:
-                    TweenMax.staggerTo(".left-model",0.2, {opacity: 0,x: -80,delay:0.01}, 0.15)
-                    TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15,() => {
-                        $('.part5-cont-item').removeClass("active")
-                    })
-                    TweenMax.to(".part5-cont-item.cont-model .title",0.2, {opacity: 0,x: 150,delay:0.01})
-                    TweenMax.to(".part5-cont-item.cont-model .content",0.2, {opacity: 0,y: 30,delay:0.01})
+        });
+    }else{
+        console.log("PC Fullpage init ",Date.UTC());
+        $('#content').fullpage({
+            // 进入页面 回调函数
+            afterLoad: function(anchorLink, index){
+                switch (index) {
+                    case 1:
+                        TweenMax.staggerTo(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3},0.3)
+                        break
+                    case 2:
+                        $(".part2-icon1, .part2-icon2").addClass("active")
+                        break
+                    case 3:
+                        TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
+                            stackProgressLoad(stack_progress_list)
+                            $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
+                            $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
+                        })
+                        break
+                    case 4:
+                        TweenMax.staggerTo(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
+                        TweenMax.staggerTo(".p4swiper-pagination", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
+                        $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
+                        break
+                    case 5:
+                        TweenMax.staggerTo(".left-model",0.3, {opacity: 1,x: 80,delay:0.2}, 0.15)
+                        TweenMax.staggerTo(".btom-model",0.2, {opacity: 1,y: -80,delay:0.2}, 0.15,() => {
+                            $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
+                            // init_Part5Item_MouseEvent()
+                        })
+                        TweenMax.to(".part5-cont-item.cont-model .title",0.5, {opacity: 1,x: -150,delay:0.65})
+                        TweenMax.to(".part5-cont-item.cont-model .content",0.5, {opacity: 1,y: -50,delay:0.65})
+                }
+            },
+            // 离开页面 回调函数
+            onLeave: function(index, direction){
+                switch (index) {
+                    case 1:
+                        TweenMax.staggerTo(".part1-cont div", 0.1, {opacity: 0,y: -60,delay:0.01},0.1)
+                        break
+                    case 2:
+                        $(".part2-icon1, .part2-icon2").removeClass("active")
+                        break
+                    case 3:
+                        TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
+                            stackProgressBack()
+                            $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
+                        })
+                        break
+                    case 4:
+                        TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
+                        TweenMax.staggerTo(".p4swiper-pagination", 0.2, {opacity: 0,y: 20,delay:0.01}, 0.15)
+                        $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
+                        break
+                    case 5:
+                        TweenMax.staggerTo(".left-model",0.2, {opacity: 0,x: -80,delay:0.01}, 0.15)
+                        TweenMax.staggerTo(".btom-model",0.2, {opacity: 0,y: 80,delay:0.01}, 0.15,() => {
+                            $('.part5-cont-item').removeClass("active")
+                        })
+                        TweenMax.to(".part5-cont-item.cont-model .title",0.2, {opacity: 0,x: 150,delay:0.01})
+                        TweenMax.to(".part5-cont-item.cont-model .content",0.2, {opacity: 0,y: 30,delay:0.01})
+                }
             }
-		}
-    });
+        });
+    }
+    
 
     $.getJSON('https://v1.hitokoto.cn/', function(res){
         console.log("data",res);
@@ -95,6 +163,17 @@ $(function(){
 let stack_progress_list = {}
 let part5_current_active = 0
 
+/*
+ * @description: 检测当前页面是否为移动端
+ * @return: {boolean} true:移动端 false:PC端
+ * 
+ * @author: Coffee_Killer
+ * @timer: 2023-09-09 21:01:37
+ */
+function isMobile(){
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
+
 // Part4Swiper对象
 const p4swiper = new Swiper(".p4swiper", {
     loop:true,
@@ -107,7 +186,13 @@ const p4swiper = new Swiper(".p4swiper", {
     
 });
 
-// 初始化技术栈页面
+/*
+ * @description: 初始化技术栈页面
+ * @params: {array} stack_list 
+ * 
+ * @author: Coffee_Killer
+ * @timer: 2023-09-09 21:02:03
+ */
 function initStack(stack_list){
     let _html = ``
     stack_list.forEach((item) => {
