@@ -176,7 +176,7 @@ html, body {
 }
 .part3-title{
     position: absolute;
-    top: 10px;
+    top: 150px;
     left: 5px;
     font-family: Pixel;
     font-size: 50px;
@@ -187,6 +187,7 @@ html, body {
     pointer-events:none;
     writing-mode: vertical-rl;
     text-orientation: upright;
+    opacity: 0;
 }
 .part3-list{
     padding-left: 10px;
@@ -194,7 +195,7 @@ html, body {
     height: 700px;
 }
 .part3-item{
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     padding: 5px 10px;
     position: relative;
     top: -50px;
@@ -203,6 +204,7 @@ html, body {
     background-color: rgba(255,255,255,.5);
     border-radius: 8px;
     opacity: 0;
+    overflow: hidden;
 }
 .part3-item .tips{
     width: 140px;
@@ -230,6 +232,21 @@ html, body {
     line-height: 2px;
     color: #ffffff;
     transform: translateY(-50%);
+}
+.part3-item .tags{
+    font-size: 15px;
+    line-height: 24px;
+}
+.part3-btn{
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--cafe_text2);
+    transform: translateX(-50%);
 }
 
 /* part4 */

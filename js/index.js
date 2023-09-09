@@ -15,10 +15,11 @@ $(function(){
                         $(".part2-icon1, .part2-icon2").addClass("active")
                         break
                     case 3:
+                        TweenMax.to(".part3-title",0.45, {opacity: 1,y: -130,delay:0.25})
                         TweenMax.staggerTo(".part3-item", 0.2, {opacity: 1,y: 50,delay:0.15}, 0.1,()=>{
                             stackProgressLoad(stack_progress_list)
-                            $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
-                            $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
+                            $('.part3-icon-1').css({ "animation": "MarioJump .1s 3 linear" })
+                            $('.part3-icon-2').css({ "animation": "CubeSway .1s 3 linear" })
                         })
                         break
                     case 4:
@@ -46,10 +47,11 @@ $(function(){
                         $(".part2-icon1, .part2-icon2").removeClass("active")
                         break
                     case 3:
-                        // TweenMax.staggerTo(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01}, 0.1,()=>{
-                        //     stackProgressBack()
-                        //     $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
-                        // })
+                        TweenMax.to(".part3-title",0.15, {opacity: 0,y: 0,delay:0.05})
+                        TweenMax.staggerTo(".part3-item", 0.05, {opacity: 0, y: 0,delay:0.01}, 0.1,()=>{
+                            stackProgressBack()
+                            $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
+                        })
                         break
                     case 4:
                         TweenMax.staggerTo(".swiper-slide", 0.2, {opacity: 0,y: 0,delay:0.01}, 0.15)
