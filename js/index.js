@@ -70,7 +70,7 @@ $(function(){
         });
     }else{
 
-        console.log("PC Fullpage init ",Date.UTC());
+        console.log("PC Fullpage init ",Date.now());
         $('#content').fullpage({
             // 进入页面 回调函数
             afterLoad: function(anchorLink, index){
@@ -218,6 +218,11 @@ function initStack(stack_list){
  */
 function stackProgressLoad(progress_list){
     progress_list.forEach((item,idx)=>{
+
+        numberLinearChange(0, item, 20, function(changeNum) {
+            $(`.part3-item:eq(${idx}) .progress-number`).html(`${changeNum}%`)
+        })
+
         $(`.part3-item:eq(${idx}) .progress-inner`).css({
             "width": `${item}%`,
             "transition": "width .55s ease-in"
@@ -274,13 +279,16 @@ function init_Part4_Swiper(story_list){
       
 }
 
-// 初始化 Part5-Item 的鼠标事件
-// function init_Part5Item_MouseEvent(){
-//     const p5_Len =  $(".part5-cont-item").length
-//     $(`.part5-cont-item:lt(${ p5_Len-1 })`).on("mouseover",function(){
-//         $(this).addClass("active").siblings().removeClass('active')
-//     })
-// }
+/*
+ * @description: 初始化 Part5-Item 的鼠标事件
+ * @author: Coffee_Killer
+ */
+/* function init_Part5Item_MouseEvent(){
+    const p5_Len =  $(".part5-cont-item").length
+    $(`.part5-cont-item:lt(${ p5_Len-1 })`).on("mouseover",function(){
+        $(this).addClass("active").siblings().removeClass('active')
+    })
+} */
 
 /*
  * @description: 通用开启弹窗函数
@@ -324,6 +332,31 @@ clipboard.on('error', function(e) {
     Qmsg.error('复制失败')
     console.error(e);
 });
+
+/*
+ * @description: 让初始数字进行线性增长到最终数字
+ * @params: {number} initNum: 初始数字
+ * @params: {number} finaNum: 最终数字
+ * @params: {number} speed: 速度控制
+ * @params: {function} callback: 回调函数
+ * 
+ * @author: Coffee_Killer
+ * @timer: 2023-09-09 22:11:44
+ */
+function numberLinearChange(initNum, finaNum, speed, callback){
+    let interval;
+    if(initNum <= finaNum){
+        interval = setInterval(
+            () => {
+                if(typeof callback === 'function'){
+                    callback(initNum)
+                }
+                clearInterval(interval)
+                return numberLinearChange(++initNum, finaNum, speed, callback)
+            }, speed); 
+    }
+    
+}
 
 
 // fullPage 响应式适配函数
