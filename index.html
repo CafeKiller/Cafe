@@ -233,17 +233,27 @@
                 <!-- <button onclick="showPop('pop-story')">故事弹窗</button> -->
             </div>
         </div>
+
+        <div class="loading-cont">
+            <div class="loading-text">
+                资源装载中: 已加载<span class="count">1</span>个资源, 当前加载<span class="type">other</span>类型资源
+            </div>
+        </div>
         
 	</body>
 
     <!-- 监听页面各类资源加载 -->
     <script>
-        let resource_cout = 0
+        let dom_count = document.querySelector(".loading-text .count")
+        let dom_type = document.querySelector(".loading-text .type")
+        let resource_count = 0
         const ResObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             entries.forEach((item,index)=>{
-                resource_cout ++
-                console.log(`资源装载中: 已加载${resource_cout}个资源, 当前加载${item.initiatorType}类型资源, 时间戳:${Date.now()}`);
+                resource_count ++
+                // console.log(`资源装载中: 已加载${resource_cout}个资源, 当前加载${item.initiatorType}类型资源, 时间戳:${Date.now()}`);
+                dom_count.innerText = resource_count
+                dom_type.innerText= item.initiatorType
             })
 
         });
@@ -252,7 +262,8 @@
 
         window.onload = ()=>{
             ResObserver.disconnect()
-            console.log(`页面加载完成,时间戳:${Date.now()}`);
+            // console.log(`页面加载完成,时间戳:${Date.now()}`);
+            document.querySelector(".loading-cont").className = "loading-cont loaded"
         }
     </script>
 

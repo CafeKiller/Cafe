@@ -34,6 +34,29 @@
     opacity: 0;
 }
 
+.loading-cont{
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+	opacity: 1;
+	z-index: 9999;
+	transition: opacity 1.2s ease-in;
+}
+.loading-text{
+	line-height: 100vh;
+	font-size: 50px;
+	text-align: center;
+	color: #ffffff;
+}
+.loading-cont.loaded{
+	opacity: 0;
+	z-index: -1;
+}
+
 @keyframes diamondBowlUp_1{
 	0% {
 		width: 12px;
