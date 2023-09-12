@@ -267,17 +267,19 @@ html, body {
     height: 795px;
 } 
 .part4-cont .story-box{
+    padding: 10px;
     position: relative;
     margin: 0 auto;
     width: 560px;
     height: 795px;
     background-color: rgba(255,255,255,.5);
+    border-radius: 10px;
 }
 .part4-cont .story-box h3{
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 24px;
+    font-size: 32px;
     color: #ffff;
 }
 .part4-cont .story-box .timer{
@@ -291,8 +293,17 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
-
+.part4-cont .p4swiper-pagination{
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+.part4-cont .swiper-pagination-bullet{
+    width: 16px;
+    height: 16px;
+}
 
 /* part5 */
 .part5{

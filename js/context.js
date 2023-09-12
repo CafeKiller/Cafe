@@ -77,7 +77,6 @@ if(isMobile()){
         slidesPerView: 1,
         spaceBetween:20,
         pagination: {
-            clickable: true,
             el: ".p4swiper-pagination",
         },
     });
