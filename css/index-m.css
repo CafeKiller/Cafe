@@ -256,6 +256,43 @@ html, body {
     background: url(../images/background/part4_bg.jpg) center top no-repeat;
     background-size: cover;
 }
+.part4-cont{
+    position: relative;
+    margin: 0 auto;
+    width: 680px;
+    height: 880px;
+}
+
+.part4-cont .swiper-slide{
+    height: 795px;
+} 
+.part4-cont .story-box{
+    position: relative;
+    margin: 0 auto;
+    width: 560px;
+    height: 795px;
+    background-color: rgba(255,255,255,.5);
+}
+.part4-cont .story-box h3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    color: #ffff;
+}
+.part4-cont .story-box .timer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 28px;
+    color: #ffff;
+}
+.part4-cont .story-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* part5 */
 .part5{
