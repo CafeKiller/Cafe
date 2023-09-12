@@ -26,7 +26,7 @@ $(function(){
         |     >=>   >=>   >=>  >=>  >=> >>         >=>                    |
         |     >=>     >=> >=> >==> >==>  >====>   >==>                    |
         |                                                                 |
-        |     = Powered by @Fengm Studio/Coffee_Killer                    |
+        |     => Powered by @Fengm Studio/Coffee_Killer <=                |
         +=================================================================+
     `);
 

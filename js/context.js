@@ -3,10 +3,11 @@
  */
 $(function(){
 
-    // 创建 Jquery.fullPage 对象
+     
     if(isMobile()){
-
         console.log("Mobile Fullpage init ",Date.now());
+
+        // 移动端 fullpage 容器初始化
         $('#content').fullpage({
             // 进入页面 回调函数
             afterLoad: function(anchorLink, index){
@@ -71,8 +72,22 @@ $(function(){
                 }
             }
         });
+
+        // 移动端 Part4Swiper对象
+        const p4swiper = new Swiper(".p4swiper", {
+            loop:true,
+            slidesPerView: 1,
+            spaceBetween:20,
+            pagination: {
+                clickable: true,
+                el: ".p4swiper-pagination",
+            },
+        });
+
     }else{
         console.log("PC Fullpage init ",Date.now());
+
+        // PC端 fullpage 容器初始化
         $('#content').fullpage({
             // 进入页面 回调函数
             afterLoad: function(anchorLink, index){
@@ -135,6 +150,20 @@ $(function(){
                 }
             }
         });
+
+
+        // PC端 Part4Swiper对象
+        const p4swiper = new Swiper(".p4swiper", {
+            loop:true,
+            slidesPerView: 1,
+            spaceBetween:20,
+            pagination: {
+                clickable: true,
+                el: ".p4swiper-pagination",
+            },
+        });
+
+
     }
 
 })

@@ -13,17 +13,7 @@ function isMobile(){
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 }
 
-// Part4Swiper对象
-const p4swiper = new Swiper(".p4swiper", {
-    loop:true,
-    slidesPerView: 3,
-    spaceBetween:20,
-    pagination: {
-        clickable: true,
-        el: ".p4swiper-pagination",
-    },
-    
-});
+
 
 /*
  * @description: 初始化技术栈页面
@@ -56,9 +46,9 @@ function initStack(stack_list){
 function stackProgressLoad(progress_list){
     progress_list.forEach((item,idx)=>{
 
-        numberLinearChange(0, item, 20, function(changeNum) {
+        /* numberLinearChange(0, item, 20, function(changeNum) {
             $(`.part3-item:eq(${idx}) .progress-number`).html(`${changeNum}%`)
-        })
+        }) */
 
         $(`.part3-item:eq(${idx}) .progress-inner`).css({
             "width": `${item}%`,
