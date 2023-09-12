@@ -235,6 +235,27 @@
         </div>
         
 	</body>
+
+    <!-- 监听页面各类资源加载 -->
+    <script>
+        let resource_cout = 0
+        const ResObserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((item,index)=>{
+                resource_cout ++
+                console.log(`资源装载中: 已加载${resource_cout}个资源, 当前加载${item.initiatorType}类型资源, 时间戳:${Date.now()}`);
+            })
+
+        });
+        // 开始监听资源条目
+        ResObserver.observe({ entryTypes: ['resource'] });
+
+        window.onload = ()=>{
+            ResObserver.disconnect()
+            console.log(`页面加载完成,时间戳:${Date.now()}`);
+        }
+    </script>
+
 	
     <!-- 外链JS -->
     <script src="./js/libs/message.min.js"></script>
@@ -246,8 +267,6 @@
     <script src="./js/initialize.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/context.js"></script>
-
-    <!-- <script src="./js/resize.js"></script> -->
 
     <script>
         
