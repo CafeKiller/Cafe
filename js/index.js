@@ -52,7 +52,7 @@ function stackProgressLoad(progress_list){
 
         $(`.part3-item:eq(${idx}) .progress-inner`).css({
             "width": `${item}%`,
-            "transition": "width .55s ease-in"
+            "transition": "width 0.85s ease-in"
         })
     })
 }

@@ -11,14 +11,15 @@ if(isMobile()){
         afterLoad: function(anchorLink, index){
             switch (index) {
                 case 1:
-                    gsap.to(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3},0.3)
+                    gsap.to(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3, stagger:0.3})
                     break
                 case 2:
                     $(".part2-icon1, .part2-icon2").addClass("active")
                     break
                 case 3:
                     gsap.to(".part3-title",0.45, {opacity: 1,y: -130,delay:0.25})
-                    gsap.to(".part3-item", 0.2, {opacity: 1,y: 50,delay:0.15}, 0.1,()=>{
+                    gsap.to(".part3-item", 0.2, { opacity: 1,y: 50,delay:0.15 }, 0.1,
+                        ()=>{
                         stackProgressLoad(stack_progress_list)
                         $('.part3-icon-1').css({ "animation": "MarioJump .1s 3 linear" })
                         $('.part3-icon-2').css({ "animation": "CubeSway .1s 3 linear" })
@@ -90,17 +91,18 @@ if(isMobile()){
         afterLoad: function(anchorLink, index){
             switch (index) {
                 case 1:
-                    gsap.to(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3},0.3)
+                    gsap.to(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3, stagger:0.3})
                     break
                 case 2:
                     $(".part2-icon1, .part2-icon2").addClass("active")
                     break
                 case 3:
-                    gsap.to(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15}, 0.1,()=>{
-                        stackProgressLoad(stack_progress_list)
-                        $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
-                        $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
-                    })
+                    gsap.to(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15,stagger:0.1,
+                                                onCompleta:()=>{
+                                                        stackProgressLoad(stack_progress_list)
+                                                        $('.part3-icon-1').css({ "animation": "MarioJump .2s 3 linear" })
+                                                        $('.part3-icon-2').css({ "animation": "CubeSway .2s 3 linear" })
+                                                    }})
                     break
                 case 4:
                     gsap.to(".swiper-slide", 0.3, {opacity: 1,y: -20,delay:0.2}, 0.15)
