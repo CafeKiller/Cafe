@@ -147,7 +147,7 @@ if(isMobile()){
                 case 3:
                     /* 技术栈页面离开动画 */
                     gsap.to(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01, stagger:0.01, 
-                                                onStart:()=>{
+                                                onCompleta:()=>{
                                                     /* 技术栈进度条回退 */
                                                     stackProgressBack()
                                                     $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
