@@ -40,6 +40,8 @@
 | TweetMax           | 2.0.1            | 用于构建补间动画                |
 | clipboard          | 2.0.6            | 用于复制页面文字                |
 | message            | 0.0.1            | 用于消息提示                    |
+| gsap               | 3.12.2           | 一个健全的web动画库             |
+| jquery-easing      | v1.4.1           | Jquery动画扩展                  |
 
 
 ## 历史版本
