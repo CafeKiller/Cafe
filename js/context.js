@@ -88,6 +88,7 @@ if(isMobile()){
     // PC端 fullpage 容器初始化
     $('#content').fullpage({
         scrollingSpeed: 1000,//设置滚动速度，单位毫秒，默认700
+        easing: 'easeOutBack',//定义页面section滚动的动画方式，若修改此项需引入jquery.easing插件
         // 进入页面 回调函数
         afterLoad: function(anchorLink, index){
             switch (index) {
@@ -146,7 +147,7 @@ if(isMobile()){
                 case 3:
                     /* 技术栈页面离开动画 */
                     gsap.to(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01, stagger:0.01, 
-                                                onCompleta:()=>{
+                                                onStart:()=>{
                                                     /* 技术栈进度条回退 */
                                                     stackProgressBack()
                                                     $('.part3-icon-1, .part3-icon-2').css({ "animation": "none" })
