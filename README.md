@@ -42,6 +42,7 @@
 | message            | 0.0.1            | 用于消息提示                    |
 | gsap               | 3.12.2           | 一个健全的web动画库             |
 | jquery-easing      | v1.4.1           | Jquery动画扩展                  |
+| art-template       | 4.13.2           | 一个简约、超快的模板引擎。      |
 
 
 ## 历史版本
