@@ -16,9 +16,9 @@
 
 ## 贡献者
 
-| Name          | Join Time     | Status           |
-| :---          | :---          | :---             |
-| CoffeeKiller  | 2023_06_28    | 持续输出中       |
+| Name         | Join Time  | Status |
+|:-------------|:-----------|:-------|
+| CoffeeKiller | 2023_06_28 | 持续输出中  |
 
 
 ## 任务
@@ -32,25 +32,25 @@
 
 ## 相关技术
 
-| LibraryName        | Version          | Description                     |
-| :----------------- | :--------------- | :------------------------------ |
-| JQuery             | 3.6.4            | JavaScript增强                  |
-| JQuery.fullPage    | 2.7.8            | JQuery全屏页面滚动展示          |
-| Swiper             | 8.3.0            | 轮播图插件                      |
-| TweetMax           | 2.0.1            | 用于构建补间动画                |
-| clipboard          | 2.0.6            | 用于复制页面文字                |
-| message            | 0.0.1            | 用于消息提示                    |
-| gsap               | 3.12.2           | 一个健全的web动画库             |
-| jquery-easing      | v1.4.1           | Jquery动画扩展                  |
-| art-template       | 4.13.2           | 一个简约、超快的模板引擎。      |
+| LibraryName     | Version | Description    |
+|:----------------|:--------|:---------------|
+| JQuery          | 3.6.4   | JavaScript增强   |
+| JQuery.fullPage | 2.7.8   | JQuery全屏页面滚动展示 |
+| Swiper          | 8.3.0   | 轮播图插件          |
+| TweetMax        | 2.0.1   | 用于构建补间动画       |
+| clipboard       | 2.0.6   | 用于复制页面文字       |
+| message         | 0.0.1   | 用于消息提示         |
+| gsap            | 3.12.2  | 一个健全的web动画库    |
+| jquery-easing   | v1.4.1  | Jquery动画扩展     |
+| art-template    | 4.13.2  | 一个简约、超快的模板引擎。  |
 
 
 ## 历史版本
 
 | Version-Number | Create_Time | Downline-Time | Description |
-| :---:          | :---        | :---          | :---        |        
+|:---------------|:------------|:--------------|:------------|        
 | Version 1.0    | 2023-06-28  | 2023-07-07    |             |
-| Version 2.0    | 2023-07-08  | current       | 视觉更新    |
+| Version 2.0    | 2023-07-08  | current       | 视觉更新        |
 
 
 ## 说明
