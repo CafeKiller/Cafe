@@ -312,3 +312,36 @@ html, body {
     background: url(../images/background/part5_bef.jpg) center top no-repeat;
     background-size: cover;
 }
+.part5-cont{
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+    width: 680px;
+    height: 880px;
+    background: rgba(255,255,255,.7);
+}
+.part5-cont-item.cont-model{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+}
+.part5-cont-item.left-model{
+    position: absolute;
+    top: 600px;
+    width: 50%;
+    height: 140px;
+}
+.part5-cont-item.left-model:nth-of-type(2){
+    right: 0;
+}
+.part5-cont-item.btom-model{
+    position: absolute;
+    top: 740px;
+    width: 50%;
+    height: 140px;
+}
+.part5-cont-item.btom-model:nth-of-type(4){
+    right: 0;
+}
