@@ -4,6 +4,7 @@
 
 let stack_progress_list = {}
 let part5_current_active = 0
+let intro_info = {}
 
 $(function(){
 
@@ -45,9 +46,16 @@ $(function(){
         })
     })
 
+    $.getJSON('./data/my.json', function (data) {
+        intro_info = data.intro_info
+        console.log("intro_info", intro_info)
+    })
+
     $.getJSON('./data/story.json', function (data) {
         init_Part4_Swiper(data.text_list)
     })
+
+
 
     autoScrolling();
 
