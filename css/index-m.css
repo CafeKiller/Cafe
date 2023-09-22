@@ -329,6 +329,7 @@ html, body {
     width: 100%;
     height: 600px;
     border: 5px solid #ffffff;
+    border-bottom: none;
     border-radius: 10px 10px 0 0;
 }
 .part5-cont-item.cont-model .title{
@@ -375,7 +376,7 @@ html, body {
 }
 .part5-cont-item.left-model,
 .part5-cont-item.btom-model{
-    border: 3px solid #ffffff;
+    border: 5px solid #ffffff;
 }
 .part5-cont-item.btom-model .img-box,
 .part5-cont-item.left-model .img-box{
