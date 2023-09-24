@@ -276,11 +276,13 @@ html, body {
     border-radius: 10px;
 }
 .part4-cont .story-box h3{
+    font-family: "Pixel";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 6px;
+    left: 14px;
     font-size: 32px;
-    color: #ffff;
+    color: #ffffff;
+    text-shadow: 3px 3px 3px rgba(0,0,0,.7);
 }
 .part4-cont .story-box .timer{
     position: absolute;
@@ -303,6 +305,8 @@ html, body {
 .part4-cont .swiper-pagination-bullet{
     width: 16px;
     height: 16px;
+    border-radius: unset;
+    transform: rotateZ(45deg);
 }
 
 /* part5 */
