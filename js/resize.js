@@ -1,6 +1,9 @@
 /*
  * Js_Desc: 移动端适配相关
  */
+
+
+
 (function(win, doc, mode) {
     var std = 750;
     if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {

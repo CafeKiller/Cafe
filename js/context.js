@@ -1,6 +1,9 @@
 /*
  * Js_Desc: 页面核心容器对象相关
  */
+
+
+
 let p4swiper = null
 if(isMobile()){
     console.log(`>>>>>>>>>>>> Mobile Fullpage init Data: ${Date.now()}`);
@@ -87,8 +90,8 @@ if(isMobile()){
 
     // PC端 fullpage 容器初始化
     $('#content').fullpage({
-        scrollingSpeed: 1000,//设置滚动速度，单位毫秒，默认700
-        easing: 'easeOutBack',//定义页面section滚动的动画方式，若修改此项需引入jquery.easing插件
+        scrollingSpeed: 1000, //设置滚动速度，单位毫秒，默认700
+        easing: 'easeOutBack', //定义页面section滚动的动画方式，若修改此项需引入jquery.easing插件
         // 进入页面 回调函数
         afterLoad: function(anchorLink, index){
             switch (index) {
@@ -135,7 +138,7 @@ if(isMobile()){
             }
         },
         // 离开页面 回调函数
-        onLeave: function(index, direction){
+        onLeave: function(index, nextIndex, direction){
             switch (index) {
                 case 1:
                     /* 首页元素离开动画 */
