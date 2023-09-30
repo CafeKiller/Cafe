@@ -3,11 +3,11 @@
  */
 let p4swiper = null
 if(isMobile()){
-    console.log("Mobile Fullpage init ",Date.now());
+    console.log(`>>>>>>>>>>>> Mobile Fullpage init Data: ${Date.now()}`);
 
     // 移动端 fullpage 容器初始化
     $('#content').fullpage({
-        // 进入页面 回调函数
+        touchSensitivity: 30, // 控制移动端页面滑动阻力
         afterLoad: function(anchorLink, index){
             switch (index) {
                 case 1:
@@ -83,7 +83,7 @@ if(isMobile()){
     });
 
 }else{
-    console.log("PC Fullpage init ",Date.now());
+    console.log(`>>>>>>>>>>>> PC Fullpage init Data: ${Date.now()}`);
 
     // PC端 fullpage 容器初始化
     $('#content').fullpage({
