@@ -35,7 +35,9 @@
 }
 
 .loading-cont{
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -47,14 +49,22 @@
 	transition: opacity 1.2s ease-in;
 }
 .loading-text{
-	line-height: 100vh;
-	font-size: 50px;
+	line-height: 42px;
+	font-size: 32px;
 	text-align: center;
 	color: #ffffff;
 }
 .loading-cont.loaded{
 	opacity: 0;
 	z-index: -1;
+}
+.loading-text .count{
+	margin: 0 10px;
+	/* background-color: #ffffff;
+	color: transparent; */
+}
+.loading-text .type{
+	margin: 0 10px;
 }
 
 @keyframes diamondBowlUp_1{
