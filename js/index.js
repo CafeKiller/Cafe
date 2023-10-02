@@ -141,8 +141,9 @@ function closePop(id = undefined){
     // 判断关闭的是否为Story故事模块, 如果是Story模块则移除相对应的动画
     // 如果不是Story模块,则移除弹窗样式
     if(id === "pop-story"){
-        TweenMax.staggerTo(".pop-story-cont", 0.3, {opacity: 0,y: 100,delay:0.2}, 0.15,function(){
-            $('.pop-model').removeClass('active')
+        gsap.to(".pop-story-cont", 0.3, {opacity: 0,y: 100,delay:0.2, stagger: 0.15, 
+            onCompleta:()=>{
+            $('.pop-model').removeClass('active')}
         })
     }else{
         $('.pop-model').removeClass('active')
