@@ -164,9 +164,10 @@ if(isMobile()){
                     break
                 case 5:
                     gsap.to(".left-model", 0.2, {opacity: 0,x: -80,delay:0.01}, 0.01)
-                    gsap.to(".btom-model", 0.2, {opacity: 0,y: 80,delay:0.01}, 0.01,() => {
-                        $('.part5-cont-item').removeClass("active")
-                    })
+                    gsap.to(".btom-model", 0.2, {opacity: 0,y: 80,delay:0.01, swagger:0.01, 
+                        onCompleta:() => {
+                            $('.part5-cont-item').removeClass("active")
+                        }})
                     gsap.to(".part5-cont-item.cont-model .title", 0.2, {opacity: 0,x: 150,delay:0.01})
                     gsap.to(".part5-cont-item.cont-model .content", 0.2, {opacity: 0,y: 30,delay:0.01})
             }
