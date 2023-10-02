@@ -1,15 +1,50 @@
 {
   "type": "info",
   "intro_info": {
-    "nickname": ["咖啡", "咖啡Killer", "Coffee_Killer"],
-    "wx_id": "Coffee2113",
-    "qq_id": "1691810090",
-    "phone_id": "1733******81",
-    "email": "zai******@163.com",
-    "cur_addr": "广东 · 深圳",
-    "work_exp": "7个月",
-    "cur_job": "前端开发",
-    "target": "全栈开发工程师",
-    "edu_bg": "专科 (23届潮汕职业技术学院毕业生)"
+    "left":{
+      "nickname":{
+        "title":"常用昵称",
+        "content":["咖啡","咖啡Killer","Coffee_Killer"]
+      }, 
+      "wx-num": {
+        "title":"",
+        "content":"Coffee2113"
+      },
+      "phone-num":{
+        "title":"手机号",
+        "content":"1733******81"
+      },
+      "qq-num":{
+        "title":"QQ",
+        "content":"1691810090"
+      },
+      "email":{
+        "title":"常用邮箱",
+        "content":"zai******@163.com"
+      }
+    },
+    "right":{
+      "address":{
+        "title":"现居住地",
+        "content":"广东 · 深圳"
+      },
+      "work-exp":{
+        "title":"工作经验",
+        "content":"7个月"
+      },
+      "current-jobs":{
+        "title":"当前职业",
+        "content":"前端开发"
+      },
+      "target-jobs":{
+        "title":"理想目标",
+        "content":"全栈开发工程师"
+      },
+      "educ-bg":{
+        "title":"教育背景",
+        "content":"专科 (23届潮汕职业技术学院毕业生)"
+      }
+    }
+    
   }
 }

@@ -144,7 +144,7 @@ function closePop(id = undefined){
         gsap.to(".pop-story-cont", 0.3, {opacity: 0,y: 100,delay:0.2, stagger: 0.15, 
                                         onCompleta:()=>{
                                         $('.pop-model').removeClass('active')}})
-    }else{
+    } else {
         $('.pop-model').removeClass('active')
     }
 }

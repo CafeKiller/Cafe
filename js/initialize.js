@@ -30,7 +30,7 @@ $(function(){
         |     >=>     >=> >=> >==> >==>  >====>   >==>                    |
         |                                                                 |
         |     => Powered by @Fengm Studio/Coffee_Killer <=                |
-        +=================================================================+
+        +=================================================================+ 
     `);
 
     $.getJSON('https://v1.hitokoto.cn/', function(res){
@@ -58,6 +58,7 @@ $(function(){
     })
 
 
+    console.log(intro_info);
 
     autoScrolling();
 

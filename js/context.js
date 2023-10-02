@@ -168,7 +168,7 @@ if(isMobile()){
                                                 onCompleta:() => {
                                                     $('.part5-cont-item').removeClass("active")
                                                 }})
-                gsap.to(".part5-cont-item.cont-model .title", 0.2, {opacity: 0,x: 150,delay:0.01})
+                    gsap.to(".part5-cont-item.cont-model .title", 0.2, {opacity: 0,x: 150,delay:0.01})
                     gsap.to(".part5-cont-item.cont-model .content", 0.2, {opacity: 0,y: 30,delay:0.01})
             }
         }
