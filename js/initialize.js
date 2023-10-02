@@ -50,7 +50,10 @@ $(function(){
 
     $.getJSON('./data/my.json', function (data) {
         intro_info = data.intro_info
-        console.log("intro_info", intro_info)
+        // console.log("intro_info", intro_info)
+        let html = template('intro_info', intro_info)
+        console.log("intro_info html", html);
+        $("#part2-wrap").html(html)
     })
 
     $.getJSON('./data/story.json', function (data) {
@@ -58,7 +61,7 @@ $(function(){
     })
 
 
-    console.log(intro_info);
+    // console.log();
 
     autoScrolling();
 
@@ -66,4 +69,8 @@ $(function(){
     $(window).resize(function(){
         autoScrolling();
     });
+
+    
+    
+    // template.render(source, data, options);
 });

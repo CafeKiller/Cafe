@@ -56,60 +56,38 @@
                         <span class="part2-icon1"></span>
                         <span class="part2-icon2"></span>
                         <h1 class="part2-title">Information</h1>
-                        <div class="part2-left">
-                            <div class="sev-thirty-box head-cover"></div>
-                            <div class="sev-thirty-box nickname">
-                                <div><span>常用昵称</span></div>
-                                <div>
-                                    <p>咖啡</p>
-                                    <p>咖啡Killer</p>
-                                    <p>Coffee_Killer</p>
-                                </div>
-                            </div>
-                            <div class="sev-thirty-box wx-num">
-                                <div><span>微信号</span></div>
-                                <div><p class="copy-allowed" data-clipboard-text="Coffee2113">Coffee2113</p></div>
-                            </div>
-                            <div class="sev-thirty-box phone-num">
-                                <div><span>手机号</span></div>
-                                <div><p class="copy-allowed" data-clipboard-text="1733******81">1733******81</p></div>
-                            </div>
-                            <div class="sev-thirty-box qq-num">
-                                <div><span>QQ</span></div>
-                                <div><p class="copy-allowed" data-clipboard-text="1691810090">1691810090</p></div>
-                            </div>
-                            <div class="sev-thirty-box email">
-                                <div><span>常用邮箱</span></div>
-                                <div><p class="copy-allowed" data-clipboard-text="zaiqiao2481@163.com">zai******@163.com</p></div>
-                            </div>
-                        </div>
-                        <div class="part2-right">
-                            <div class="sev-thirty-box address">
-                                <div><span>现居住地</span></div>
-                                <div><p>广东 · 深圳</p></div>
-                            </div>
-                            <div class="sev-thirty-box work-exp">
-                                <div>工作经验</div>
-                                <div>6月</div>
-                            </div>
-                            <div class="sev-thirty-box current-jobs">
-                                <div>当前职业</div>
-                                <div>前端开发</div>
-                            </div>
-                            <div class="sev-thirty-box target-jobs">
-                                <div>理想目标</div>
-                                <div>全栈开发工程师</div>
-                            </div>
-                            <div class="sev-thirty-box educ-bg">
-                                <div>教育背景</div>
-                                <div>专科 (23届潮汕职业技术学院毕业生)</div>
-                            </div>
-                        </div>
+                        <div id="part2-wrap"></div>
 
-                        <!--<script id="intro_info" type="text/html">
-                                    
-                        </script>-->
-
+                        <!-- 模版渲染数据 -->
+                        <script id="intro_info" type="text/html">
+                            <div class="part2-left">
+                                <div class="sev-thirty-box head-cover"></div>
+                                {{each left}}
+                                    <div class="sev-thirty-box {{$index}}">
+                                        <div><span>{{$value.title}}</span></div>
+                                        {{if $index == "nickname" }}
+                                            <div>
+                                                {{each $value.content}}
+                                                    <p>{{$value}}</p>
+                                                {{/each}}
+                                            </div>
+                                        {{/if}}
+                                        {{if $index != "nickname" }}
+                                            <div><p class="copy-allowed" data-clipboard-text="{{$value.content}}">{{$value.content}}</p></div>
+                                        {{/if}}
+                                    </div>
+                                {{/each}}
+                            </div>
+                            <div class="part2-right">
+                                {{each right}}
+                                    <div class="sev-thirty-box {{$index}}">
+                                        <div><span>{{$value.title}}</span></div>
+                                        <div><p>{{$value.content}}</p></div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </script>
+                        
                     </div>
                 </div>
 
