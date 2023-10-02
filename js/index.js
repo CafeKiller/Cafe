@@ -128,7 +128,7 @@ function showPop(id){
 
     // 判断是否为Story故事模块, 如果是Story模块则添加相对应的动画
     if(id === "pop-story"){
-        TweenMax.to(".pop-story-cont", 0.5, {opacity: 1,y: -100,delay:0.5}, 0.15)
+        gsap.to(".pop-story-cont", 0.5, {opacity: 1,y: -100,delay:0.5}, 0.15)
     }
 }
 
@@ -142,9 +142,8 @@ function closePop(id = undefined){
     // 如果不是Story模块,则移除弹窗样式
     if(id === "pop-story"){
         gsap.to(".pop-story-cont", 0.3, {opacity: 0,y: 100,delay:0.2, stagger: 0.15, 
-            onCompleta:()=>{
-            $('.pop-model').removeClass('active')}
-        })
+                                        onCompleta:()=>{
+                                        $('.pop-model').removeClass('active')}})
     }else{
         $('.pop-model').removeClass('active')
     }
