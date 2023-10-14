@@ -9,6 +9,8 @@
 .loading-cont.loaded{opacity:0;z-index:-1}
 .loading-text .count{margin:0 10px}
 .loading-text .type{margin:0 10px}
+/* 禁止ie渲染 */
+#ie-pop{position:absolute;z-index: 99999;width: 100%;height: 100vh;background-color: black;color: #ffffff;text-align: center; line-height: 100vh;font-size: 26px;}
 
 @keyframes diamondBowlUp_1{0%{width:12px;height:12px;opacity:.3}
 	100%{width:22px;height:22px;opacity:.8}

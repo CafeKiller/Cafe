@@ -30,6 +30,7 @@
 	</head>
 	
 	<body>
+        <div id="ie-pop" style="display: none;"></div>
         <h1 class="hide-text">Cafe_Shop - 咖啡の个人简历网站</h1>
         <div class="wrap">
             <div class="content" id="content">
@@ -193,6 +194,9 @@
         
 	</body>
 
+    <!--  适配代码  -->
+    <script src="./js/fit.js"></script>
+
     <!-- 监听页面各类资源加载 -->
     <script>
         let dom_count = document.querySelector(".loading-text .count")
@@ -217,9 +221,6 @@
             document.querySelector(".loading-cont").className = "loading-cont loaded"
         }
     </script>
-
-    <!--  移动端适配  -->
-    <script src="./js/resize.js"></script>	
 
     <!-- 外链JS -->
     <script src="./js/libs/message.min.js"></script>

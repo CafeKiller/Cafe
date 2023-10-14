@@ -3,7 +3,14 @@
  */
 
 
-
+/*
+ * @description: 移动端适配
+ * @params: {Window} win: 全局对象
+ * @params: {Document} doc: 全局DOM对象
+ * @params: {string} mode: 单位选择,px或rem
+ * 
+ * @author: Coffee_Killer
+ */
 (function(win, doc, mode) {
     var std = 750;
     if(/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
@@ -37,3 +44,33 @@
         }
     }
 })(window, document, 'px');
+
+/*
+ * @description: 判断浏览器版本是否为IE
+ * 
+ * @author: Coffee_Killer
+ * @timer: 2023-10-14 10:58:19
+ */
+function IEVersion() {
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串 
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器 
+    var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+    if(isIE) {
+        IERender()
+    } else if(isIE11) {
+        IERender()
+    }
+}
+
+/*
+ * @description: 针对IE进行渲染, 全面禁止适配IE
+ * 
+ * @author: Coffee_Killer
+ * @timer: 2023-10-14 10:58:19
+ */
+function IERender(){
+    var iePOP = document.getElementById("ie-pop");
+    iePOP.style.display = "block"
+    iePOP.innerText = "检查到您当前使用的是IE浏览器, 网站无法提供服务"
+}
+IEVersion()
