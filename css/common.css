@@ -1,128 +1,27 @@
+:root{--cafe_text1:#4d3900;--cafe_text2:#8b4513;--transparent:url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)}
+.outer-roll{overflow:auto;overflow-x:hidden}
+.outer-roll::-webkit-scrollbar{width:4px}
+.outer-roll::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.5);border-radius:2px}
+.outer-roll::-webkit-scrollbar-track{width:15px;background-color:rgba(0,0,0,.2)}
+.hide-text{font-size:0;text-indent:-9999;overflow:hidden;opacity:0}
+.loading-cont{display:flex;justify-content:center;align-items:center;position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:rgba(0,0,0,.5);opacity:1;z-index:9999;transition:opacity 1.2s ease-in}
+.loading-text{line-height:42px;font-size:32px;text-align:center;color:#ffffff}
+.loading-cont.loaded{opacity:0;z-index:-1}
+.loading-text .count{margin:0 10px}
+.loading-text .type{margin:0 10px}
 
-:root{
-	--cafe_text1: #4d3900;
-	--cafe_text2: #8b4513;
-	--transparent: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+@keyframes diamondBowlUp_1{0%{width:12px;height:12px;opacity:.3}
+	100%{width:22px;height:22px;opacity:.8}
 }
-
-
-
-/* 外壳滑动容器 start */
-.outer-roll{
-	/* width: 100vw;
-	height: 100vh; */
-	overflow: auto;
-	overflow-x: hidden;
+@keyframes diamondBowlUp_2{0%{width:12px;height:12px;opacity:.1}
+	100%{width:14px;height:14px;opacity:.5}
 }
-.outer-roll::-webkit-scrollbar{
-	width: 4px;
+@keyframes MarioJump{0%{top:-30px}
+	50%{top:-50px}
+	100%{top:-30px}
 }
-.outer-roll::-webkit-scrollbar-thumb{
-	background-color: rgba(0, 0, 0, .5);
-	border-radius: 2px;
-}
-.outer-roll::-webkit-scrollbar-track{
-	width: 15px;
-	background-color: rgba(0, 0, 0, .2);
-}
-/* 外壳滑动容器 end */
-
-.hide-text{
-    font-size: 0;
-    text-indent: -9999;
-    overflow: hidden;
-    opacity: 0;
-}
-
-.loading-cont{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, .5);
-	opacity: 1;
-	z-index: 9999;
-	transition: opacity 1.2s ease-in;
-}
-.loading-text{
-	line-height: 42px;
-	font-size: 32px;
-	text-align: center;
-	color: #ffffff;
-}
-.loading-cont.loaded{
-	opacity: 0;
-	z-index: -1;
-}
-.loading-text .count{
-	margin: 0 10px;
-	/* background-color: #ffffff;
-	color: transparent; */
-}
-.loading-text .type{
-	margin: 0 10px;
-}
-
-@keyframes diamondBowlUp_1{
-	0% {
-		width: 12px;
-        height: 12px;
-		opacity: .3;
-	}
-	100% {
-		width: 22px;
-        height: 22px;
-		opacity: .8;
-	}
-}
-@keyframes diamondBowlUp_2{
-	0% {
-		width: 12px;
-        height: 12px;
-		opacity: .1;
-	}
-	100% {
-		width: 14px;
-        height: 14px;
-		opacity: .5;
-	}
-}
-
-@keyframes MarioJump {
-	0% {
-		top: -30px;
-	}
-	50% {
-		top: -50px;
-	}
-	100% {
-		top: -30px;
-	}
-}
-
-@keyframes CubeSway {
-	0% {
-		left: 15px;
-		bottom: 20px;
-		transform: rotateZ(0deg);
-	}
-	33% {
-		left: 15px;
-		bottom: 20px;
-		transform: rotateZ(-15deg);
-	}
-	66% {
-		left: 15px;
-		bottom: 20px;
-		transform: rotateZ(15deg);
-	}
-	100% {
-		left: 15px;
-		bottom: 20px;
-		transform: rotateZ(0deg);
-	}
+@keyframes CubeSway{0%{left:15px;bottom:20px;transform:rotateZ(0deg)}
+	33%{left:15px;bottom:20px;transform:rotateZ(-15deg)}
+	66%{left:15px;bottom:20px;transform:rotateZ(15deg)}
+	100%{left:15px;bottom:20px;transform:rotateZ(0deg)}
 }
