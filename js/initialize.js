@@ -49,10 +49,8 @@ $(function(){
     })
 
     $.getJSON('./data/my.json', function (data) {
-        intro_info = data.intro_info
-        // console.log("intro_info", intro_info)
+        intro_info = data ? data.intro_info : undefined
         let html = template('intro_info', intro_info)
-        console.log("intro_info html", html);
         $("#part2-wrap").html(html)
     })
 

@@ -75,13 +75,17 @@ function stackProgressBack(){
  */
 function init_Part4_Swiper(story_list){
 
+    if(!story_list) {
+        Qmsg.error('数据异常, [STORY模块]渲染失败') 
+        return
+    }
     // 渲染Part4 SwiperSlide标签
     story_list.forEach((item,idx)=>{
         p4swiper.appendSlide(`
             <div class="swiper-slide">
                 <div class="story-box story-box-num${idx}" date-idx="${idx}">
-                    <h3>${item.title.toUpperCase()}</h3>
-                    <img src="${item.cover}" alt="StoryCover_${item.title}">
+                    <h3>${ item.title ? item.title.toUpperCase() : ""}</h3>
+                    <img src="${item.title ? item.cover : "" }" alt="StoryCover_${item.title}">
                     <span class="timer">${item.timer}</span>
                 </div>
             </div>

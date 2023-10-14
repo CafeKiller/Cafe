@@ -96,15 +96,12 @@ if(isMobile()){
         afterLoad: function(anchorLink, index){
             switch (index) {
                 case 1:
-                    /* 首页元素加载动画 */
                     gsap.to(".part1-cont div", 0.3, {opacity: 1,y: 60,delay:0.3, stagger:0.3})
                     break
                 case 2:
-                    /* 简介页bef元素加载动画 */
                     $(".part2-icon1, .part2-icon2").addClass("active")
                     break
                 case 3:
-                    /* 技术栈进入动画 */
                     gsap.to(".part3-item", 0.2, {opacity: 1,x: 60,delay:0.15,stagger:0.1,
                                                 onCompleta:()=>{
                                                     /* 技术栈进度图加载 */
@@ -114,17 +111,14 @@ if(isMobile()){
                                                 }})
                     break
                 case 4:
-                    /* 轮播slide 渐渐上浮显示 */
                     gsap.to(".swiper-slide", 0.3, {opacity: 1, y: -20, delay:0.2, stagger:0.15,
                                                     onCompleta:()=>{
                                                         /* 允许点击 */
                                                         $(".p4swiper .swiper-slide").css({"pointer-events":"all"})
                                                     }})
-                    /* 轮播pagination 渐渐上浮显示 */
                     gsap.to(".p4swiper-pagination", 0.3, {opacity: 1, y: -20, delay:0.75})
                     break
                 case 5:
-                    /* 底部模块加载 */
                     gsap.to(".left-model",0.3, {opacity: 1, x: 80, delay:0.2, stagger:0.15})
                     gsap.to(".btom-model",0.2, {opacity: 1, y: -80, delay:0.2, stagger:0.15, 
                                                onCompleta:()=>{
@@ -132,7 +126,6 @@ if(isMobile()){
                                                     $(`.part5-cont-item:eq(${part5_current_active})`).addClass("active")
                                                     // init_Part5Item_MouseEvent()
                                                 }})
-                    /* 内容加载 */
                     gsap.to(".part5-cont-item.cont-model .title",0.5, {opacity: 1,x: -150,delay:0.65})
                     gsap.to(".part5-cont-item.cont-model .content",0.5, {opacity: 1,y: -50,delay:0.65})
             }
@@ -141,14 +134,12 @@ if(isMobile()){
         onLeave: function(index, nextIndex, direction){
             switch (index) {
                 case 1:
-                    /* 首页元素离开动画 */
                     gsap.to(".part1-cont div", 0.1, {opacity: 0, y: -60, delay:0.01, stagger:0.01 })
                     break
                 case 2:
                     $(".part2-icon1, .part2-icon2").removeClass("active")
                     break
                 case 3:
-                    /* 技术栈页面离开动画 */
                     gsap.to(".part3-item", 0.1, {opacity: 0,x: -60,delay:0.01, stagger:0.01, 
                                                 onCompleta:()=>{
                                                     /* 技术栈进度条回退 */
@@ -157,7 +148,6 @@ if(isMobile()){
                                                 }})
                     break
                 case 4:
-                    /* 轮播页面离开动画 */
                     gsap.to(".swiper-slide", 0.2, {opacity: 0, y: 0, delay:0.01, swagger:0.01})
                     gsap.to(".p4swiper-pagination", 0.2, {opacity: 0, y: 20, delay:0.01, swagger:0.01})
                     $(".p4swiper .swiper-slide").css({"pointer-events":"none"})
