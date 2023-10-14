@@ -191,10 +191,19 @@ function numberLinearChange(initNum, finaNum, speed, callback){
 
 // fullPage 响应式适配函数
 function autoScrolling(){
-    var $ww = $(window).width();
-    /* if($ww < 1024){
-        $.fn.fullpage.setAutoScrolling(false);
-    } else {
-        $.fn.fullpage.setAutoScrolling(true);
-    } */
+    const minWW = 1200
+    // 屏幕自适应
+    if (!/(iPhone|iPad|iPod|iOS|Android|Windows Phone|BlackBerry|SymbianOS)/i.test(navigator.userAgent)) {
+        // 只需要在PC端工作
+        $(function(){
+            let ww = $(window).width() <= minWW ? minWW : $(window).width()
+            let zoom = ww/1920
+            $('.part-cont').css('zoom', zoom)
+        })
+        window.onresize=function(){
+            let ww = $(window).width() <= minWW ? minWW : $(window).width()
+            let zoom = ww/1920
+            $('.part-cont').css('zoom', zoom)
+        }
+    }
 }
