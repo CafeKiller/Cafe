@@ -1,25 +1,23 @@
-/*
- * Js_Desc: 主要方法相关
- */
+/**
+  * @file 主要函数文件
+  */
 
-
-
-/*
- * @description: 检测当前页面是否为移动端
- * @return: {boolean} true:移动端 false:PC端
- * @author: Coffee_Killer
- */
+/**
+  * @description: 检测当前页面是否为移动端
+  * @return: {boolean} true:移动端 false:PC端
+  * @author: Coffee_Killer
+  */
 function isMobile(){
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 }
 
 
 
-/*
- * @description: 初始化技术栈页面
- * @params: {array} stack_list 
- * @author: Coffee_Killer
- */
+/**
+  * @description: 初始化技术栈页面
+  * @param: {array} stack_list 
+  * @author: Coffee_Killer
+  */
 function initStack(stack_list){
     let _html = ``
     stack_list.forEach((item) => {
@@ -38,11 +36,11 @@ function initStack(stack_list){
     $(".part3-list").html(_html)
 }
 
-/*
- * @description: 技术栈进度条加载(进入状态)
- * @params: {array} progress_list
- * @author: Coffee_Killer
- */
+/**
+  * @description: 技术栈进度条加载(进入状态)
+  * @param: {array} progress_list
+  * @author: Coffee_Killer
+  */
 function stackProgressLoad(progress_list){
     progress_list.forEach((item,idx)=>{
 
@@ -57,10 +55,10 @@ function stackProgressLoad(progress_list){
     })
 }
 
-/*
- * @description: 技术栈进度条加载(离开状态)
- * @author: Coffee_Killer
- */
+/**
+  * @description: 技术栈进度条加载(离开状态)
+  * @author: Coffee_Killer
+  */
 function stackProgressBack(){
     $(`.part3-item .progress-inner`).css({
         "width": `0%`,
@@ -68,11 +66,11 @@ function stackProgressBack(){
     })
 }
 
-/*
- * @description: 初始化Part4-Swiper模块函数
- * @params: {array} story_list
- * @author: Coffee_Killer
- */
+/**
+  * @description: 初始化Part4-Swiper模块函数
+  * @param: {array} story_list
+  * @author: Coffee_Killer
+  */
 function init_Part4_Swiper(story_list){
 
     if(!story_list) {
@@ -110,10 +108,10 @@ function init_Part4_Swiper(story_list){
       
 }
 
-/*
- * @description: 初始化 Part5-Item 的鼠标事件
- * @author: Coffee_Killer
- */
+/**
+  * @description: 初始化 Part5-Item 的鼠标事件
+  * @author: Coffee_Killer
+  */
 /* function init_Part5Item_MouseEvent(){
     const p5_Len =  $(".part5-cont-item").length
     $(`.part5-cont-item:lt(${ p5_Len-1 })`).on("mouseover",function(){
@@ -121,11 +119,11 @@ function init_Part4_Swiper(story_list){
     })
 } */
 
-/*
- * @description: 通用开启弹窗函数
- * @params: {string} id: DOC_id
- * @author: Coffee_Killer
- */
+/**
+  * @description: 通用开启弹窗函数
+  * @param: {string} id: DOC_id
+  * @author: Coffee_Killer
+  */
 function showPop(id){
     // 添加弹窗样式
     $(`.pop-model#${id}`).addClass("active")
@@ -136,11 +134,11 @@ function showPop(id){
     }
 }
 
-/*
- * @description: 通用关闭弹窗函数
- * @params: {string} id: DOC_id
- * @author: Coffee_Killer
- */
+/**
+  * @description: 通用关闭弹窗函数
+  * @param: {string} id: DOC_id
+  * @author: Coffee_Killer
+  */
 function closePop(id = undefined){
     // 判断关闭的是否为Story故事模块, 如果是Story模块则移除相对应的动画
     // 如果不是Story模块,则移除弹窗样式
@@ -164,16 +162,16 @@ clipboard.on('error', function(e) {
     console.error(e);
 });
 
-/*
- * @description: 让初始数字进行线性增长到最终数字
- * @params: {number} initNum: 初始数字
- * @params: {number} finaNum: 最终数字
- * @params: {number} speed: 速度控制
- * @params: {function} callback: 回调函数
- * 
- * @author: Coffee_Killer
- * @timer: 2023-09-09 22:11:44
- */
+/**
+  * @description: 让初始数字进行线性增长到最终数字
+  * @param: {number} initNum: 初始数字
+  * @param: {number} finaNum: 最终数字
+  * @param: {number} speed: 速度控制
+  * @param: {Function} callback: 回调函数
+  * 
+  * @author: Coffee_Killer
+  * @timer: 2023-09-09 22:11:44
+  */
 function numberLinearChange(initNum, finaNum, speed, callback){
     let interval;
     if(initNum <= finaNum){
