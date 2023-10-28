@@ -1,0 +1,8 @@
+# 排除文件
+.vscode
+.idea
+.idea/
+node_modules/
+static/
+css/lib/
+prod/
