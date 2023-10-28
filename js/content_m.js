@@ -1,7 +1,7 @@
 /**
   * @file: 页面 移动端核心容器对象相关
   */
-
+let p4swiper = null
 if(isMobile()){
     $('#content').fullpage({
         touchSensitivity: 30, // 控制移动端页面滑动阻力
@@ -70,7 +70,7 @@ if(isMobile()){
     });
 
     // 移动端 Part4Swiper对象
-    let p4swiper = new Swiper(".p4swiper", {
+    p4swiper = new Swiper(".p4swiper", {
         loop:true,
         slidesPerView: 1,
         spaceBetween:20,

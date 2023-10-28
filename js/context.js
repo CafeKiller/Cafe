@@ -1,7 +1,7 @@
 /**
   * @file: 页面 PC端核心容器对象相关
   */
-
+let p4swiper = null;
 if(!isMobile()) {
 
     // PC端 fullpage 容器初始化
@@ -82,7 +82,7 @@ if(!isMobile()) {
 
 
     // PC端 Part4Swiper对象
-    let p4swiper = new Swiper(".p4swiper", {
+    p4swiper = new Swiper(".p4swiper", {
         loop:true,
         slidesPerView: 3,
         spaceBetween:20,
