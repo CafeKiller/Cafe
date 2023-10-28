@@ -11,8 +11,6 @@ function isMobile(){
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 }
 
-
-
 /**
   * @description: 初始化技术栈页面
   * @param: {array} stack_list 
@@ -112,12 +110,12 @@ function init_Part4_Swiper(story_list){
   * @description: 初始化 Part5-Item 的鼠标事件
   * @author: Coffee_Killer
   */
-/* function init_Part5Item_MouseEvent(){
+function init_Part5Item_MouseEvent(){
     const p5_Len =  $(".part5-cont-item").length
     $(`.part5-cont-item:lt(${ p5_Len-1 })`).on("mouseover",function(){
         $(this).addClass("active").siblings().removeClass('active')
     })
-} */
+}
 
 /**
   * @description: 通用开启弹窗函数
@@ -151,17 +149,6 @@ function closePop(id = undefined){
     }
 }
 
-// 复制文字函数
-var clipboard = new ClipboardJS('.copy-allowed');
-clipboard.on('success', function(e) {
-    Qmsg.success('复制成功')
-    e.clearSelection();
-});
-clipboard.on('error', function(e) {
-    Qmsg.error('复制失败')
-    console.error(e);
-});
-
 /**
   * @description: 让初始数字进行线性增长到最终数字
   * @param: {number} initNum: 初始数字
@@ -187,7 +174,10 @@ function numberLinearChange(initNum, finaNum, speed, callback){
     
 }
 
-// fullPage 响应式适配函数
+/**
+  * @description: 响应式适配函数
+  * @author: Coffee_Killer
+  */
 function autoScrolling(){
     const minWW = 1200
     // 屏幕自适应
