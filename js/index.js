@@ -195,3 +195,92 @@ function autoScrolling(){
         }
     }
 }
+
+/**
+  * @description: 防抖函数
+  * @param: {Function} fn: 回调函数
+  * @param: {number} delay: 延时
+  * @param: {boolean} immediate: 是否立即调用
+  * @author: Coffee_Killer
+  */
+function debounce(fn, delay, immediate = false) {
+    let timer = null
+    let isInvoke = false
+
+    const _debounce = function(...args) {
+        return new Promise((resolve, reject) => {
+            if (timer) clearTimeout(timer)
+
+            if (immediate && !isInvoke) {
+                const result = fn.apply(this, args)
+                resolve(result)
+                isInvoke = true
+            } else {
+                timer = setTimeout(() => {
+                const result = fn.apply(this, args)
+                resolve(result)
+                isInvoke = false
+                timer = null
+                }, delay)
+            }
+        })
+    }
+
+    _debounce.cancel = function() {
+        if (timer) clearTimeout(timer)
+        timer = null
+        isInvoke = false
+    }
+
+    return _debounce
+}
+
+/**
+  * @description: 节流函数
+  * @param: {Function} fn: 回调函数
+  * @param: {number} interval: 时间间隔
+  * @param: {object} options: 可选参数 { leading首次触发, trailing最后触发 }
+  * @author: Coffee_Killer
+  */
+function throttle(fn, interval, options = { leading: true, trailing: false }) {
+    const { leading, trailing, resultCallback } = options
+    let lastTime = 0
+    let timer = null
+  
+    const _throttle = function(...args) {
+      return new Promise((resolve, reject) => {
+        const nowTime = new Date().getTime()
+        if (!lastTime && !leading) lastTime = nowTime
+  
+        const remainTime = interval - (nowTime - lastTime)
+        if (remainTime <= 0) {
+          if (timer) {
+            clearTimeout(timer)
+            timer = null
+          }
+  
+          const result = fn.apply(this, args)
+          resolve(result)
+          lastTime = nowTime
+          return
+        }
+  
+        if (trailing && !timer) {
+          timer = setTimeout(() => {
+            timer = null
+            lastTime = !leading ? 0: new Date().getTime()
+            const result = fn.apply(this, args)
+            resolve(result)
+          }, remainTime)
+        }
+      })
+    }
+  
+    _throttle.cancel = function() {
+      if(timer) clearTimeout(timer)
+      timer = null
+      lastTime = 0
+    }
+    return _throttle
+}
+  
