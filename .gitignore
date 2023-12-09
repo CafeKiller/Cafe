@@ -6,3 +6,5 @@ node_modules/
 static/
 css/lib/
 prod/
+versions/
+versions/*

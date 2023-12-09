@@ -1,7 +1,4 @@
-/**
-  * @file: 页面 PC端核心容器对象相关
-  */
-let p4swiper = null;
+
 if(!isMobile()) {
 
     // PC端 fullpage 容器初始化

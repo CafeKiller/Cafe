@@ -18,16 +18,23 @@
 .qmsg .qmsg-item .qmsg-content-loading{color:#409eff}
 .qmsg .qmsg-item .qmsg-content-loading .qmsg-count{background-color:#409eff}
 .qmsg .animate-turn{animation:MessageTurn 1s linear infinite}
-@keyframes MessageTurn{0%{transform:rotate(0deg)}
-25%{transform:rotate(90deg)}
-50%{transform:rotate(180deg)}
-75%{transform:rotate(270deg)}
-100%{transform:rotate(360deg)}
-}@keyframes MessageMoveOut{0%{max-height:150px;padding:8px;opacity:1}
-to{max-height:0;padding:0;opacity:0}
-}@keyframes MessageMoveIn{0%{transform:translateY(-100%);transform-origin:0 0;opacity:0}
-to{transform:translateY(0);transform-origin:0 0;opacity:1}
-}@keyframes MessageShake{0%,100%{transform:translateX(0px);opacity:1}
-25%,75%{transform:translateX(-4px);opacity:.75}
-50%{transform:translateX(4px);opacity:.25}
+@keyframes MessageTurn{
+    0%{transform:rotate(0deg)}
+    25%{transform:rotate(90deg)}
+    50%{transform:rotate(180deg)}
+    75%{transform:rotate(270deg)}
+    100%{transform:rotate(360deg)}
+}
+@keyframes MessageMoveOut{
+    0%{max-height:150px;padding:8px;opacity:1}
+    to{max-height:0;padding:0;opacity:0}
+}
+@keyframes MessageMoveIn{
+    0%{transform:translateY(-100%);transform-origin:0 0;opacity:0}
+    to{transform:translateY(0);transform-origin:0 0;opacity:1}
+}
+@keyframes MessageShake{
+    0%,100%{transform:translateX(0px);opacity:1}
+    25%,75%{transform:translateX(-4px);opacity:.75}
+    50%{transform:translateX(4px);opacity:.25}
 }

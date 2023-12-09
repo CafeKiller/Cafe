@@ -13,12 +13,10 @@
 		<meta name="author" content="FengmStudio-CaFe" />
 		<meta name="Description" content="CoffeeShop,即咖啡厅,是一个萌新程序员的全静态个人简历网站" />
 		<meta name="Keywords" content="个人网站,咖啡厅,Coffee_Shop,Cafe_shop,个人简历,独立网站,Jquery.fullpage" />
-		<title>Cafe_Shop - 咖啡の个人简历网站</title>
+		<title>Cafe - 咖啡の个人简历网站</title>
 		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 
         <!-- CSS External Link -->
-        <!-- Swiper             | home link : https://swiper.com.cn/ -->
-        <!-- Jquery.fullPage    | home link : https://github.com/alvarotrigo/fullpage.js -->
         <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.0/swiper-bundle.css">
         <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fullPage.js/3.0.9/fullpage.css">
 
@@ -31,143 +29,33 @@
 	</head>
 	
 	<body>
-        <div id="ie-pop" style="display: none;"></div>
-        <h1 class="hide-text">Cafe_Shop - 咖啡の个人简历网站</h1>
+        <h1 class="hide-text">Cafe - 咖啡の个人简历网站</h1>
+
         <div class="wrap">
             <div class="content" id="content">
                 <!-- 模块1 KV -->
                 <div class="section part1">
-                    <div class="hide-text">main</div>
-                    <div class="part1-cont part-cont">
-                        <div class="title">Cafe</div>
-                        <div class="sub-title">
-                            <p>一个喜欢荒木飞吕彦和硬核画风的码农</p>
-                            <p>一个持续性混吃等死, 间歇性发奋图强的家伙</p>
-                        </div>
-                        <div class="kv-cent">
-                            <!-- <p class="text">人，只有在放弃战斗的时候才算输，只要坚持战斗，就还没输！</p>
-                            <p class="about">——<span class="about-name">《进击的巨人》</span></p> -->
-                        </div>
-                    </div>
+
                 </div>
                     
                 <!-- 模块2 简历 -->
                 <div class="section part2">
-                    <div class="part2-cont part-cont">
-                        <span class="part2-icon1"></span>
-                        <span class="part2-icon2"></span>
-                        <h1 class="part2-title">Information</h1>
-                        <div id="part2-wrap"></div>
-                        <!-- 模版渲染数据 -->
-                        <script id="intro_info" type="text/html">
-                            <div class="part2-left">
-                                <div class="sev-thirty-box head-cover"></div>
-                                {{each left}}
-                                    <div class="sev-thirty-box {{$index}}">
-                                        <div><span>{{$value.title}}</span></div>
-                                        {{if $index == "nickname" }}
-                                            <div>
-                                                {{each $value.content}}
-                                                    <p>{{$value}}</p>
-                                                {{/each}}
-                                            </div>
-                                        {{/if}}
-                                        {{if $index != "nickname" }}
-                                            <div><p class="copy-allowed" data-clipboard-text="{{$value.content}}">{{$value.content}}</p></div>
-                                        {{/if}}
-                                    </div>
-                                {{/each}}
-                            </div>
-                            <div class="part2-right">
-                                {{each right}}
-                                    <div class="sev-thirty-box {{$index}}">
-                                        <div><span>{{$value.title}}</span></div>
-                                        <div><p>{{$value.content}}</p></div>
-                                    </div>
-                                {{/each}}
-                            </div>
-                        </script> 
-                    </div>
+                    
                 </div>
 
                 <!-- 模块3 技术栈 -->
                 <div class="section part3">
-                    <div class="part3-cont part-cont">
-                        <h1 class="part3-title">TechnologyStack</h1>
-                        <span class="part3-icon-1"></span>
-                        <span class="part3-icon-2"></span>
-                        <div class="part3-list">
-                        </div>
-                        <a href="javascript:alert(0)" class="part3-btn">[ 全栈开发工程师 ]</a>
-                    </div>
+                    
                 </div>
 
                 <!-- 模块4 经历 -->
                 <div class="section part4">
-                    <div class="part4-cont part-cont">
-                        <div class="p4-outer">
-                            <div class="p4swiper">
-                                <div class="swiper-wrapper">
-                                </div>
-                            </div>
-                            <div class="p4swiper-pagination"></div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <!-- 模块5 补充 -->
                 <div class="section part5">
-                    <div class="part5-cont part-cont">
-                        <div class="part5-cont-item left-model">
-                            <div class="img-box" style="background-image: url(./images/p5_img1.png);">
-                                <div class="sideslip">
-                                    <h1>说明</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="part5-cont-item left-model">
-                            <div class="img-box" style="background-image: url(./images/p5_img2.png);">
-                                <div class="sideslip"></div>
-                            </div>
-                        </div>
-                        <div class="part5-cont-item btom-model">
-                            <div class="img-box" style="background-image: url(./images/p5_img3.png);">
-                                <div class="sideslip"></div>
-                            </div>
-                        </div>
-                        <div class="part5-cont-item btom-model">
-                            <div class="img-box" style="background-image: url(./images/p5_img4.png);">
-                                <div class="sideslip"></div>
-                            </div>
-                        </div>
-                        <div class="part5-cont-item cont-model">
-                            <div class="title">ABOUT</div>
-                            <ul class="content">
-                                <li>
-                                    <span>Bilibili Link</span>
-                                    <span><a href="https://space.bilibili.com/248826433">https://space.bilibili.com/248826433</a></span>
-                                </li>
-                                <li>
-                                    <span>Github</span>
-                                    <span><a href="https://github.com/CoffeeKiller1/Cafe_Shop">https://github.com/CoffeeKiller1/Cafe_Shop</a></span>
-                                </li>
-                                <li>
-                                    <span>Gitee</span>
-                                    <span><a href="https://gitee.com/coffeekiller002/coffee_-shop">https://gitee.com/coffeekiller002/coffee_-shop</a></span>
-                                </li>
-                                <li>
-                                    <span>Producer</span>
-                                    <span>Coffee(FengmStudio)</span>
-                                </li>
-                                <li>
-                                    <span>Project Creation Time</span>
-                                    <span>2023-06-28</span>
-                                </li>
-                                <li class="content-footer">Copyright © 2023 FengmStudio CoffeeKiller, All rights reserved</li>
-                                <li class="content-footer">图片来源于网络,如有侵权请告知删除</li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -178,10 +66,6 @@
                 </div>
             </div>
 
-            <!-- 弹窗测试区域 -->
-            <div class="test-model">
-                <!-- <button onclick="showPop('pop-story')">故事弹窗</button> -->
-            </div>
         </div>
 
         <div class="loading-cont">
@@ -232,7 +116,7 @@
 
     <!-- Project JS Link -->
     <script src="./js/message.min.js"></script>
-    <script src="./js/initialize.js"></script>
+
     <script src="./js/index.js"></script>
     <script src="./js/context.js"></script>
 
