@@ -1,3 +1,4 @@
+/* ========================= RESET ========================= */
 body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,header,section,article,footer{margin:0}
 body,button,input,select,textarea{font:16px tahoma,sans-serif}
 h1,h2,h3,h4,h5,h6{font-size:100%}
@@ -9,5 +10,45 @@ button,input,select,textarea{font-size:100%;outline:none}
 table{border-collapse:collapse;border-spacing:0}
 td,th,ul,ol{padding:0}
 body{background-color:#19191b;overflow-x:hidden;overflow-y:hidden}
-.wrap{max-width:1920px;margin:0 auto}
-.wrap *{box-sizing:border-box}
+/* ========================= RESET ========================= */
+
+/* ========================= COMMON ========================= */
+@font-face {
+    font-family: "font1";
+    src: url("../fonts/Quanxiaosi_PixelFont.ttf");
+}
+.wrap *,
+.wrap *::after, 
+.wrap *::before {
+    box-sizing:border-box;
+}
+.wrap {
+    max-width:1920px;
+    margin:0 auto;
+    background-color: var(--white-color1);
+}
+/* ========================= COMMON ========================= */
+
+/* ========================= BODY ========================= */
+.part-outer {
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 100%;
+    border-left: 2px solid var(--white-color2);
+    border-right: 2px solid var(--white-color2);
+}
+.part-inner {
+    width: 1000px;
+    height: 640px;
+    background-color: var(--white-color2);
+}
+.part1-title {
+    font-family: "font1";
+    font-size: 88px;
+    line-height: 88px;
+    color: var(--black-color1);
+}
+/* ========================= BODY ========================= */
