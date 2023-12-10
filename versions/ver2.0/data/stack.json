@@ -1,0 +1,47 @@
+{
+    "type": "progress",
+    "stack_list": [
+        {
+            "title": "JAVA",
+            "color":"#c74634",
+            "progress_number": 50,
+            "tips": "",
+            "tags": "SpringCloud、SpringBoot、MybatisPlus、MVC、Kotlin、JVM原理、Netty"
+        },
+        {
+            "title": "Web前端",
+            "color":"#1fc28b",
+            "progress_number": 35,
+            "tips": "",
+            "tags": "Vue3、Uniapp、Threejs、TypeScript、EChart、Nodejs、Express、微信小程序"
+        },
+        {
+            "title": "运维",
+            "color":"#e99543",
+            "progress_number": 15,
+            "tips": "",
+            "tags": " Liunx、Docker、Redis、MongoDB、Nginx、MySQL"
+        },
+        {
+            "title": "游戏开发",
+            "color":"#55c0e0",
+            "progress_number": 8,
+            "tips": "",
+            "tags": "C#、Unity、RPGMake"
+        },
+        {
+            "title": "基础知识",
+            "color": "#5d54af",
+            "progress_number": 25,
+            "tips": "",
+            "tags": "计算机网络、计算机组成原理、信息安全与维护、设计模式、数据结构与算法"
+        },
+        {
+            "title": "OTHER",
+            "color": "#cc961c",
+            "progress_number": 25,
+            "tips": "",
+            "tags": "C、C++、Python、Golang、Android、PHP、ThinkPHP、Dart"
+        }
+    ]
+}
