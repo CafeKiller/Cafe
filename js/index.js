@@ -2,7 +2,14 @@
   * @file 主要函数文件
   */
 
-/* =================================== INIT =================================== */
+
+/* =================================== VARIABLE ================================= */
+let part_typed_obj = undefined
+/* =================================== VARIABLE ================================= */
+
+
+
+/* =================================== INIT ===================================== */
 $(function(){
 
     console.log(`
@@ -35,7 +42,7 @@ $(function(){
     });
 
     // 复制文字函数
-    const clipboard = new ClipboardJS('.copy-allowed');
+    /*const clipboard = new ClipboardJS('.copy-allowed');
     clipboard.on('success', function(e) {
         Qmsg.success('复制成功')
         e.clearSelection();
@@ -43,10 +50,25 @@ $(function(){
     clipboard.on('error', function(e) {
         Qmsg.error('复制失败')
         console.error(e);
-    });
+    });*/
 
 });
-/* =================================== INIT =================================== */
+/* =================================== INIT ===================================== */
+
+
+
+/* =================================== FUNCTION ================================= */
+function typedInit( typed_obj, dom_name,  str_arr , options = {}) {
+    typed_obj = new Typed(dom_name, {
+        strings: str_arr,
+        ...options,
+        onComplete: (self) => {
+
+        }
+    })
+    return typed_obj
+}
+/* =================================== FUNCTION ================================= */
 
 
 

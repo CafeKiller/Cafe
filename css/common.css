@@ -2,17 +2,23 @@
 	font-family: Pixel;
 	src: url(../fonts/Quanxiaosi_PixelFont.ttf);
 }
+@font-face {
+	font-family: FZ_YJH;
+	src: url(../fonts/FanZ_LTYJH.ttf);
+}
 :root{
 	--cafe_color1:#4d3900;
 	--cafe_color2:#8b4513;
 	--white-color1: #ffffff;
 	--white-color2: #e5e7eb;
 	--black-color1: #000000;
-	--transparent:url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)
+	--transparent:url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+	--font1: "Pixel", "Microsoft YaHei UI", "serif";
+	--font2: "FZ_YJH", "Microsoft YaHei UI", "serif";
 }
 .hide-text{
 	font-size: 0;
-	text-indent: -9999;
+	text-indent: -9999em;
 	overflow: hidden;
 	opacity: 0
 }

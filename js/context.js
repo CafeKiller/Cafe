@@ -9,7 +9,13 @@ if(!isMobile()) {
         afterLoad: function(anchorLink, index){
             switch (index) {
                 case 1:
-                    
+
+                    if (part_typed_obj === undefined) {
+                        part_typed_obj = typedInit(part_typed_obj,
+                            ".head-text",
+                            part1_arr,
+                            { typeSpeed: 10, backSpeed: 10, showCursor: false })
+                    }
                     break
                 case 2:
                     
@@ -27,7 +33,7 @@ if(!isMobile()) {
         onLeave: function(index, nextIndex, direction){
             switch (index) {
                 case 1:
-                    
+
                     break
                 case 2:
                     

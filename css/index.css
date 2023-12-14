@@ -13,10 +13,6 @@ body{background-color:#19191b;overflow-x:hidden;overflow-y:hidden}
 /* ========================= RESET ========================= */
 
 /* ========================= COMMON ========================= */
-@font-face {
-    font-family: "font1";
-    src: url("../fonts/Quanxiaosi_PixelFont.ttf");
-}
 .wrap *,
 .wrap *::after, 
 .wrap *::before {
@@ -41,14 +37,46 @@ body{background-color:#19191b;overflow-x:hidden;overflow-y:hidden}
     border-right: 2px solid var(--white-color2);
 }
 .part-inner {
+    position: relative;
     width: 1000px;
     height: 640px;
-    background-color: var(--white-color2);
+    /*background-color: var(--white-color2);*/
+}
+.part1 .part-inner {
+    padding: 0 20px;
+    user-select: none;
 }
 .part1-title {
-    font-family: "font1";
-    font-size: 88px;
-    line-height: 88px;
+    font-family: var(--font1);
+    font-size: 108px;
+    line-height: 108px;
+    width: 100%;
     color: var(--black-color1);
+}
+.part1-line {
+    margin: 10px 0 50px;
+    width: 90%;
+    height: 2px;
+    background-color: var(--black-color1);
+}
+.part1-desc {
+    font-family: var(--font2);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+.part1-small-text {
+    margin-left: -20px;
+    padding: 12px 20px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 42px;
+    font-family: var(--font2);
+    font-size: 18px;
+    line-height: 18px;
+    background-color: var(--white-color2);
 }
 /* ========================= BODY ========================= */
