@@ -79,4 +79,28 @@ body{background-color:#19191b;overflow-x:hidden;overflow-y:hidden}
     line-height: 18px;
     background-color: var(--white-color2);
 }
+
+.part2 .part-inner {
+    display: flex;
+}
+.part2-line {
+    width: 1px;
+    height: 640px;
+    border: 1px solid var(--white-color2);
+}
+.part2-left {
+    width: 300px;
+    padding: 0 20px;
+}
+.user-cover {
+    display: flex;
+    align-items: flex-end;
+    width: 70%;
+    height: 140px;
+    background-color: var(--white-color1);
+    border-bottom: 2px solid var(--black-color1);
+}
+.user-name {
+    font-family: var(--font2);
+}
 /* ========================= BODY ========================= */
