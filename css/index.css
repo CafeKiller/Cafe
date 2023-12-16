@@ -89,18 +89,48 @@ body{background-color:#19191b;overflow-x:hidden;overflow-y:hidden}
     border: 1px solid var(--white-color2);
 }
 .part2-left {
+    position: relative;
     width: 300px;
-    padding: 0 20px;
 }
 .user-cover {
+    margin-left: 20px;
+    margin-bottom: 100px;
     display: flex;
     align-items: flex-end;
-    width: 70%;
+    width: 80%;
     height: 140px;
     background-color: var(--white-color1);
     border-bottom: 2px solid var(--black-color1);
+    user-select: none;
+    overflow: hidden;
 }
-.user-name {
+.user-cover img {
+    position: relative;
+    /*top: 140px;*/
+}
+.user-info {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 80%;
+}
+.user-item {
+    margin-top: 20px;
+    display: flex;
+    width: auto;
+    font-weight: 800;
+    font-size: 20px;
     font-family: var(--font2);
+    color: var(--cafe_color2);
+}
+.user-item span{
+    display: block;
+    width: 50%;
+    color: var(--black-color1);
+}
+
+.part2-right {
+    padding-top: 140px;
+    width: 698px;
 }
 /* ========================= BODY ========================= */
