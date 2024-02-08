@@ -124,57 +124,30 @@
                     <a class="pop-close" href="javascript:closePop('pop-story')">×</a>
                 </div>
             </div>
-
-        </div>
-
-        <div class="loading-cont">
-            <div class="loading-text">
-                资源装载中......<br>
-                已加载<span class="count">1</span>个资源, 当前加载<span class="type">other</span>类型资源
+            <div class="pop-model" id="ie-pop">
+                <div class="pop-story-cont">
+                    <a class="pop-close" href="javascript:closePop('pop-story')">×</a>
+                </div>
             </div>
+
         </div>
-        
+
+        <!-- 外链JS -->
+        <script src="./js/libs/jquery.min.js"></script>
+        <script src="./js/libs/typed.min.js"></script>
+        <script src="./js/libs/jquery.fullpage.min.js"></script>
+        <script src="./js/libs/jquery-easing.min.js"></script>
+        <script src="./js/libs/message.min.js"></script>
+
+        <!-- Project JS Link -->
+        <script src="./js/data.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/context.js"></script>
 	</body>
 
-    <!--  适配代码  -->
-    <script src="./js/fit.js"></script>
 
-    <!-- 监听页面各类资源加载 -->
-    <script>
-        let dom_count = document.querySelector(".loading-text .count")
-        let dom_type = document.querySelector(".loading-text .type")
-        let resource_count = 0
-        const ResObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            entries.forEach((item,index)=>{
-                resource_count ++
-                // console.log(`资源装载中: 已加载${resource_cout}个资源, 当前加载${item.initiatorType}类型资源, 时间戳:${Date.now()}`);
-                dom_count.innerText = resource_count
-                dom_type.innerText= item.initiatorType
-            })
 
-        });
-        // 开始监听资源条目
-        ResObserver.observe({ entryTypes: ['resource'] });
 
-        window.onload = ()=>{
-            ResObserver.disconnect()
-            // console.log(`页面加载完成,时间戳:${Date.now()}`);
-            document.querySelector(".loading-cont").className = "loading-cont loaded"
-        }
-    </script>
-
-    <!-- 外链JS -->
-    <script src="./js/libs/jquery.min.js"></script>
-    <script src="./js/libs/typed.min.js"></script>
-    <script src="./js/libs/jquery.fullpage.min.js"></script>
-    <script src="./js/libs/jquery-easing.min.js"></script>
-    <script src="./js/libs/message.min.js"></script>
-
-    <!-- Project JS Link -->
-    <script src="./js/data.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/context.js"></script>
 
 </html>
 <!-- CreateTime: 2023-5-23 23:26  |  Team: Fengm Studio  |  Creator: Coffee_Killer -->
