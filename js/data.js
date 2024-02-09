@@ -45,3 +45,8 @@ const part1_arr = [
     "Great works not by strength， but by insist to complete。^3000",
     "Event is not the size of the power， and can insist on how long。^3000",
 ]
+
+const part1_cont = `
+    嗨~ 你好呀！欢迎来到我的咖啡屋<span>(Cafe)</span>，
+    <br>我是Coffee，正在努力成为一个有趣的全栈开发工程师。
+`

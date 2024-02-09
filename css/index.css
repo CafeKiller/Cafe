@@ -48,18 +48,20 @@ body{background-color:#19191b;overflow-x:hidden;overflow-y:hidden}
 }
 .part1-title {
     font-family: var(--font1);
-    font-size: 108px;
-    line-height: 108px;
+    font-size: 98px;
+    line-height: 98px;
     width: 100%;
     color: var(--black-color1);
 }
 .part1-line {
     margin: 10px 0 50px;
     width: 90%;
-    height: 2px;
+    height: 4px;
     background-color: var(--black-color1);
 }
 .part1-desc {
+    padding-left: 10px;
+    border-left: 2px solid #000000;
     font-family: var(--font2);
     font-weight: 400;
     font-size: 20px;
@@ -143,6 +145,8 @@ body{background-color:#19191b;overflow-x:hidden;overflow-y:hidden}
     line-height: 32px;
     color: var(--cafe_color1);
     border-bottom: 1px solid var(--black-color1);
+    cursor: default;
+    user-select: none;
 }
 .detail-item .text-key {
     display: inline-block;
@@ -154,6 +158,7 @@ body{background-color:#19191b;overflow-x:hidden;overflow-y:hidden}
 }
 .detail-item .text-value {
     padding: 0 10px;
+    cursor: pointer;
 }
 .detail-item .center-mask {
     position: relative;
