@@ -10,6 +10,8 @@ let part_typed_obj = undefined
 
 
 /* =================================== INIT ===================================== */
+
+// 页面初始化
 $(function () {
     console.log(`
         +=================================================================+
@@ -43,6 +45,9 @@ $(function () {
     IERender()
     initUserInfoDOM()
     initDetailListDOM()
+
+    // 初始化"个人简单介绍"模块DOM
+    $(".self-intro").html(selfIntro)
 });
 
 // 页面结构&文本相关加载
@@ -54,6 +59,14 @@ $(document).ready(function () {
 
 
 /* =================================== FUNCTION ================================= */
+
+/**
+ * @description 文字写入(typed)模块初始化
+ * @param {Object} typed_obj 用于保存typed的对象, 建议为空
+ * @param {string} dom_name dom名称
+ * @param {Array<string>} str_arr 需要写入的文字的数组
+ * @param {Object} options 可选项, 扩展参数
+ * */
 function typedInit(typed_obj, dom_name, str_arr, options = {}) {
     typed_obj = new Typed(dom_name, {
         strings: str_arr,
@@ -64,6 +77,9 @@ function typedInit(typed_obj, dom_name, str_arr, options = {}) {
     })
     return typed_obj
 }
+/**
+ * @description 初始化"当前基本信息"模块DOM
+ * */
 function initUserInfoDOM() {
     let _dom = ``
     for (const item in myData) {
@@ -71,6 +87,10 @@ function initUserInfoDOM() {
     }
     $(".user-info").html(_dom)
 }
+
+/**
+ * @description 初始化"联系&基本信息"模块DOM
+ * */
 function initDetailListDOM() {
     let _dom = ``
     for (const item in detailData) {
@@ -91,7 +111,7 @@ function initDetailListDOM() {
 /* =================================== COMMON =================================== */
 /**
   * @description: 检测当前页面是否为移动端
-  * @return: {boolean} true:移动端 false:PC端
+  * @return: {boolean} true:移动端, false:PC端
   */
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
@@ -109,6 +129,7 @@ function autoScrolling() {
         $(function () {
             let ww = $(window).width() <= minWW ? minWW : $(window).width()
             let zoom = ww / 1920
+            //TODO Firefox浏览器不支持zoom单位, 需要适配
             $('.part-cont').css('zoom', zoom)
         })
         window.onresize = function () {

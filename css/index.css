@@ -172,18 +172,18 @@ body {
     display: flex;
 }
 
-.part2-line {
+.part2 .part2-line {
     width: 1px;
     height: 640px;
     border: 1px solid var(--white-color2);
 }
 
-.part2-left {
+.part2 .part2-left {
     position: relative;
     width: 300px;
 }
 
-.user-cover {
+.part2 .user-cover {
     margin-left: 20px;
     margin-bottom: 100px;
     display: flex;
@@ -196,19 +196,19 @@ body {
     overflow: hidden;
 }
 
-.user-cover img {
+.part2 .user-cover img {
     position: relative;
     /*top: 140px;*/
 }
 
-.user-info {
+.part2 .user-info {
     position: absolute;
     bottom: 0;
     left: 20px;
     width: 80%;
 }
 
-.user-item {
+.part2 .user-item {
     margin-top: 20px;
     display: flex;
     width: auto;
@@ -218,19 +218,19 @@ body {
     color: var(--cafe_color2);
 }
 
-.user-item span {
+.part2 .user-item span {
     display: block;
     width: 50%;
     color: var(--black-color1);
 }
 
-.part2-right {
+.part2 .part2-right {
     position: relative;
     padding: 140px 30px 0;
     width: 698px;
 }
 
-.detail-item {
+.part2 .detail-item {
     width: 638px;
     margin-bottom: 10px;
     display: flex;
@@ -243,7 +243,7 @@ body {
     user-select: none;
 }
 
-.detail-item .text-key {
+.part2 .detail-item .text-key {
     display: inline-block;
     width: 102px;
     text-align: justify;
@@ -252,17 +252,17 @@ body {
     /*border-bottom: 1px solid var(--black-color1);*/
 }
 
-.detail-item .text-value {
+.part2 .detail-item .text-value {
     padding: 0 10px;
     cursor: pointer;
 }
 
-.detail-item .center-mask {
+.part2 .detail-item .center-mask {
     position: relative;
     flex: 1;
 }
 
-.detail-item .center-mask:before {
+.part2 .detail-item .center-mask:before {
     content: "";
     position: absolute;
     bottom: -1px;
@@ -272,12 +272,65 @@ body {
     border-bottom: 1px dashed var(--white-color1);
 }
 
-.self-intro {
+.part2 .self-intro {
+    padding: 20px;
     position: absolute;
     bottom: 0;
     width: 638px;
-    height: 120px;
+    text-indent: 2em;
+    font-size: 18px;
+    line-height: 24px;
     background-color: var(--white-color2);
 }
 
+.part3 .part3-title-model {
+    position: relative;
+    letter-spacing: 4px;
+    text-indent: 8px;
+}
+.part3 .part3-title {
+    padding: 0 10px;
+    position: relative;
+    background-color: #fff;
+    z-index: 10;
+}
+.part3 .part3-title-line {
+    position: absolute;
+    top: 16px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+.part3 .product-list {
+    padding: 0 80px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    height: 360px;
+}
+.part3 .product-item {
+    position: relative;
+    width: 240px;
+    background-color: #ddd;
+    cursor: pointer;
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+.part3 .product-item::after,
+.part3 .product-item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 240px;
+    height: 60px;
+    background-color: var(--bot-color1);
+    -webkit-clip-path: polygon(50% 60%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 60%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    z-index: 5;
+}
+.part3 .product-item::after {
+    bottom: -10px;
+    background-color: var(--bot-color2);
+    z-index: 10;
+}
 /* ========================= BODY ========================= */

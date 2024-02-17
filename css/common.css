@@ -53,3 +53,11 @@
 
 /* 禁止ie渲染 */
 #ie-pop{position:absolute;z-index: 99999;width: 100%;height: 100vh;background-color: black;color: #ffffff;text-align: center; line-height: 100vh;font-size: 26px;}
+
+/* 字体控制 */
+.font-type1-size16 {font-size: 16px;line-height: 16px;}
+.font-type1-size20 {font-size: 20px;line-height: 20px;}
+.font-type1-size28 {font-size: 28px;line-height: 28px;}
+.font-type1-size36 {font-size: 36px;line-height: 36px;}
+.font-type1-size44 {font-size: 44px;line-height: 44px;}
+.font-type1-size52 {font-size: 44px;line-height: 44px;}
