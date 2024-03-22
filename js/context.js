@@ -3,7 +3,7 @@
   */
 if (!isMobile()) {
     $('#content').fullpage({
-        anchors: ['page1', 'page2', 'page3', 'page4'],
+        anchors: ['part1', 'part2', 'part3', 'part4'],
         scrollingSpeed: 1000, //设置滚动速度，单位毫秒，默认700
         easing: 'easeOutBack', //定义页面section滚动的动画方式，若修改此项需引入jquery.easing插件
         // afterRender: function () {
@@ -49,7 +49,6 @@ if (!isMobile()) {
                     } else {
                         glt.to(".product-item", {y:0, opacity:0, delay:0.1, stagger:0.2, duration:0.3})
                     }
-
                     break
                 case 4:
 

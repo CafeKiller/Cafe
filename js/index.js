@@ -48,6 +48,7 @@ $(function () {
 
     // 初始化"个人简单介绍"模块DOM
     $(".self-intro").html(selfIntro)
+    $(".product-item").on("click", showProductContainer)
 });
 
 // 页面结构&文本相关加载
@@ -106,11 +107,21 @@ function initDetailListDOM() {
 }
 
 /**
- *
+ * 显示项目介绍容器
  * */
-function productLoadAnime() {
-    let glt = gsap.timeline()
-    glt.to(".product-item", {y:40, opacity:1, delay:0.1, stagger:0.2, duration:1})
+function showProductContainer (event) {
+    console.log(event)
+    // 静止页面滚动
+    $.fn.fullpage.setAllowScrolling(false);
+
+    let { tag } = event.currentTarget.dataset
+    let gtl = gsap.timeline()
+
+    gtl.to($(`.product-item[data-tag="${tag}"]`), {x: -20, delay:0.1, duration:0.2 })
+    gtl.to($(`.product-item[data-tag="${tag}"]`).siblings(), {x: 200, opacity: 0, delay: 0.1, duration: 0.3 })
+    gtl.to(".product-item-container", {y: -155, opacity: 1, delay: 0.1, duration: 0.5, oncomplete:() => {
+            $(".product-item").off("click")
+        }})
 }
 /* =================================== FUNCTION ================================= */
 
