@@ -13,7 +13,7 @@ let part_typed_obj = undefined
 
 // 页面初始化
 $(function () {
-    console.log(`
+    console.log(`%c
         +=================================================================+
         |                                                                 |
         |        >=>                   >=>>    >=>>                       |
@@ -34,7 +34,7 @@ $(function () {
         |                                                                 |
         |     => Powered by @Fengm Studio/Coffee_Killer <=                |
         +=================================================================+ 
-    `);
+    `, `color:#8b4513; font-size: 20px; font-weight:800;`);
 
     // 在window对象上绑定resize监听函数
     autoScrolling();
@@ -103,6 +103,14 @@ function initDetailListDOM() {
         `
     }
     $(".detail-list").html(_dom)
+}
+
+/**
+ *
+ * */
+function productLoadAnime() {
+    let glt = gsap.timeline()
+    glt.to(".product-item", {y:40, opacity:1, delay:0.1, stagger:0.2, duration:1})
 }
 /* =================================== FUNCTION ================================= */
 

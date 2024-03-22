@@ -315,6 +315,8 @@ body {
     cursor: pointer;
     -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    transform: translateY(-40px);
+    opacity: 0;
 }
 .part3 .product-item::after,
 .part3 .product-item::before {
@@ -332,5 +334,11 @@ body {
     bottom: -10px;
     background-color: var(--bot-color2);
     z-index: 10;
+}
+.product-item-container {
+    position: absolute;
+    width: 500px;
+    height: 360px;
+    background-color: #ccc;
 }
 /* ========================= BODY ========================= */
