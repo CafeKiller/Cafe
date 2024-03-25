@@ -48,7 +48,6 @@ $(function () {
 
     // 初始化"个人简单介绍"模块DOM
     $(".self-intro").html(selfIntro)
-    $(".product-item").on("click", showProductContainer)
 });
 
 // 页面结构&文本相关加载
@@ -110,18 +109,102 @@ function initDetailListDOM() {
  * 显示项目介绍容器
  * */
 function showProductContainer (event) {
-    console.log(event)
-    // 静止页面滚动
+    // 限制页面滚动
     $.fn.fullpage.setAllowScrolling(false);
+    $(`.product-item`).css({"pointer-events": "none"})
 
     let { tag } = event.currentTarget.dataset
     let gtl = gsap.timeline()
 
-    gtl.to($(`.product-item[data-tag="${tag}"]`), {x: -20, delay:0.1, duration:0.2 })
-    gtl.to($(`.product-item[data-tag="${tag}"]`).siblings(), {x: 200, opacity: 0, delay: 0.1, duration: 0.3 })
-    gtl.to(".product-item-container", {y: -155, opacity: 1, delay: 0.1, duration: 0.5, oncomplete:() => {
-            $(".product-item").off("click")
-        }})
+    const corpDOM = $(`.product-item[data-tag="corp"]`),
+          personDOM = $(`.product-item[data-tag="person"]`),
+          communalDOM = $(`.product-item[data-tag="communal"]`),
+          contTagName = ".product-item-container"
+
+    switch (tag) {
+        case "corp":
+            gtl.to(corpDOM, {x: -20, delay:0.1, duration:0.2 })
+            gtl.to(communalDOM, {x: 100, opacity: 0, delay: 0.1, duration: 0.3 })
+            gtl.to(personDOM, {x: 100, opacity: 0, delay: 0.1, duration: 0.3 })
+            gtl.to(contTagName, {y: -155, opacity: 1, delay: 0.1, duration: 0.5, onComplete:() => {
+                    $(".product-item").off("click").on("click", closeProductContainer)
+                    $(contTagName).toggleClass("on")
+                    $(`.product-item`).css({"pointer-events": "auto"})
+                }})
+            break
+        case "person":
+            gtl.to(corpDOM, {x: -100, opacity: 0, delay:0.1, duration:0.3 })
+            gtl.to(communalDOM, {x: 100, opacity: 0, delay: 0.1, duration: 0.3 })
+            gtl.to(personDOM, {x: -320, delay:0.1, duration:0.4 })
+            gtl.to(contTagName, {y: -155, opacity: 1, delay: 0.1, duration: 0.5, onComplete:() => {
+                    $(".product-item").off("click").on("click", closeProductContainer)
+                    $(contTagName).toggleClass("on")
+                    $(`.product-item`).css({"pointer-events": "auto"})
+                }})
+            break
+        case "communal":
+            gtl.to(corpDOM, {x: -100, opacity: 0, delay: 0.1, duration: 0.3 })
+            gtl.to(personDOM, {x: -100, opacity: 0, delay: 0.1, duration: 0.3 })
+            gtl.to(communalDOM, {x: -618, delay:0.1, duration:0.6 })
+            gtl.to(contTagName, {y: -155, opacity: 1, delay: 0.1, duration: 0.5, onComplete:() => {
+                    $(".product-item").off("click").on("click", closeProductContainer)
+                    $(contTagName).toggleClass("on")
+                    $(`.product-item`).css({"pointer-events": "auto"})
+                }})
+            break
+        default:
+            console.log("%c %s not legal.","font-size: 20px;color: red;background: #000;", tag)
+    }
+}
+
+function closeProductContainer(event){
+    // 释放页面滚动
+    $.fn.fullpage.setAllowScrolling(true);
+    $(`.product-item`).css({"pointer-events": "none"})
+
+    let { tag } = event.currentTarget.dataset
+    let gtl = gsap.timeline()
+
+    const corpDOM = $(`.product-item[data-tag="corp"]`),
+        personDOM = $(`.product-item[data-tag="person"]`),
+        communalDOM = $(`.product-item[data-tag="communal"]`),
+        contTagName = ".product-item-container"
+
+    switch (tag) {
+        case "corp":
+            gtl.to(contTagName, {y: 155, opacity: 0, delay: 0.1, duration: 0.3})
+            gtl.to(personDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
+            gtl.to(communalDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
+            gtl.to(corpDOM, {x: 0, delay:0.1, duration: 0.3, oncomplete:() => {
+                    $(".product-item").off("click").on("click", showProductContainer)
+                    $(contTagName).toggleClass("on")
+                    $(`.product-item`).css({"pointer-events": "auto"})
+                }})
+            break
+        case "person":
+            gtl.to(contTagName, {y: 155, opacity: 0, delay: 0.1, duration: 0.3})
+            gtl.to(communalDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
+            gtl.to(personDOM, {x: 0, delay:0.1, duration: 0.3})
+            gtl.to(corpDOM, {x: 0, opacity: 1, delay:0.1, duration:0.3, oncomplete:() => {
+                    $(".product-item").off("click").on("click", showProductContainer).toggleClass("on")
+                    $(contTagName).toggleClass("on")
+                    $(`.product-item`).css({"pointer-events": "auto"})
+                }})
+
+            break
+        case "communal":
+            gtl.to(contTagName, {y: 155, opacity: 0, delay: 0.1, duration: 0.3})
+            gtl.to(communalDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
+            gtl.to(personDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
+            gtl.to(corpDOM, {x: 0, opacity: 1, delay:0.1, duration:0.3, oncomplete:() => {
+                    $(".product-item").off("click").on("click", showProductContainer).toggleClass("on")
+                    $(contTagName).toggleClass("on")
+                    $(`.product-item`).css({"pointer-events": "auto"})
+                }})
+            break
+        default:
+            console.log("%c %s not legal.","font-size: 20px;color: red;background: #000;", tag)
+    }
 }
 /* =================================== FUNCTION ================================= */
 
