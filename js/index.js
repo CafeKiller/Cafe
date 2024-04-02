@@ -128,8 +128,9 @@ function showProductContainer (event) {
             gtl.to(personDOM, {x: 100, opacity: 0, delay: 0.1, duration: 0.3 })
             gtl.to(contTagName, {y: -155, opacity: 1, delay: 0.1, duration: 0.5, onComplete:() => {
                     $(".product-item").off("click").on("click", closeProductContainer)
+                        .css({"pointer-events": "auto"})
                     $(contTagName).toggleClass("on")
-                    $(`.product-item`).css({"pointer-events": "auto"})
+                    $(`.product-item[data-tag='corp']`).addClass("on")
                 }})
             break
         case "person":
@@ -138,8 +139,9 @@ function showProductContainer (event) {
             gtl.to(personDOM, {x: -320, delay:0.1, duration:0.4 })
             gtl.to(contTagName, {y: -155, opacity: 1, delay: 0.1, duration: 0.5, onComplete:() => {
                     $(".product-item").off("click").on("click", closeProductContainer)
+                        .css({"pointer-events": "auto"})
                     $(contTagName).toggleClass("on")
-                    $(`.product-item`).css({"pointer-events": "auto"})
+                    $(`.product-item[data-tag='person']`).addClass("on")
                 }})
             break
         case "communal":
@@ -148,8 +150,9 @@ function showProductContainer (event) {
             gtl.to(communalDOM, {x: -618, delay:0.1, duration:0.6 })
             gtl.to(contTagName, {y: -155, opacity: 1, delay: 0.1, duration: 0.5, onComplete:() => {
                     $(".product-item").off("click").on("click", closeProductContainer)
+                        .css({"pointer-events": "auto"})
                     $(contTagName).toggleClass("on")
-                    $(`.product-item`).css({"pointer-events": "auto"})
+                    $(`.product-item[data-tag='communal']`).addClass("on")
                 }})
             break
         default:
@@ -177,8 +180,8 @@ function closeProductContainer(event){
             gtl.to(communalDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
             gtl.to(corpDOM, {x: 0, delay:0.1, duration: 0.3, oncomplete:() => {
                     $(".product-item").off("click").on("click", showProductContainer)
+                        .removeClass("on").css({"pointer-events": "auto"})
                     $(contTagName).toggleClass("on")
-                    $(`.product-item`).css({"pointer-events": "auto"})
                 }})
             break
         case "person":
@@ -186,9 +189,9 @@ function closeProductContainer(event){
             gtl.to(communalDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
             gtl.to(personDOM, {x: 0, delay:0.1, duration: 0.3})
             gtl.to(corpDOM, {x: 0, opacity: 1, delay:0.1, duration:0.3, oncomplete:() => {
-                    $(".product-item").off("click").on("click", showProductContainer).toggleClass("on")
+                    $(".product-item").off("click").on("click", showProductContainer)
+                        .removeClass("on").css({"pointer-events": "auto"})
                     $(contTagName).toggleClass("on")
-                    $(`.product-item`).css({"pointer-events": "auto"})
                 }})
 
             break
@@ -197,9 +200,9 @@ function closeProductContainer(event){
             gtl.to(communalDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
             gtl.to(personDOM, {x: 0, opacity: 1, delay: 0.1, duration: 0.3 })
             gtl.to(corpDOM, {x: 0, opacity: 1, delay:0.1, duration:0.3, oncomplete:() => {
-                    $(".product-item").off("click").on("click", showProductContainer).toggleClass("on")
+                    $(".product-item").off("click").on("click", showProductContainer)
+                        .removeClass("on").css({"pointer-events": "auto"})
                     $(contTagName).toggleClass("on")
-                    $(`.product-item`).css({"pointer-events": "auto"})
                 }})
             break
         default:

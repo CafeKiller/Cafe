@@ -74,7 +74,7 @@ ol {
 }
 
 body {
-    background-color: #19191b;
+    background-color: #FFFFFF;
     overflow-x: hidden;
     overflow-y: hidden
 }
@@ -311,12 +311,13 @@ body {
 .part3 .product-item {
     position: relative;
     width: 240px;
-    background-color: #ddd;
+    background-color: #EEEEEE;
     cursor: pointer;
     -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     transform: translateY(-40px);
     opacity: 0;
+
 }
 .part3 .product-item::after,
 .part3 .product-item::before {
@@ -335,17 +336,86 @@ body {
     background-color: var(--bot-color2);
     z-index: 10;
 }
+.part3 .product-item .title {
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+}
+.part3 .product-item .product-item-close {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    background: url(../images/icon_close.png) no-repeat;
+    background-size: 100%;
+    transform: translateX(-50%) rotate(0deg);
+    transition: bottom .3s ease, transform .7s ease;
+    color: transparent;
+}
+.part3 .product-item.on .product-item-close {
+    bottom: 50px;
+    transform: translateX(-50%) rotate(720deg);
+}
+.part3 .product-item:hover .product-item-close {
+    transform: translateX(-50%) rotate(360deg);
+}
 .product-item-container {
     position: absolute;
     bottom: 0;
     right: 80px;
     width: 570px;
     height: 360px;
-    background-color: #333;
+    background-color: #EEEEEE;
     opacity: 0;
     pointer-events: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.3);
+    transition: box-shadow .3s ease;
 }
 .product-item-container.on {
     pointer-events: auto;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
 }
+.product-item-container .scroll-box {
+    padding-right: 10px;
+    margin: 20px auto 0;
+    width: 536px;
+    height: 320px;
+    overflow-y: auto;
+}
+.product-item-container .scroll-box::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0,0,0,.1);
+}
+.product-item-container .scroll-box::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: rgba(255,255,255,.8);
+}
+.product-item-container .scroll-box .project-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    /*background-color: skyblue;*/
+    margin-bottom: 8px;
+}
+.product-item-container .scroll-box .project-item:last-child {
+    margin-bottom: 0;
+}
+.product-item-container .scroll-box .project-item .img_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(to right, #000, transparent);
+    background-position: center center;
+    background-size: 100%;
+    z-index: -1;
+}
+
 /* ========================= BODY ========================= */
