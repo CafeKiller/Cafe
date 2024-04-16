@@ -5,6 +5,7 @@
 
 /* =================================== VARIABLE ================================= */
 let part_typed_obj = undefined
+let part3Swiper = undefined
 /* =================================== VARIABLE ================================= */
 
 
@@ -48,6 +49,12 @@ $(function () {
 
     // 初始化"个人简单介绍"模块DOM
     $(".self-intro").html(selfIntro)
+
+    // 初始化 项目经历(part3) 的swiper
+    part3Swiper = new Swiper(".part3-swiper",{
+        slidesPerView: "auto",
+        spaceBetween: 30,
+    })
 });
 
 // 页面结构&文本相关加载

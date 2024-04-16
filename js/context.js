@@ -24,9 +24,7 @@ if (!isMobile()) {
 
                     break
                 case 3:
-                    let glt = gsap.timeline()
-                    glt.to(".product-item", {y:40, opacity:1, delay:0.1, stagger:0.2, duration:1})
-                    setTimeout(()=>{ $(".product-item").on("click", showProductContainer) }, 1000)
+
                     break
                 case 4:
 
@@ -44,13 +42,7 @@ if (!isMobile()) {
 
                     break
                 case 3:
-                    $(".product-item").off("click")
-                    let glt = gsap.timeline()
-                    if (direction === "down") {
-                        glt.to(".product-item", {y:80, opacity:0, delay:0.1, stagger:0.2, duration:0.3})
-                    } else {
-                        glt.to(".product-item", {y:0, opacity:0, delay:0.1, stagger:0.2, duration:0.3})
-                    }
+
                     break
                 case 4:
 
