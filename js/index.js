@@ -54,7 +54,12 @@ $(function () {
     part3Swiper = new Swiper(".part3-swiper",{
         slidesPerView: "auto",
         spaceBetween: 30,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
     })
+
+    renderProjectExperienceDOM(project_experience_arr)
 });
 
 // 页面结构&文本相关加载
@@ -110,6 +115,38 @@ function initDetailListDOM() {
         `
     }
     $(".detail-list").html(_dom)
+}
+
+/**
+ * @description 渲染项目经历的DOM结构
+ * @param {Array} dataArr
+ * */
+function renderProjectExperienceDOM(dataArr) {
+    // 将数组进行倒序排列,让近期的项目排在前面
+    let reversedArr = dataArr.slice().reverse();
+    let _html = ``
+    reversedArr.forEach((item) => {
+        _html += `
+            <div class="swiper-slide">
+                <h1 class="title">${item.title}</h1>
+                <p class="time">${item.time}</p>
+                <p class="remit">负责：${item.remit}</p>
+                <ul class="entry">
+                    <li class="first">主要职责</li>
+                    ${ (() => {
+                        let _html_in = ``
+                        item.entry.forEach((_item)=>{
+                            _html_in += `<li>${_item}</li>`
+                        })
+                        return _html_in
+                    })() }
+                    <li class="last">项目链接：<a target="_blank" href="${item.link}">${item.link}</a></li>
+                </ul>
+            </div>
+        `
+    })
+    _html += `<div class="swiper-slide"></div>`
+    $('.part3-swiper .swiper-wrapper').html(_html)
 }
 
 /**

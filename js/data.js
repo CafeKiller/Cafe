@@ -65,3 +65,42 @@ const part1_cont = `
     嗨~ 你好呀！欢迎来到我的咖啡屋<span>(Cafe)</span>，
     <br>我是Coffee，正在努力成为一个有趣的全栈开发工程师。
 `
+
+const project_experience_arr = [
+    {
+        title: "卡拉彼丘拍卖行",
+        time: "2023年12月 —— 2024年1月",
+        remit: "前端开发",
+        leven: "",
+        entry: [
+            "负责将设计师提供的原稿转换前端的HTML结构页面，并编写CSS样式的，完成对各类PC设备的适配；并且整合gsap动画组件，完成页面动画的构建；",
+            "引入milo组件与腾讯后端业务进行对接，与后端人员进行沟通，制定服务接口，实现实时数据交互；",
+            "通过whistle配置测试环境，使用Wireshark或WebDevTool抓取实际后端数据，配合测试人员完成功能测试与bug修复；",
+        ],
+        link: "https://klbq.qq.com/cp/GloveAuctionHouse/index.html"
+    },
+    {
+        title: "卡拉彼丘长廊复现",
+        time: "2023年12月 —— 2024年1月",
+        remit: "前端开发",
+        leven: "",
+        entry: [
+            "负责将设计师提供的原稿转换前端的HTML结构页面，并编写CSS样式的，完成对各类PC设备的适配；并且整合gsap动画组件，完成页面动画的构建；",
+            "引入milo组件与腾讯后端业务进行对接，与后端人员进行沟通，制定服务接口，实现实时数据交互；",
+            "通过whistle配置测试环境，使用Wireshark或WebDevTool抓取实际后端数据，配合测试人员完成功能测试与bug修复；",
+        ],
+        link: "https://klbq.qq.com/cp/GloveAuctionHouse/index.html"
+    },
+    {
+        title: "卡拉彼丘自定义挑战",
+        time: "2023年12月 —— 2024年1月",
+        remit: "前端开发",
+        leven: "",
+        entry: [
+            "负责将设计师提供的原稿转换前端的HTML结构页面，并编写CSS样式的，完成对各类PC设备的适配；并且整合gsap动画组件，完成页面动画的构建；",
+            "引入milo组件与腾讯后端业务进行对接，与后端人员进行沟通，制定服务接口，实现实时数据交互；",
+            "通过whistle配置测试环境，使用Wireshark或WebDevTool抓取实际后端数据，配合测试人员完成功能测试与bug修复；",
+        ],
+        link: "https://klbq.qq.com/cp/GloveAuctionHouse/index.html"
+    },
+]
