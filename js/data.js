@@ -104,3 +104,7 @@ const project_experience_arr = [
         link: "https://klbq.qq.com/cp/GloveAuctionHouse/index.html"
     },
 ]
+
+const project_firms_arr = [
+    {name: '深圳我蓬科技有限公司', project_num: 3 },
+]
