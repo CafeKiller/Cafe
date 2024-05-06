@@ -371,10 +371,10 @@ body {
 .part4 .image-swiper-cont {
     margin: 60px auto 0;
     width: 800px;
-    height: 200px;
 }
+.part4 .link-cont .title,
 .part4 .image-swiper-cont .title {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-family: Pixel;
     font-size: 24px;
     line-height: 1;
@@ -384,7 +384,35 @@ body {
     overflow: hidden;
 }
 .part4 .image-swiper-cont .image-swiper .swiper-slide {
-    height: 200px;
+    width: auto;
+    height: 280px;
+}
+.part4 .image-swiper-cont .image-swiper .swiper-slide img {
+    height: 280px;
+    object-fit: cover;
+}
+
+.part4 .link-cont {
+    margin: 46px auto 0;
+    width: 800px;
+}
+.part4 .link-cont .title {
+    margin-bottom: 24px;
+}
+.part4 .link-cont .link-list {
+
+}
+.part4 .link-cont .link-list li {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    list-style: none;
+    font-size: 20px;
+}
+.part4 .link-cont .link-list li a {
+    color: #409eff;
+}
+.part4 .link-cont .link-list li a:hover {
+    text-decoration: underline !important;
 }
 
 /* ========================= BODY ========================= */
