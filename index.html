@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="mobile-web-app-capable">
     <meta name="robots" content="all">
     <meta name="Copyright" content="FengmStudio" />
     <meta name="author" content="FengmStudio-CaFe" />
     <meta name="Description" content="CoffeeShop,即咖啡厅,是一个萌新程序员的全静态个人简历网站" />
-    <meta name="Keywords" content="个人网站,咖啡厅,Coffee_Shop,Cafe_shop,个人简历,独立网站" />
+    <meta name="Keywords" content="个人网站,咖啡厅,Coffee_Shop,Cafe_shop,个人简历,独立网站,Jquery.fullpage" />
     <title>Cafe - 咖啡の个人简历网站</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 
@@ -21,19 +26,123 @@
     <link rel="stylesheet" href="./css/index.css" media="screen and (min-device-width: 1025px)">
     <link rel="stylesheet" href="./css/index-m.css" media="screen and (max-device-width: 1024px)">
 
-    <script src="./js/resize.js"></script>
 </head>
 
 <body>
     <h1 class="hide-text">Cafe - 咖啡の个人简历网站</h1>
 
     <div class="wrap">
-        <header class="header">
-
-        </header>
         <div class="content" id="content">
 
+            <div class="section part1">
+                <div class="part-outer">
+                    <div class="part-inner">
+                        <div class="page-tab">
+
+                        </div>
+                        <h1 class="part1-title">Hello World!</h1>
+                        <div class="part1-line"></div>
+                        <h2 class="part1-desc"></h2>
+                        <h3 class="part1-small-text">
+                            <p class="head-text"></p>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section part2">
+                <div class="part-outer">
+                    <div class="part-inner">
+                        <div class="part2-left">
+                            <div class="user-cover">
+                                <img src="./images/cover.jpg" alt="">
+                            </div>
+                            <div class="user-info"></div>
+                        </div>
+                        <div class="part2-line"></div>
+                        <div class="part2-right">
+                            <!-- <h1 class="part2-title">basic info</h1>-->
+                            <div class="detail-list"></div>
+                            <div class="self-intro"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section part3">
+                <div class="part-outer">
+                    <div class="part-inner">
+                        <div class="part3-title-model">
+                            <span class="part3-title font-type1-size28">Project Experience</span>
+                            <div class="part3-title-line"></div>
+                        </div>
+                        <div class="swiper part3-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section part4">
+                <div class="part-outer">
+                    <div class="part-inner">
+                        <div class="part4-title-model">
+                            <span class="part4-title font-type1-size28">Replenishment</span>
+                            <div class="part4-title-line"></div>
+                        </div>
+                        <div class="image-swiper-cont">
+                            <div class="title">Life Photos</div>
+                            <div class="image-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./images/photos/p1.jpg"></div>
+                                    <div class="swiper-slide"><img src="./images/photos/p2.jpg"></div>
+                                    <div class="swiper-slide"><img src="./images/photos/p3.jpg"></div>
+                                    <div class="swiper-slide"><img src="./images/photos/p4.jpg"></div>
+                                    <div class="swiper-slide"><img src="./images/photos/p1.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="link-cont">
+                            <div class="title">Other Link</div>
+                            <ul class="link-list">
+                                <li>
+                                    Github:
+                                    <a href="https://github.com/CafeKiller" target="_blank">https://github.com/CafeKiller</a>
+                                </li>
+                                <li>
+                                    Gitee:
+                                    <a href="https://gitee.com/coffeekiller002" target="_blank">https://gitee.com/coffeekiller002</a>
+                                </li>
+                                <li>
+                                    BiliBili:
+                                    <a href="https://space.bilibili.com/248826433">https://space.bilibili.com/248826433</a>
+                                </li>
+                                <li>
+                                    Blog:
+                                    <a href="https://cafekiller.github.io/">https://cafekiller.github.io/</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- 弹窗区域 -->
+        <div class="pop-model" id="pop-story">
+            <div class="pop-story-cont">
+                <a class="pop-close" href="javascript:closePop('pop-story')">×</a>
+            </div>
+        </div>
+        <div class="pop-model" id="ie-pop">
+            <div class="pop-story-cont">
+                <a class="pop-close" href="javascript:closePop('pop-story')">×</a>
+            </div>
+        </div>
+
     </div>
 
     <!-- 外链JS -->
@@ -46,9 +155,14 @@
 
     <!-- Project JS Link -->
     <script src="./js/data.js"></script>
-    <script src="./js/utils.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/context.js"></script>
 </body>
+
+
+
+
+
 </html>
 <!-- CreateTime: 2023-5-23 23:26  |  Team: Fengm Studio  |  Creator: Coffee_Killer -->
 <!-- Declaration : 部分素材来源网络，侵删 -->
